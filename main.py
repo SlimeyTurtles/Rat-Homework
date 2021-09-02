@@ -26,9 +26,9 @@ def avinh():
 def akhil():
     return render_template("akhil.html")
 
-@app.route('/calissa/')
+@app.route('/calissa/', methods=['GET', 'POST'])
 def calissa():
-    return render_template("calissa.html")
+    return greet('/calissa/', "calissa.html")
 
 @app.route('/valen/')
 def valen():
