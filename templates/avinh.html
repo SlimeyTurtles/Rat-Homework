@@ -1,7 +1,8 @@
 <!-- Extending the predefined project layout -->
 {% extends "layouts/base.html" %}
+
 <!- This variable sets name of browser tab  -->
-{% set project = "Avinh" %}
+{% set project = "Stubby" %}
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
@@ -10,7 +11,7 @@
             <p>Hello, {{greetInput}}!</p>
         </div>
         <div class="col-12">
-            <form id="greet" method="POST" action={{htmlFile}} >
+            <form id="greet" method="POST" action={{htmlLink}} >
                 <label for="name">Type a greeting name?</label>
                 <input name="name" id="name">
                 <input type="submit" value="Greetings!">

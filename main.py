@@ -4,25 +4,23 @@ from flask import Flask, render_template, request
 # create a Flask instance
 app = Flask(__name__)
 
-htmlLinkPy='/stub/'
-htmlFile="stub.html"
+#this adds the greet code
+def greet(link, file):
+    if request.form:                                                        # if the user submits a name
+        name = request.form.get("name")                                     # store what the user submits
+        if len(name) != 0:                                                  # and if there is text in the submission box
+            return render_template(file, greetInput=name, htmlLink=link)    # give html file the stored name
+    return render_template(file, greetInput="World", htmlLink=link)         # if no submitted text, default to "Greetings, World"
 
-# connects default URL to render index.html
 @app.route('/')
 def index():
     return render_template("index.html")
 
-@app.route('/stub/', methods=['GET', 'POST'])
-def stub(htmlLinkPy='/stub/', htmlFile="stub.html"):
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template(htmlFile, greetInput=name, htmlLinkHtml=htmlLinkPy)
-    return render_template(htmlFile, greetInput="World", htmlLinkHtml=htmlLinkPy)
+# about us pages
 
 @app.route('/avinh/', methods=['GET', 'POST'])
 def avinh():
-    stub('/avinh/', "avinh.html")
+    return greet('/avinh/', "avinh.html")
 
 @app.route('/akhil/')
 def akhil():
@@ -35,6 +33,12 @@ def calissa():
 @app.route('/valen/')
 def valen():
     return render_template("valen.html")
+
+# mini-labs
+
+@app.route('/greet/', methods=['GET', 'POST'])
+def greetminilab():
+    return greet('/greet/', "greet.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
