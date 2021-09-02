@@ -6,11 +6,11 @@ app = Flask(__name__)
 
 #this adds the greet code
 def greet(link, file):
-    if request.form:                                                        # if the user submits a name
-        name = request.form.get("name")                                     # store what the user submits
-        if len(name) != 0:                                                  # and if there is text in the submission box
-            return render_template(file, greetInput=name, htmlLink=link)    # give html file the stored name
-    return render_template(file, greetInput="World", htmlLink=link)         # if no submitted text, default to "Greetings, World"
+    if request.form:                                               # if the user submits a name
+        name = request.form.get("name")                            # store what the user submits
+        if len(name) != 0:                                         # and if there is text in the submission box
+            return render_template(file, input=name, link=link)    # give html file the stored name
+    return render_template(file, input="World", link=link)         # if no submitted text, default to "Greetings, World"
 
 @app.route('/')
 def index():
@@ -22,17 +22,17 @@ def index():
 def avinh():
     return greet('/avinh/', "avinh.html")
 
-@app.route('/akhil/')
+@app.route('/akhil/', methods=['GET', 'POST'])
 def akhil():
-    return render_template("akhil.html")
+    return greet('/akhil/', "akhil.html")
 
-@app.route('/calissa/')
+@app.route('/calissa/', methods=['GET', 'POST'])
 def calissa():
-    return render_template("calissa.html")
+    return greet('/calissa/', "calissa.html")
 
-@app.route('/valen/')
+@app.route('/valen/', methods=['GET', 'POST'])
 def valen():
-    return render_template("valen.html")
+    return greet('/valen/', "valen.html")
 
 # mini-labs
 
