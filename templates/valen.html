@@ -1,15 +1,63 @@
-<!-- Extending the predefined project layout -->
-{% extends "layouts/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me Valen</title>
+</head>
+<body>
 
-<!- This variable sets name of browser tab  -->
-{% set project = "Stubby" %}
+</body>
+</html>
 
-<!- This is a replacement block for Body in base.html -->
+
+About Me Valen Reynolds
 {% block body %}
-<!- Try building a new body here ->
-<p>Tech Talk 1 - Body Stub</p>
-{% endblock %}
 
-<!- This is turning off birds background from base.html -->
-{% block background %}
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+        <div class="col-12">
+            <p>Hello, {{name}}!</p>
+        </div>
+        <div class="col-12">
+            <form action="/aboutme" id="greet" method="POST" >
+                <label for="name">Type a greeting name?</label>
+                <input name="name" id="name">
+                <input type="submit" value="Greetings!">
+            </form>
+        </div>
+        <div class="col-12">
+            <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
+        </div>
+    </div>
+
+    <!- Try building a new body here ->
+
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+        <div class="col-12">
+            <p>Hello, I am 15 years old. I go to del norte highschool. My favorite subject is social studies. I like to play basketball. These are pictures of me, me my grandpa and brother, and me playing basketball. </p>
+            <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Photo%20on%209-1-21%20at%2011.06%20AM.jpg?raw=true" width="400" height="266">
+            <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/IMG_0142.JPG?raw=true" width="361" height="418">
+            <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/IMG_1133.jpg?raw=true" width="562" height="317">
+        </div>
+        <div class="col-12">
+            <form action="/Hello" id="Hello" method="POST" >
+            </form>
+        </div>
+        <div class="col-12">
+            <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
+        </div>
+    </div>
+    <!doctype html>
+    <html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>testpage </title>
+        <style>
+            body {
+                background-color: Yellow;
+            }
+        </style>
+    </head>
+    <body>
+    </body>
+    </html>
 {% endblock %}
