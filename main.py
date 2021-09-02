@@ -4,7 +4,8 @@ from flask import Flask, render_template, request
 # create a Flask instance
 app = Flask(__name__)
 
-#this adds the greet code
+#this adds the greet code-------------------------------
+
 def greet(link, file):
     if request.form:                                               # if the user submits a name
         name = request.form.get("name")                            # store what the user submits
@@ -16,7 +17,7 @@ def greet(link, file):
 def index():
     return render_template("index.html")
 
-# about us pages
+# about us pages -------------------------------------
 
 @app.route('/avinh/', methods=['GET', 'POST'])
 def avinh():
@@ -34,7 +35,7 @@ def calissa():
 def valen():
     return greet('/valen/', "valen.html")
 
-# mini-labs
+# mini-labs ------------------------------------------
 
 @app.route('/greet/', methods=['GET', 'POST'])
 def greetminilab():
@@ -43,6 +44,22 @@ def greetminilab():
 @app.route('/videojournal/')
 def videojounral():
     return render_template("videojournal.html")
+
+@app.route('/food/')
+def food():
+    return render_template("food.html")
+
+@app.route('/shop/')
+def shop():
+    return render_template("shop.html")
+
+@app.route('/customization/')
+def customization():
+    return render_template("customization.html")
+
+@app.route('/minigames/')
+def minigames():
+    return render_template("minigames.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
