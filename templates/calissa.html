@@ -7,16 +7,31 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
 
+    <style>
+        p {
+            margin: 80px 20px 20px 80px;
+        }
+        h1{
+            margin: 30px 90px 20px 80px
+        }
+    </style>
+
+
       <h1>Calissa Tyrrell</h1>
 
-<p>Hi! My name is Calissa and I am currently a junior at Del Norte. My favorite class at Del Norte is probably AP Computer
-    Science, probably because its the most interesting. To be honest though, I'm not very good at it.</p>
+    <p>Hi! My name is Calissa and I am currently a junior at Del Norte. My favorite class at Del Norte is probably AP Computer
+    <br> Science, probably because its the most interesting. To be honest though, I'm not very good at it. <br> </p>
 
-<p>I also have a lot of hobbies. I enjoy gardening, playing video games, as well as eating. Yes, eating is a hobby. I'd say there
-    is a special art to good food. Yummy food is probably what I am most passionate about in regards to hobbies. </p>
+    <p>I also have a lot of hobbies. I play basketball year-round, enjoy gardening, playing video games, as well as eating. Yes, eating is a hobby.
+        I'd say there is a special art to good food. Yummy food (especially Italian food) is probably what I am most passionate about in regards to hobbies.</p>
+    
+    <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/IMG_2137%202.PNG?raw=true" style="border:20px;margin:20px"/width="207" height="448">
+
+    <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Italian-food.jpeg?raw=true" style=" position:absolute;left:260px; width:"435" height="262">
 
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->
+
 {% block background %}
 {% endblock %}
