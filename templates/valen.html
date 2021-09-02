@@ -15,10 +15,10 @@ About Me Valen Reynolds
 
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
         <div class="col-12">
-            <p>Hello, {{name}}!</p>
+            <p>Hello, {{input}}!</p>
         </div>
         <div class="col-12">
-            <form action="/aboutme" id="greet" method="POST" >
+            <form id="greet" method="POST" action={{link}} >
                 <label for="name">Type a greeting name?</label>
                 <input name="name" id="name">
                 <input type="submit" value="Greetings!">
