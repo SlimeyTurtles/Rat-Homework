@@ -40,6 +40,10 @@ def valen():
 def greetminilab():
     return greet('/greet/', "greet.html")
 
+@app.route('/videojournal/')
+def videojounral():
+    return render_template("videojournal.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
