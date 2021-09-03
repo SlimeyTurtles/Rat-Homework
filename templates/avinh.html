@@ -6,20 +6,51 @@
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
-        <div class="col-12">
+
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left;">
+
+        <h1> Avinh’s Journal </h1>
+        <p><strong>CSP Period 3 Team Repositories </strong></p>
+
+        <hr>
+
+        <h3> Greet Code </h3>
             <p>Hello, {{input}}!</p>
-        </div>
-        <div class="col-12">
             <form id="greet" method="POST" action={{link}} >
-                <label for="name">Type a greeting name?</label>
-                <input name="name" id="name">
-                <input type="submit" value="Greetings!">
+                    <label for="name">Type a greeting name?</label>
+                    <input name="name" id="name">
+                    <input type="submit" value="Greetings!">
             </form>
-        </div>
-        <div class="col-12">
-            <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
-        </div>
+
+        <hr>
+
+        <h3> Personal Work Plan </h3>
+        <table border=2 px>
+            <tr>
+                <td><br /></td>
+                <td> Monday </td>
+                <td> Tuesday </td>
+                <td> Wednesday </td>
+                <td> Thursday </td>
+                <td> Friday </td>
+            </tr>
+            <tr>
+                <th>In Class</th>
+                <th>Get assignment</th>
+                <th>Ask Kylie or Akhil for help</th>
+                <th>Realize I was one return statement off and cry</th>
+                <th>Ask Kylie or Akhil for help</th>
+                <th>Ask Kylie or Akhil for help</th>
+            </tr>
+            <tr>
+                <th>At Home</th>
+                <th>Procrastinate</th>
+                <th>Code until im one line from done then give up</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
+
     </div>
 {% endblock %}
 
