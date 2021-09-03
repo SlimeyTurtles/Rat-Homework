@@ -42,7 +42,7 @@ def greetminilab():
     return greet('/greet/', "greet.html")
 
 @app.route('/videojournal/')
-def videojounral():
+def videojournal():
     return render_template("videojournal.html")
 
 @app.route('/food/')
