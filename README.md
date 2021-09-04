@@ -10,7 +10,7 @@ https://github.com/SlimeyTurtles/Rat-Homework/projects/1
 - Developer: Valen Reynolds
 ### Pair Share Journals
 - Avinh and Calissa: https://docs.google.com/document/d/1M_jU_NzcbDCb40K4yJio2Le8LXt5a7TuSz09csn4ihg/edit?usp=sharing
-- Akhil and Valen:
+- Akhil and Valen: https://docs.google.com/document/d/10I6YvPmj3kJEx2zUNu701KBxFONUrfeIO5VNaR7ilts/edit
 ### Objective
 We want our website to be an interactive homework checklist. So far on our sight we have temporary pages for our catagories that don't have code yet. We also have a drop down with our about me pages linked. We will have rat that eats the cheese (homework) when we complete an assignment. When the rat eats the cheese we get more lives on our mini game. Our game is catch the apple but the apple is cheese and the rat (you) has to catch the cheese to get lives. Rat traps fall down on the you have to avoide them while trying to catch the cheese to get more lives. When the rat traps hit the floor you get a point.
 ## Sprint 1, 2 ([Overview with self grades](https://docs.google.com/document/d/15w6Z8kx3Inzfa8vwtc6_sD0a42b-ZCU14hYjFbG608A/edit?usp=sharing))
