@@ -1,19 +1,43 @@
 # Team Repositories Period 3 (Avinh, Akhil, Calissa, Valen)
+
 ### Repository
 https://github.com/SlimeyTurtles/Rat-Homework#readme
+
 ### Scrum Board
 https://github.com/SlimeyTurtles/Rat-Homework/projects/1
+
 ### Roles
+
 - Scrum Master: Avinh Huynh
 - Designer: Calissa Tyrell
 - Technical Lead: Akhil Nandhakumar
 - Developer: Valen Reynolds
+
 ### Pair Share Journals
+
 - Avinh and Calissa: https://docs.google.com/document/d/1M_jU_NzcbDCb40K4yJio2Le8LXt5a7TuSz09csn4ihg/edit?usp=sharing
 - Akhil and Valen: https://docs.google.com/document/d/10I6YvPmj3kJEx2zUNu701KBxFONUrfeIO5VNaR7ilts/edit
+
 ### Objective
+
 We want our website to be an interactive homework checklist. So far on our sight we have temporary pages for our catagories that don't have code yet. We also have a drop down with our about me pages linked. We will have rat that eats the cheese (homework) when we complete an assignment. When the rat eats the cheese we get more lives on our mini game. Our game is catch the apple but the apple is cheese and the rat (you) has to catch the cheese to get lives. Rat traps fall down on the you have to avoide them while trying to catch the cheese to get more lives. When the rat traps hit the floor you get a point.
+
+## Sprint 3, 4 Sept. 7 - Sept. 17
+
+Table of Contents:
+1. Clean up Code/HTML files
+2. Clean up Scrum Board https://github.com/SlimeyTurtles/Rat-Homework/projects/1
+3. Clean up Read Me https://github.com/SlimeyTurtles/Rat-Homework/commit/536e5e76bf77dc047eeb1c56de7be51b25c69299
+4. Theme 1
+5. Theme 2
+6. Mini-labs Location
+7. Virtual Currency Counter
+8. Connection to Canvas
+9. Developing Shop
+10. Developing Games
+
 ## Sprint 1, 2 Aug. 23 - Sept. 3 ([Overview with self grades](https://docs.google.com/document/d/15w6Z8kx3Inzfa8vwtc6_sD0a42b-ZCU14hYjFbG608A/edit?usp=sharing))
+
 Table of Contents:
 1. About Me Avinh https://github.com/SlimeyTurtles/Rat-Homework/blob/main/templates/avinh.html
 2. About Me Akhil https://github.com/SlimeyTurtles/Rat-Homework/blob/main/templates/akhil.html
