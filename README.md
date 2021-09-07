@@ -34,6 +34,7 @@ Table of Contents:
 - [ ] Embed Brain Write
 - [ ] Embed Wireframes
 - [ ] Embed TPT 3
+- [ ] Greet
 7. Virtual Currency Counter
 8. Connection to Canvas
 9. Developing Shop
