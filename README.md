@@ -31,9 +31,9 @@ Table of Contents:
 4. Wireframe/Brain storm Theme and Mini-labs location
 5. Themes
 6. Mini-labs Location
-- [] Embed Brain Write
-- [] Embed Wireframes
-- [] Embed TPT 3
+- [ ] Embed Brain Write
+- [ ] Embed Wireframes
+- [ ] Embed TPT 3
 7. Virtual Currency Counter
 8. Connection to Canvas
 9. Developing Shop
