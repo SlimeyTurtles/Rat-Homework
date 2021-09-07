@@ -1,6 +1,8 @@
 <!-- Extending the predefined project layout -->
 {% extends "layouts/base.html" %}
 
+
+
 <!- This variable sets name of browser tab  -->
 {% set project = "About Akhil" %}
 
@@ -11,8 +13,8 @@
     <!- Try building a new body here ->
     <body style="background-color:##808080;"></body>
     <body style="background-size: cover;"></body>
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
-
+    <div class="center-block" style="margin: 25px 50px 75px; text-align:left; font-family: gilroy,serif;">
+    <font color="black" size="+1.5">
         <div class="col-12">
             <p>Hello, {{input}}!</p>
         </div>
@@ -23,34 +25,32 @@
                 <input type="submit" value="Greetings!">
             </form>
         </div>
-        <div class="col-12">
-            <img src="/static/assets/PythonFlask.jpeg" style="height: 400px" >
+    </font>
+
+    <font size="+2" color="black">
+        <div style="margin: 20px 50px 0px">
+            <p>My name is Akhil Nandhakumar. I am currently 16 years old, and turning 17 on November 1st 2021. I am junior at Del Norte High School.</p>
         </div>
 
-    </div>
-
-        <div>
-            <font size="+1.5"><font color="black">
-                <p>My name is Akhil Nandhakumar. I am 16 years old, and turning 17 on November 1st. I am junior at Del Norte High School.</p>
-                <font/></font>
-        </div>
-
-        <div>
+        <div style="margin: 0px 50px">
             <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/IMG-20190601-WA0004.jpg?raw=true"alt="Me Playing Tennis, JTT Sectional Finals" width="225" height="300"> <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/IMG-20191122-WA0010.jpg?raw=true" alt="playing tennis with my brother" width="400" height="300">
         </div>
 
-        <div>
-            <font size="+1.5"
+        <div style="margin: 0px 50px">
             <p>One of my favorite hobbies is tennis. I play for the Del Norte team, and enjoy playing with my brother. The pictures above are me playing at the California Jr. Team Tennis Sectionals Finals, and hitting with my brother at the local courts in 4s Ranch.</p>
             <p>Some of my other hobbies include playing piano, singing, hiking, and mountain biking. Here are a couple pictures of me and my family below!</p>
-            <font/>
         </div>
 
-        <div>
+        <div style="margin: 0px 50px">
             <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/20210811_101949_HDR.jpg?raw=true" width="225" height="300"> <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/IMG-20190410-WA0001.jpg?raw=true" width="225" height="300"> <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/IMG-20200216-WA0030.jpg?raw=true" width="225" height="300">
         </div>
 
+    <div style="margin: 0px 50px">
+        <p>When I grow up, I aspire to wok in the mechanical engineering field and hopefully do something related to aeronautics or automobiles.</p>
     </div>
+    <font/>
+
+
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->
