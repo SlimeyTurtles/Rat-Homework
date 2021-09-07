@@ -28,16 +28,16 @@ Table of Contents:
 1. Clean up Code/HTML files
 2. Clean up Scrum Board https://github.com/SlimeyTurtles/Rat-Homework/projects/1
 3. Clean up Read Me https://github.com/SlimeyTurtles/Rat-Homework/commit/536e5e76bf77dc047eeb1c56de7be51b25c69299
-4. Theme 1
-5. Theme 2
+4. Wireframe/Brain storm Theme and Mini-labs location
+5. Themes
 6. Mini-labs Location
-7. Embed Brain Write
-8. Embed Wireframes
-9. Embed TPT 3
-10. Virtual Currency Counter
-11. Connection to Canvas
-12. Developing Shop
-13. Developing Games
+- [ ] Embed Brain Write
+- [ ] Embed Wireframes
+- [ ] Embed TPT 3
+7. Virtual Currency Counter
+8. Connection to Canvas
+9. Developing Shop
+10. Developing Games
 
 ## Sprint 1, 2 Aug. 23 - Sept. 3 ([Overview with self grades](https://docs.google.com/document/d/15w6Z8kx3Inzfa8vwtc6_sD0a42b-ZCU14hYjFbG608A/edit?usp=sharing))
 
