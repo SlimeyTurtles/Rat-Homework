@@ -55,3 +55,9 @@ Table of Contents:
 10. Navbar Dropdown https://github.com/SlimeyTurtles/Rat-Homework/commit/069a02d2707d03a521e396e73df8ddd68c0db6b0
 11. Video Journal 0 https://github.com/SlimeyTurtles/Rat-Homework/blob/main/templates/videojournal.html
 12. Place holder HTML files https://github.com/SlimeyTurtles/Rat-Homework/commit/069a02d2707d03a521e396e73df8ddd68c0db6b0
+
+Self Grades:
+- Avinh: 4/4
+- Akhil: 4/4
+- Calissa: 4/4
+- Valen: 4/4
