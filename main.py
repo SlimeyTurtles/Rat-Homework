@@ -21,29 +21,31 @@ def index():
 
 @app.route('/avinh/', methods=['GET', 'POST'])
 def avinh():
-    return greet('/avinh/', "avinh.html")
+    return greet('/avinh/', "/about/avinh.html")
 
 @app.route('/akhil/', methods=['GET', 'POST'])
 def akhil():
-    return greet('/akhil/', "akhil.html")
+    return greet('/akhil/', "/about/akhil.html")
 
 @app.route('/calissa/', methods=['GET', 'POST'])
 def calissa():
-    return greet('/calissa/', "calissa.html")
+    return greet('/calissa/', "/about/calissa.html")
 
 @app.route('/valen/', methods=['GET', 'POST'])
 def valen():
-    return greet('/valen/', "valen.html")
+    return greet('/valen/', "/about/valen.html")
 
 # mini-labs ------------------------------------------
 
 @app.route('/greet/', methods=['GET', 'POST'])
 def greetminilab():
-    return greet('/greet/', "greet.html")
+    return greet('/greet/', "/minilabs/greet.html")
 
 @app.route('/videojournal/')
 def videojournal():
-    return render_template("videojournal.html")
+    return render_template("/minilabs/videojournal.html")
+
+# theme ---------------------------------------------
 
 @app.route('/food/')
 def food():

@@ -1,0 +1,35 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left;">
+
+        <h1> Avinh’s Journal </h1>
+        <p><strong>CSP Period 3 Team Repositories </strong></p>
+
+        <hr>
+
+        <p> I am the Scrum Master for my Scrum Team. I assign tasks for my scrum team, and I develop code.</p>
+        <p> I am a Junior at Del Norte High School. I like getting 12 hours of sleep, drinking tea, lighting incense, and going back to sleep.</p>
+
+        <hr>
+
+        <h3> Greet Code </h3>
+            <p>Hello, {{input}}!</p>
+            <form id="greet" method="POST" action={{link}} >
+                    <label for="name">Type a greeting name?</label>
+                    <input name="name" id="name">
+                    <input type="submit" value="Greetings!">
+            </form>
+
+    </div>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
