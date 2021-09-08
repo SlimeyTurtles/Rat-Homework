@@ -45,6 +45,10 @@ def greetminilab():
 def videojournal():
     return render_template("/minilabs/videojournal.html")
 
+@app.route('/Pair Share Journal/')
+def PairShareJournal():
+    return render_template("/minilabs/PairShareJournals.html")
+
 # theme ---------------------------------------------
 
 @app.route('/food/')
