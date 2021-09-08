@@ -45,9 +45,19 @@ def greetminilab():
 def videojournal():
     return render_template("/minilabs/videojournal.html")
 
-@app.route('/Pair Share Journal/')
+# How-Its-Made ---------------------------------------
+
+@app.route('/pair-share-journals/')
 def PairShareJournal():
-    return render_template("/minilabs/PairShareJournals.html")
+    return render_template("/HowItsMade/PairShareJournals.html")
+
+@app.route('/brainwrites/')
+def brainwrites():
+    return render_template("/HowItsMade/brainwrites.html")
+
+@app.route('/wireframes/')
+def wireframes():
+    return render_template("/HowItsMade/wireframes.html")
 
 # theme ---------------------------------------------
 
