@@ -1,19 +1,20 @@
-
 <!-- Extending the predefined project layout -->
 {% extends "layouts/base.html" %}
 
-
 <!- This variable sets name of browser tab  -->
 {% set project = "About Valen" %}
-# weeoww
-<!- This is a replacement block for Body in base.html -->
 
-
-About Me Valen Reynolds
 {% block body %}
 
+    <style>
+        body {
+            background-color: Yellow;
+        }
+    </style>
+
+<font color="black">
+
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
-        <font color="black">
         <div class="col-12">
             <p>Hello, {{input}}!</p>
         </div>
@@ -23,38 +24,22 @@ About Me Valen Reynolds
                 <input name="name" id="name">
                 <input type="submit" value="Greetings!">
             </form>
-        </font>
         </div>
     </div>
 
-    <!- Try building a new body here ->
-
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
         <div class="col-12">
-            <font color="black">
             <p>Hello, I am 15 years old. I go to del norte highschool. My favorite subject is social studies. I like to play basketball. These are pictures of me, me my grandpa and brother, and me playing basketball. My favorite food is BBQ.</p>
-            </font>
-            <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Photo%20on%209-1-21%20at%2011.06%20AM.jpg?raw=true" width="400" height="266">
-            <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/IMG_0142.JPG?raw=true" width="361" height="418">
-            <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/IMG_1133.jpg?raw=true" width="425" height="300">
+            <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/about%20static/valen%20static/Valen2.jpg?raw=true" width="400" height="266">
+            <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/about%20static/valen%20static/Valen1.JPG?raw=true" width="361" height="418">
+            <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/about%20static/valen%20static/Valen3.jpg?raw=true" width="425" height="300">
         </div>
         <div class="col-12">
             <form action="/Hello" id="Hello" method="POST" >
             </form>
         </div>
     </div>
-    <!doctype html>
-    <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <title>testpage </title>
-        <style>
-            body {
-                background-color: Yellow;
-            }
-        </style>
-    </head>
-    <body>
-    </body>
-    </html>
+
+</font>>
+
 {% endblock %}
