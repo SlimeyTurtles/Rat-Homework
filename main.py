@@ -45,6 +45,10 @@ def greetminilab():
 def videojournal():
     return render_template("/minilabs/videojournal.html")
 
+@app.route('/binaryhackathon/')
+def binaryhackathon():
+    return render_template("/minilabs/binaryhackathon.html")
+
 # How-Its-Made ---------------------------------------
 
 @app.route('/pair-share-journals/')
