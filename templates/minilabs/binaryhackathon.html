@@ -7,14 +7,14 @@
            use HTML Input Form in Frontend, ie toward top of Page
            send initial value and updated values to form via Python render_template -->
 <!-- Hack: use 8 as default -->
-{% set BITS = 8 %}
+{% set BITS = 9 %}
 {% set MAX = ((2 ** BITS) - 1) %}
 
 <!-- Hack: Set bulbs and pass as variables via Python render_template
            add new images (ie PNGs) to project -->
 <!-- use your PNGs as default -->
-{% set imgBulbOn = "/static/assets/bulb_on.gif" %}
-{% set imgBulbOff = "/static/assets/bulb_off.png" %}
+{% set dogawake = "https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/awake_dog.jpeg?raw=true" %}
+{% set dogsleep = "https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/dog%20sleeping.jpeg?raw=true" %}
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}
 
@@ -70,13 +70,13 @@
             const image = document.getElementById('bulb' + i);
             const butt = document.getElementById('butt' + i);
             // Change digit and visual
-            if (image.src.match("{{ imgBulbOn }}")) {
+            if (image.src.match("{{ dogawake }}")) {
                 dig.value = 0;
-                image.src = "{{ imgBulbOff }}";
+                image.src = "{{ dogawake }}";
                 butt.innerHTML = "{{ msgTurnOn }}";
             } else {
                 dig.value = 1;
-                image.src = "{{ imgBulbOn }}";
+                image.src = "{{ dogawake }}";
                 butt.innerHTML = "{{ msgTurnOff }}";
             }
             // Binary numbers
@@ -102,10 +102,10 @@
                 let digit = binary.substr(i, 1);
                 document.getElementById('digit' + i).value = digit;
                 if (digit === "1") {
-                    document.getElementById('bulb' + i).src = "{{ imgBulbOn }}";
+                    document.getElementById('bulb' + i).src = "{{ dogawake }}";
                     document.getElementById('butt' + i).innerHTML = "{{ msgTurnOff }}";
                 } else {
-                    document.getElementById('bulb' + i).src = "{{ imgBulbOff }}";
+                    document.getElementById('bulb' + i).src = "{{ dogsleep }}";
                     document.getElementById('butt' + i).innerHTML = "{{ msgTurnOn }}";
                 }
             }
@@ -146,7 +146,7 @@
                 <table class="table">
                     <tr>
                         {% for i in range(BITS) %}
-                            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ dogsleep }}" alt="" width="40" height="Auto">
                                 <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
                             </td>
                         {% endfor %}
