@@ -1,10 +1,10 @@
 # Team Repositories Period 3 (Avinh, Akhil, Calissa, Valen)
 
-### Repository
-https://github.com/SlimeyTurtles/Rat-Homework#readme
+### [Repository](https://github.com/SlimeyTurtles/Rat-Homework#readme)
 
-### Scrum Board
-https://github.com/SlimeyTurtles/Rat-Homework/projects/1
+### [Scrum Board](https://github.com/SlimeyTurtles/Rat-Homework/projects/1)
+
+### [Insights](https://github.com/SlimeyTurtles/Rat-Homework/pulse)
 
 ### Overview
 
