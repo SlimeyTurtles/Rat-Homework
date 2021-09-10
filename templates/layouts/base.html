@@ -67,9 +67,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         .btn:link,
         .btn:visited {
             text-transform: uppercase;
-            text-decoration: none;
-            padding: 15px 40px;
-            display: inline-block;
             border-radius: 100px;
             transition: all .2s;
             position: absolute;
@@ -88,6 +85,11 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
         }
 
+        #menu {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
         .row{
             margin: auto;
         }
@@ -109,42 +111,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 {% include "layouts/navbar.html" %}
 
 {% block body %}
-    <div class="container-fluid">
-        <div class="row justify-content-end" style="padding: 2%;">
-            <div class="col-2" style="text-align: right;">
-                {% block info %}
-                    <!-- notice jinja style variables used in href's -->
-                    <a><h5>{{basename}}</h5></a>
-                    <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
-                    <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>
-                    <a href={{twitter}} target="_blank"><i class="fa fa-twitter"></i></a>
-                {% endblock %}
-            </div>
-        </div>
-
-        <div class="product" style="margin-top: 2%;">
-            <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
-
-                <div class="col-8" >
-                    <h1>{{ project }} Project</h1>
-                </div>
-
-            </div>
-
-            <div class="row" style="padding-left: 10%;">
-                {% block links %}
-                    <div class="col-3">
-                        <a href="{{ overview }}" class="btn">Overview</a>
-                    </div>
-
-                    <div class="col-3">
-                        <a href="{{ repo }}" class="btn">Repository</a>
-                    </div>
-                {% endblock %}
-            </div>
-
-        </div>
-    </div>
+            <a href="{{ overview }}" class="btn" id="menu">Overview</a>
 {% endblock %}
 
 </body>
