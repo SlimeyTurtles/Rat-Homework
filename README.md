@@ -1,4 +1,38 @@
+## Pop-quiz!!!
+### Team Repositories, [Scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1), Avinh Akhil Calissa Valen
+
+### Pairshare Journal Avinh Calissa: https://docs.google.com/document/d/1M_jU_NzcbDCb40K4yJio2Le8LXt5a7TuSz09csn4ihg/edit?usp=sharing
+
+### Pairshare Journal Akhil Valen: https://docs.google.com/document/d/10I6YvPmj3kJEx2zUNu701KBxFONUrfeIO5VNaR7ilts/edit
+
+### Avinh
+- Id: 43688346
+- Tasks:
+- Commits:
+- Scrumboard:
+- Profile:
+### Akhil 
+- Id: 89219514
+- Tasks:
+- Commits:
+- Scrumboard:
+- Profile:
+### Calissa
+- Id: 89219525
+- Tasks:
+- Commits:
+- Scrumboard:
+- Profile:
+### Valen
+- Id: 89166851
+- Tasks:
+- Commits:
+- Scrumboard:
+- Profile:
+
 # Team Repositories Period 3 (Avinh, Akhil, Calissa, Valen)
+
+
 
 ### Repository
 https://github.com/SlimeyTurtles/Rat-Homework#readme
