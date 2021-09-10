@@ -19,10 +19,10 @@
 - Profile:
 ### Calissa
 - Id: 89219525
-- Tasks: [https://github.com/SlimeyTurtles/Rat-Homework/issues?q=is%3Aopen+is%3Aissue+label%3ACalissa](Tasks)
-- Commits:[ https://github.com/SlimeyTurtles/Rat-Homework/commits?author=CalissaT&since=2021-09-01&until=2021-09-11](Commits)
-- Scrumboard:[ https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=label%3Acalissa](Scrumboard)
-- Profile:[ https://github.com/CalissaT](Profile)
+- Tasks: https://github.com/SlimeyTurtles/Rat-Homework/issues?q=is%3Aopen+is%3Aissue+label%3ACalissa
+- Commits:https://github.com/SlimeyTurtles/Rat-Homework/commits?author=CalissaT&since=2021-09-01&until=2021-09-11
+- Scrumboard:https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=label%3Acalissa
+- Profile: https://github.com/CalissaT
 ### Valen
 - Id: 89166851
 - Tasks:
