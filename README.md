@@ -1,38 +1,4 @@
-## Pop-quiz!!!
-### Team Repositories, [Scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1), Avinh Akhil Calissa Valen
-
-### Pairshare Journal Avinh Calissa: https://docs.google.com/document/d/1M_jU_NzcbDCb40K4yJio2Le8LXt5a7TuSz09csn4ihg/edit?usp=sharing
-
-### Pairshare Journal Akhil Valen: https://docs.google.com/document/d/10I6YvPmj3kJEx2zUNu701KBxFONUrfeIO5VNaR7ilts/edit
-
-### Avinh
-- Id: 43688346
-- Tasks:
-- Commits:
-- Scrumboard:
-- Profile:
-### Akhil 
-- Id: 89219514
-- Tasks:
-- Commits:
-- Scrumboard:
-- Profile:
-### Calissa
-- Id: 89219525
-- Tasks: https://github.com/SlimeyTurtles/Rat-Homework/issues?q=is%3Aopen+is%3Aissue+label%3ACalissa
-- Commits:https://github.com/SlimeyTurtles/Rat-Homework/commits?author=CalissaT&since=2021-09-01&until=2021-09-11
-- Scrumboard:https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=label%3Acalissa
-- Profile: https://github.com/CalissaT
-### Valen
-- Id: 89166851
-- Tasks:
-- Commits:
-- Scrumboard:
-- Profile:
-
 # Team Repositories Period 3 (Avinh, Akhil, Calissa, Valen)
-
-
 
 ### Repository
 https://github.com/SlimeyTurtles/Rat-Homework#readme
@@ -40,12 +6,12 @@ https://github.com/SlimeyTurtles/Rat-Homework#readme
 ### Scrum Board
 https://github.com/SlimeyTurtles/Rat-Homework/projects/1
 
-### Roles
+### Overview
 
-- Scrum Master: Avinh Huynh
-- Designer: Calissa Tyrell
-- Technical Lead: Akhil Nandhakumar
-- Developer: Valen Reynolds
+- Scrum Master: Avinh Huynh, 43688346, [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3ASlimeyTurtles+is%3Aopen), [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=SlimeyTurtles), [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Aslimeyturtles), [profile](https://github.com/SlimeyTurtles)
+- Technical Lead: Akhil Nandhakumar, 89219514, [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3AAkhilNandhakumar+is%3Aopen), [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=AkhilNandhakumar), [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Aakhilnandhakumar), [profile](https://github.com/AkhilNandhakumar)
+- Designer: Calissa Tyrell, 89219525, [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3ACalissaT+is%3Aopen), [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=CalissaT), [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Aakhilnandhakumar+assignee%3Acalissat), [profile](https://github.com/CalissaT)
+- Developer Valen Reynolds, 89166851, [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3AValenReynolds+is%3Aopen), [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=ValenReynolds), [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Avalenreynolds), [profile](https://github.com/ValenReynolds)
 
 ### Pair Share Journals
 
