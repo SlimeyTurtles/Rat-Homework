@@ -7,14 +7,14 @@
            use HTML Input Form in Frontend, ie toward top of Page
            send initial value and updated values to form via Python render_template -->
 <!-- Hack: use 8 as default -->
-{% set BITS = 10 %}
+{% set BITS = 8 %}
 {% set MAX = ((2 ** BITS) - 1) %}
 
 <!-- Hack: Set bulbs and pass as variables via Python render_template
            add new images (ie PNGs) to project -->
 <!-- use your PNGs as default -->
-{% set dogawake = "https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/awake_dog.jpeg?raw=true" %}
-{% set dogsleep = "https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/dog%20sleeping.jpeg?raw=true" %}
+{% set imgBulbOn = "/static/assets/bulb_on.gif" %}
+{% set imgBulbOff = "/static/assets/bulb_off.png" %}
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}
 
@@ -39,7 +39,6 @@
             document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
             // DOM assignment to Decimal conversion
             document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
-            document.getElementById('ASCII').innerHTML = String.fromCharCode(parseInt(binary, 2))
             /* Hack: show ASCII printable character(s) for each 8 bits
              DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asplook
              below ASCII for more ideas of where to make changes
@@ -71,13 +70,13 @@
             const image = document.getElementById('bulb' + i);
             const butt = document.getElementById('butt' + i);
             // Change digit and visual
-            if (image.src.match("{{ dogawake }}")) {
+            if (image.src.match("{{ imgBulbOn }}")) {
                 dig.value = 0;
-                image.src = "{{ dogsleep }}";
+                image.src = "{{ imgBulbOff }}";
                 butt.innerHTML = "{{ msgTurnOn }}";
             } else {
                 dig.value = 1;
-                image.src = "{{ dogawake }}";
+                image.src = "{{ imgBulbOn }}";
                 butt.innerHTML = "{{ msgTurnOff }}";
             }
             // Binary numbers
@@ -103,10 +102,10 @@
                 let digit = binary.substr(i, 1);
                 document.getElementById('digit' + i).value = digit;
                 if (digit === "1") {
-                    document.getElementById('bulb' + i).src = "{{ dogawake }}";
+                    document.getElementById('bulb' + i).src = "{{ imgBulbOn }}";
                     document.getElementById('butt' + i).innerHTML = "{{ msgTurnOff }}";
                 } else {
-                    document.getElementById('bulb' + i).src = "{{ dogsleep }}";
+                    document.getElementById('bulb' + i).src = "{{ imgBulbOff }}";
                     document.getElementById('butt' + i).innerHTML = "{{ msgTurnOn }}";
                 }
             }
@@ -127,7 +126,7 @@
                         <th>Octal</th>
                         <th>Hexadecimal</th>
                         <th>Decimal</th>
-                        <th>ASCII</th>
+                        <!-- Hack: display ASCII label for printable character(s)  -->
                         <th>Minus</th>
                     </tr>
                     <tr>
@@ -136,8 +135,9 @@
                         <td id="octal">0</td>
                         <td id="hexadecimal">0</td>
                         <td id="decimal">0</td>
-                        <td id="ASCII">NULL</td>
+                        <!-- Hack: display ASCII printable character(s)  -->
                         <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
+
                     </tr>
                 </table>
             </div>
@@ -146,7 +146,7 @@
                 <table class="table">
                     <tr>
                         {% for i in range(BITS) %}
-                            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ dogsleep }}" alt="" width="40" height="Auto">
+                            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
                                 <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
                             </td>
                         {% endfor %}
