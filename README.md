@@ -27,7 +27,7 @@ We want our website to be an interactive homework checklist. So far on our sight
 ## Sprint 3, 4 Sept. 7 - Sept. 17
 
 Table of Contents:
-1. Clean up Code/HTML files [HTML Folders](https://github.com/SlimeyTurtles/Rat-Homework/commit/a34049dc6734873dcc9c0098ae58b6403a0a1bf5), [Image Folders](https://github.com/SlimeyTurtles/Rat-Homework/commit/0ee89a390621dbced1ea0f1d41c7fe88c958e374), []
+1. Clean up Code/HTML files [HTML Folders](https://github.com/SlimeyTurtles/Rat-Homework/commit/a34049dc6734873dcc9c0098ae58b6403a0a1bf5), [Image Folders](https://github.com/SlimeyTurtles/Rat-Homework/commit/0ee89a390621dbced1ea0f1d41c7fe88c958e374),
 2. Clean up Scrum Board https://github.com/SlimeyTurtles/Rat-Homework/projects/1
 3. Clean up Read Me https://github.com/SlimeyTurtles/Rat-Homework/commit/536e5e76bf77dc047eeb1c56de7be51b25c69299
 4. Wireframe/Brain storm Theme and Mini-labs location https://docs.google.com/drawings/d/1EhY_meu3FENJRA6Q3lh0G19nPU1qK4Fv9JI6G1Pp7vg/edit?usp=sharing
