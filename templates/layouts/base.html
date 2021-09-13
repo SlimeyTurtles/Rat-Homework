@@ -9,9 +9,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <html lang="en">
 
 {% set basename = "Homework Planner" %}
-{% set github = "https://github.com/nighthawkcoders" %}
-{% set twitter = "https://twitter.com/NighthawkCoding" %}
-{% set youtube = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" %}
+{% set menu = "filler" %}
 
 <head>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -85,10 +83,21 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
         }
 
+        #background {
+            position: fixed;
+            top: 9%;
+        }
+
+        #homeworklist {
+            position: fixed;
+            top: 10%;
+            right: 2%;
+            font-size: xx-large;
+        }
         #menu {
             position: fixed;
-            bottom: 0px;
-            right: 0px;
+            bottom: 2%;
+            right: 2%;
         }
         .row{
             margin: auto;
@@ -100,20 +109,19 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         }
     </style>
 
-    <title>{{ basename }} | {{ project }} </title>
-    {% block meta %}
-    {% endblock %}
+    <title>{{ basename }}</title>
+
 </head>
 
 <body>
+    {% include "layouts/navbar.html" %}
 
-
-{% include "layouts/navbar.html" %}
-
-{% block body %}
-            <a href="{{ overview }}" class="btn" id="menu">Overview</a>
-{% endblock %}
-
+    {% block body %}
+        <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true" width="50%" height="50%">
+    <p>this rat is a place holder for when i make a background later (avinh)</p>
+        <p id="homeworklist">Homework List: <br>1. shenanigans<br>2. sheeenanigans</p>>
+        <a href="{{ menu }}" class="btn" id="menu">Menu</a>
+    {% endblock %}
 </body>
 
 {% block background %}

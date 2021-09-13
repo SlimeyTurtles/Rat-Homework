@@ -1,17 +1,17 @@
 # Team Repositories Period 3 (Avinh, Akhil, Calissa, Valen)
 
-### Repository
-https://github.com/SlimeyTurtles/Rat-Homework#readme
+### [Repository](https://github.com/SlimeyTurtles/Rat-Homework#readme)
 
-### Scrum Board
-https://github.com/SlimeyTurtles/Rat-Homework/projects/1
+### [Scrum Board](https://github.com/SlimeyTurtles/Rat-Homework/projects/1)
 
-### Roles
+### [Insights](https://github.com/SlimeyTurtles/Rat-Homework/pulse)
 
-- Scrum Master: Avinh Huynh
-- Designer: Calissa Tyrell
-- Technical Lead: Akhil Nandhakumar
-- Developer: Valen Reynolds
+### Overview
+
+- Scrum Master: Avinh Huynh, 43688346, [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3ASlimeyTurtles+is%3Aopen), [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=SlimeyTurtles), [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Aslimeyturtles), [profile](https://github.com/SlimeyTurtles)
+- Technical Lead: Akhil Nandhakumar, 89219514, [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3AAkhilNandhakumar+is%3Aopen), [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=AkhilNandhakumar), [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Aakhilnandhakumar), [profile](https://github.com/AkhilNandhakumar)
+- Designer: Calissa Tyrell, 89219525, [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3ACalissaT+is%3Aopen), [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=CalissaT), [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Acalissat), [profile](https://github.com/CalissaT)
+- Developer Valen Reynolds, 89166851, [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3AValenReynolds+is%3Aopen), [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=ValenReynolds), [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Avalenreynolds), [profile](https://github.com/ValenReynolds)
 
 ### Pair Share Journals
 

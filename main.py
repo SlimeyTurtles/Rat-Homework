@@ -53,7 +53,7 @@ def binaryhackathon():
 
 @app.route('/pair-share-journals/')
 def PairShareJournal():
-    return render_template("/HowItsMade/PairShareJournals.html")
+    return render_template("/HowItsMade/TPT3.html")
 
 @app.route('/brainwrites/')
 def brainwrites():
