@@ -1,0 +1,52 @@
+
+{% extends "layouts/base.html" %}
+{% set project = "TPT 3" %}
+
+<style>
+    .col-md {
+        border-width: 20px ;
+        border-color: black;
+        align-content: center;
+    }
+</style>
+
+
+
+{% block body %}
+<! Bootstrap Grid for TPT week notes/research >
+
+<div class="container-fluid">
+
+<! Heading Row >
+    <div class="row justify-content-md-cent">
+        <div class="col-md" style="background-color:#c5daff;" align="center">
+            <p><font size="+3">TPT Week #</font></p>
+        </div>
+        <div class="col-md" style="background-color:#c5daff;" align="center">
+            <p><font size="+3">Notes/Research/Design</font></p>
+        </div>
+    </div>
+
+<! Week 1 >
+    <div class="row justify-content-md-cent">
+        <div class="col-lg" style="background-color:#c5daff;" align="center">
+            <p><font size="+3">Week 1</font></p>
+        </div>
+        <div class="col-lg" style="background-color:#c5daff;" align="center">
+            <p><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true" ></p>
+        </div>
+    </div>
+
+    <! Week 2 >
+    <div class="row justify-content-md-cent">
+        <div class="col-lg" style="background-color:#c5daff;" align="center">
+            <p><font size="+3">Week 2</font></p>
+        </div>
+        <div class="col-lg" style="background-color:#c5daff;" align="center">
+            <p><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true" ></p>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

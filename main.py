@@ -51,9 +51,9 @@ def binaryhackathon():
 
 # How-Its-Made ---------------------------------------
 
-@app.route('/pair-share-journals/')
+@app.route('/test-prep-tuesday/')
 def PairShareJournal():
-    return render_template("/HowItsMade/TPT3.html")
+    return render_template("/HowItsMade/TPT.html")
 
 @app.route('/brainwrites/')
 def brainwrites():
