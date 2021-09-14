@@ -8,10 +8,12 @@
 
 ### Overview
 
-- Scrum Master: Avinh Huynh, 43688346, [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3ASlimeyTurtles+is%3Aopen), [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=SlimeyTurtles), [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Aslimeyturtles), [profile](https://github.com/SlimeyTurtles)
-- Technical Lead: Akhil Nandhakumar, 89219514, [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3AAkhilNandhakumar+is%3Aopen), [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=AkhilNandhakumar), [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Aakhilnandhakumar), [profile](https://github.com/AkhilNandhakumar)
-- Designer: Calissa Tyrell, 89219525, [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3ACalissaT+is%3Aopen), [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=CalissaT), [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Acalissat), [profile](https://github.com/CalissaT)
-- Developer Valen Reynolds, 89166851, [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3AValenReynolds+is%3Aopen), [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=ValenReynolds), [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Avalenreynolds), [profile](https://github.com/ValenReynolds)
+| Role | Name | ID | Tasks | Commits | Scrumboard | Profile |
+| --- | --- | --- | --- | --- | --- | --- |
+| Scrum Master | Avinh Huynh | 43688346 | [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3ASlimeyTurtles+is%3Aopen) | [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=SlimeyTurtles) | [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Aslimeyturtles) | [profile](https://github.com/SlimeyTurtles) |
+| Technical Lead | Akhil Nandhakumar | 89219514 | [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3AAkhilNandhakumar+is%3Aopen) | [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=AkhilNandhakumar) | [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Aakhilnandhakumar) | [profile](https://github.com/AkhilNandhakumar) |
+| Designer | Calissa Tyrell | 89219525 | [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3ACalissaT+is%3Aopen) | [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=CalissaT) | [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Acalissat) | [profile](https://github.com/CalissaT) |
+| Developer | Valen Reynolds | 89166851 | [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3AValenReynolds+is%3Aopen) | [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=ValenReynolds) | [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Avalenreynolds) | [profile](https://github.com/ValenReynolds) |
 
 ### Pair Share Journals
 
@@ -25,16 +27,22 @@ We want our website to be an interactive homework checklist. So far on our sight
 ## Sprint 3, 4 Sept. 7 - Sept. 17
 
 Table of Contents:
-1. Clean up Code/HTML files
+1. Clean up Code/HTML files [HTML Folders](https://github.com/SlimeyTurtles/Rat-Homework/commit/a34049dc6734873dcc9c0098ae58b6403a0a1bf5), [Image Folders](https://github.com/SlimeyTurtles/Rat-Homework/commit/0ee89a390621dbced1ea0f1d41c7fe88c958e374),
 2. Clean up Scrum Board https://github.com/SlimeyTurtles/Rat-Homework/projects/1
 3. Clean up Read Me https://github.com/SlimeyTurtles/Rat-Homework/commit/536e5e76bf77dc047eeb1c56de7be51b25c69299
-4. Wireframe/Brain storm Theme and Mini-labs location
-5. Themes
-6. Mini-labs Location
-- [ ] Embed Brain Write
-- [ ] Embed Wireframes
-- [ ] Embed TPT 3
-- [ ] Greet
+4. Wireframe/Brain storm Theme and Mini-labs location https://docs.google.com/drawings/d/1EhY_meu3FENJRA6Q3lh0G19nPU1qK4Fv9JI6G1Pp7vg/edit?usp=sharing
+5. Theme https://github.com/SlimeyTurtles/Rat-Homework/commit/605aaea7ced436e449cb6fe55cbad204a7c9025b
+- [X] Change Background https://github.com/SlimeyTurtles/Rat-Homework/commit/605aaea7ced436e449cb6fe55cbad204a7c9025b
+- [X] Change Font https://github.com/SlimeyTurtles/Rat-Homework/commit/87409f4cc819623e6d8a9cbe84113d1c8dd9da58
+- [X] Add Buttons https://github.com/SlimeyTurtles/Rat-Homework/commit/118f17f87cbf2adb387fa5288498868b97a91b1d
+6. Mini-labs Location [Dropdown](https://github.com/SlimeyTurtles/Rat-Homework/commit/88e0b770057dd82e79fe773740ed45bdccd640e2)
+- [X] Embed Brain Write https://github.com/SlimeyTurtles/Rat-Homework/commit/abd88133b1042050c1645ac5be6fb2f2ec81d45f
+- [X] Embed Wireframes https://github.com/SlimeyTurtles/Rat-Homework/commit/d3a304b45f07b4e5e381983518925ca531003f0e
+- [X] Embed TPT 3 https://github.com/SlimeyTurtles/Rat-Homework/commit/6f9021604b10f5b87a35a1c2ce2fed50b52409a8
+- [X] Greet https://github.com/SlimeyTurtles/Rat-Homework/blob/main/templates/greet.html
+
+To Do:
+
 7. Virtual Currency Counter
 8. Connection to Canvas
 9. Developing Shop
