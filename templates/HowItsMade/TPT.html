@@ -1,52 +1,81 @@
-
 {% extends "layouts/base.html" %}
 {% set project = "TPT 3" %}
 
+
+<!-------------------------------------------------->
+
+<! temp css (works in base but not here, will fix after) >
 <style>
-    .col-md {
-        border-width: 20px ;
-        border-color: black;
-        align-content: center;
+    .col-lg{
+        margin-right: 5px;
+        margin-top: 5px;
+        border-style: solid;
+        border-width: 3px;
+        border-color: #adcbd9;
     }
 </style>
 
-
+<!-------------------------------------------------->
 
 {% block body %}
+
 <! Bootstrap Grid for TPT week notes/research >
 
-<div class="container-fluid">
+<div class="container-fluid" >
 
-<! Heading Row >
-    <div class="row justify-content-md-cent">
-        <div class="col-md" style="background-color:#c5daff;" align="center">
+<! Heading Row--------------------------------------------------------------------------- >
+    <div class="row">
+        <div class="col-lg" align="center">
             <p><font size="+3">TPT Week #</font></p>
         </div>
-        <div class="col-md" style="background-color:#c5daff;" align="center">
+        <div class="col-lg" align="center">
             <p><font size="+3">Notes/Research/Design</font></p>
         </div>
-    </div>
 
-<! Week 1 >
-    <div class="row justify-content-md-cent">
-        <div class="col-lg" style="background-color:#c5daff;" align="center">
+        <div class="w-100"></div>
+
+<! Week 1 --------------------------------------------------------------------------- >
+        <div class="col-lg" align="center">
+            <br><br><br><br><br><br>
             <p><font size="+3">Week 1</font></p>
         </div>
-        <div class="col-lg" style="background-color:#c5daff;" align="center">
-            <p><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true" ></p>
+        <div class="col-lg" align="center">
+            <p><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQLWXYIH7s3yNhSCi0Sao_7itGrS9cax-HENWudvNFvFSEvkP-azN6ub5dZ50WN_yUHUTcG2V8jn0CV/embed?start=true&loop=true&delayms=3000" frameborder="0" width="600" height="356" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></p>
         </div>
-    </div>
 
-    <! Week 2 >
-    <div class="row justify-content-md-cent">
-        <div class="col-lg" style="background-color:#c5daff;" align="center">
+        <div class="w-100"></div>
+
+<! Week 2 --------------------------------------------------------------------------- >
+        <div class="col-lg" align="center">
+            <br><br><br><br><br><br><br><br><br><br><br>
             <p><font size="+3">Week 2</font></p>
         </div>
-        <div class="col-lg" style="background-color:#c5daff;" align="center">
-            <p><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true" ></p>
+        <div class="col-lg" align="center">
+            <iframe src="https://docs.google.com/document/d/e/2PACX-1vSUiAqvlQwXQo2Zh0mZe5wLMw82x8tQxPdI-njGYAOJ1XvMvOXCOJRloYqHkHNN0fZxFH_8ATV0o3lX/pub?embedded=true" width="600" height="600"></iframe>
         </div>
-    </div>
 
-</div>
+        <div class="w-100"></div>
+
+<! Week 3 --------------------------------------------------------------------------- >
+        <div class="col-lg" align="center">
+            <br><br><br><br><br><br><br><br><br><br><br>
+            <p><font size="+3">Week 3</font></p>
+        </div>
+        <div class="col-lg" align="center">
+            <iframe src="https://docs.google.com/document/d/e/2PACX-1vTeLdd9ESZFVVkl3n2mYjbmhmxZuWoQU78nswX-QYFjR9MNEbREAzeAMBDWebswSlXdDS5a5npdRshV/pub?embedded=true" width="600" height="600"></iframe>
+        </div>
+
+        <div class="w-100"></div>
+
+<! Week 4 --------------------------------------------------------------------------- >
+        <div class="col-lg" align="center">
+            <br><br><br><br><br><br><br><br><br><br><br>
+            <p><font size="+3">Week 4</font></p>
+        </div>
+        <div class="col-lg" align="center">
+            <iframe src="https://docs.google.com/document/d/e/2PACX-1vQ_LS9VWirG02kr4MrtwI8AuWUUqrtuABYtkXFhmzLPTtCjmU7_LWCgm-XYw9Q4gutzk8q63L2VEN9X/pub?embedded=true" width="600" height="600"></iframe></iframe>
+        </div>
+
+        <div class="w-100"></div>
 
 {% endblock %}
