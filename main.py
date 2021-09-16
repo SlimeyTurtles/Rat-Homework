@@ -6,12 +6,12 @@ app = Flask(__name__)
 
 #this adds the greet code-------------------------------
 
-def greet(link, file):
-    if request.form:                                               # if the user submits a name
-        name = request.form.get("name")                            # store what the user submits
-        if len(name) != 0:                                         # and if there is text in the submission box
-            return render_template(file, input=name, link=link)    # give html file the stored name
-    return render_template(file, input="World", link=link)         # if no submitted text, default to "Greetings, World"
+def greet(link, file, defaultsubmission):
+    if request.form:                                                    # if the user submits a name
+        submission = request.form.get("input")                          # store what the user submits
+        if len("input") != 0:                                        # and if there is text in the submission box
+            return render_template(file, input=submission, link=link)   # give html file the stored name
+    return render_template(file, input=defaultsubmission, link=link)    # if no submitted text, use "defaultsubmission"
 
 @app.route('/')
 def index():
@@ -21,33 +21,33 @@ def index():
 
 @app.route('/avinh/', methods=['GET', 'POST'])
 def avinh():
-    return greet('/avinh/', "/about/avinh.html")
+    return greet('/avinh/', "/about/avinh.html", "World")
 
 @app.route('/akhil/', methods=['GET', 'POST'])
 def akhil():
-    return greet('/akhil/', "/about/akhil.html")
+    return greet('/akhil/', "/about/akhil.html", "World")
 
 @app.route('/calissa/', methods=['GET', 'POST'])
 def calissa():
-    return greet('/calissa/', "/about/calissa.html")
+    return greet('/calissa/', "/about/calissa.html", "World")
 
 @app.route('/valen/', methods=['GET', 'POST'])
 def valen():
-    return greet('/valen/', "/about/valen.html")
+    return greet('/valen/', "/about/valen.html", "World")
 
 # mini-labs ------------------------------------------
 
 @app.route('/greet/', methods=['GET', 'POST'])
 def greetminilab():
-    return greet('/greet/', "/minilabs/greet.html")
+    return greet('/greet/', "/minilabs/greet.html", "World")
 
 @app.route('/videojournal/')
 def videojournal():
     return render_template("/minilabs/videojournal.html")
 
-@app.route('/binaryhackathon/')
+@app.route('/binaryhackathon/', methods=['GET', 'POST'])
 def binaryhackathon():
-    return render_template("/minilabs/binaryhackathon.html")
+    return greet('/greet/', "/minilabs/binaryhackathon.html", "8")
 
 # How-Its-Made ---------------------------------------
 
