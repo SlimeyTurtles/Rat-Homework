@@ -6,12 +6,12 @@ app = Flask(__name__)
 
 #this adds the greet code-------------------------------
 
-def greet(link, file, defaultnumber):
-    if request.form:                                                    # if the user submits a name
-        number = request.form.get("input")                          # store what the user submits
-        if len("input") != 0:                                        # and if there is text in the number box
-            return render_template(file, input=number, link=link)   # give html file the stored name
-    return render_template(file, input=defaultnumber, link=link)    # if no submitted text, use "defaultnumber"
+def greet(link, file, default):
+    if request.form:                                                # if the user submits a name
+        input = request.form.get("input")                           # store what the user submits
+        if len("input") != 0:                                       # and if there is text in the number box
+            return render_template(file, input=input, link=link)    # give html file the stored name
+    return render_template(file, input=default, link=link)          # if there is nothing submitted, use "default"
 
 @app.route('/')
 def index():
@@ -104,14 +104,6 @@ class CoinBank:
             return self.num_coins
         else:
             raise ValueError("You do not have that many coins")
-    from flask import Flask, render_template, request
-app = Flask(__name__)
-app.debug = True
-
-@app.route('/', methods=['GET'])
-def dropdown():
-    colours = ['Red', 'Blue', 'Black', 'Orange']
-    return render_template('test.html', colours=colours)
 
 # runs the application on the development server
 if __name__ == "__main__":
