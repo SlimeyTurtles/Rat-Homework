@@ -77,42 +77,12 @@ def shop():
 def customization():
     return render_template("customization.html")
 
-@app.route('/minigames/')
+@app.route('/minigames/', methods=['GET', 'POST'])
 def minigames():
     return render_template("minigames.html")
 
-# money calculations
-
-class CoinBank:
-    num_coins = 10
-
-    def getCoins(self):
-        return self.num_coins
-
-    def addCoins(self, coins):
-        self.num_coins = self.num_coins + coins
-        return self.num_coins
-
-    def removeCoins(self, coins):
-        # only remove coins if we have enough! We do not let you spend more than you have
-        if self.num_coins >= coins:
-            self.num_coins = self.num_coins - coins
-            return self.num_coins
-        else:
-            raise ValueError("You do not have that many coins")
-    from flask import Flask, render_template, request
-app = Flask(__name__)
-app.debug = True
-
-@app.route('/', methods=['GET'])
-def dropdown():
-    colours = ['Red', 'Blue', 'Black', 'Orange']
-    return render_template('test.html', colours=colours)
-
 if __name__ == "__main__":
     app.run()
-
-
 
 # runs the application on the development server
 if __name__ == "__main__":
