@@ -6,12 +6,12 @@ app = Flask(__name__)
 
 #this adds the greet code-------------------------------
 
-def greet(link, file, defaultsubmission):
+def greet(link, file, defaultnumber):
     if request.form:                                                    # if the user submits a name
-        submission = request.form.get("input")                          # store what the user submits
-        if len("input") != 0:                                        # and if there is text in the submission box
-            return render_template(file, input=submission, link=link)   # give html file the stored name
-    return render_template(file, input=defaultsubmission, link=link)    # if no submitted text, use "defaultsubmission"
+        number = request.form.get("input")                          # store what the user submits
+        if len("input") != 0:                                        # and if there is text in the number box
+            return render_template(file, input=number, link=link)   # give html file the stored name
+    return render_template(file, input=defaultnumber, link=link)    # if no submitted text, use "defaultnumber"
 
 @app.route('/')
 def index():
@@ -47,7 +47,11 @@ def videojournal():
 
 @app.route('/binaryhackathon/', methods=['GET', 'POST'])
 def binaryhackathon():
-    return greet('/greet/', "/minilabs/binaryhackathon.html", "8")
+    if request.form:
+        number = request.form.get("input")
+        if len(number) != 0:
+            return render_template("/minilabs/binaryhackathon.html", BITS=int(number), link="/binaryhackathon/")
+    return render_template("/minilabs/binaryhackathon.html", BITS=8, link="/binaryhackathon/")
 
 # How-Its-Made ---------------------------------------
 
@@ -105,11 +109,6 @@ class CoinBank:
 def dropdown():
     colours = ['Red', 'Blue', 'Black', 'Orange']
     return render_template('test.html', colours=colours)
-
-if __name__ == "__main__":
-    app.run()
-
-
 
 # runs the application on the development server
 if __name__ == "__main__":
