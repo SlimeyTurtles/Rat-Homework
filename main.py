@@ -1,17 +1,19 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
+from images import image_data
+
 
 # create a Flask instance
 app = Flask(__name__)
 
 #this adds the greet code-------------------------------
 
-def greet(link, file, default):
-    if request.form:                                                # if the user submits a name
-        input = request.form.get("input")                           # store what the user submits
-        if len("input") != 0:                                       # and if there is text in the number box
-            return render_template(file, input=input, link=link)    # give html file the stored name
-    return render_template(file, input=default, link=link)          # if there is nothing submitted, use "default"
+def greet(link, file, defaultsubmission):
+    if request.form:                                                    # if the user submits a name
+        submission = request.form.get("input")                          # store what the user submits
+        if len("input") != 0:                                        # and if there is text in the submission box
+            return render_template(file, input=submission, link=link)   # give html file the stored name
+    return render_template(file, input=defaultsubmission, link=link)    # if no submitted text, use "defaultsubmission"
 
 @app.route('/')
 def index():
@@ -47,11 +49,11 @@ def videojournal():
 
 @app.route('/binaryhackathon/', methods=['GET', 'POST'])
 def binaryhackathon():
-    if request.form:
-        number = request.form.get("input")
-        if len(number) != 0:
-            return render_template("/minilabs/binaryhackathon.html", BITS=int(number), link="/binaryhackathon/")
-    return render_template("/minilabs/binaryhackathon.html", BITS=8, link="/binaryhackathon/")
+    return greet('/greet/', "/minilabs/binaryhackathon.html", "8")
+
+@app.route('/rgb/', methods=['GET', 'POST'])
+def rgb():
+    return render_template("/minilabs/rgb.html", images=image_data)
 
 # How-Its-Made ---------------------------------------
 
@@ -93,17 +95,27 @@ class CoinBank:
     def getCoins(self):
         return self.num_coins
 
-    def addCoins(self, coins):
-        self.num_coins = self.num_coins + coins
-        return self.num_coins
-
-    def removeCoins(self, coins):
-        # only remove coins if we have enough! We do not let you spend more than you have
-        if self.num_coins >= coins:
+    def AddCoins(self, coins):
+        # if removing coins (coins are negative) and we can afford it
+        if self.num_coins >= coins < 0:
             self.num_coins = self.num_coins - coins
             return self.num_coins
+        # if we are adding coins
+        elif coins > 0:
+            self.num_coins = self.num_coins + coins
+        # if you do not have enough coins
         else:
             raise ValueError("You do not have that many coins")
+
+@app.route('/', methods=['GET'])
+def dropdown():
+    colours = ['Red', 'Blue', 'Black', 'Orange']
+    return render_template('test.html', colours=colours)
+
+if __name__ == "__main__":
+    app.run()
+
+
 
 # runs the application on the development server
 if __name__ == "__main__":
