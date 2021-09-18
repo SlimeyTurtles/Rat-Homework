@@ -40,13 +40,12 @@ Table of Contents:
 - [X] Embed Wireframes https://github.com/SlimeyTurtles/Rat-Homework/commit/d3a304b45f07b4e5e381983518925ca531003f0e
 - [X] Embed TPT 3 https://github.com/SlimeyTurtles/Rat-Homework/commit/6f9021604b10f5b87a35a1c2ce2fed50b52409a8
 - [X] Greet https://github.com/SlimeyTurtles/Rat-Homework/blob/main/templates/greet.html
-
-To Do:
-
-7. Virtual Currency Counter
-8. Connection to Canvas
-9. Developing Shop
-10. Developing Games
+7. Binary Hackathon Code
+- [X] Change Images https://github.com/SlimeyTurtles/Rat-Homework/commit/5e55d9b4e034f871883edb356c35a44f94724ce4
+- [X] Binary to ASCII Conversion https://github.com/SlimeyTurtles/Rat-Homework/commit/62c31d0fc47b6b43a61bd414271ea5bbe75549fd
+- [X] Bits Front End Code https://github.com/SlimeyTurtles/Rat-Homework/commit/64ba8047a021fa783eb497e27a5dfa422bd5d31e
+8. RGB Tech Talk https://github.com/SlimeyTurtles/Rat-Homework/commit/5f99358c19c37a6f78741ac39dc06df81b58db39
+9. Virtual Currency https://github.com/SlimeyTurtles/Rat-Homework/commit/2fb3077e5a4b3f9de56bfbf0b33727a99abd2ee1
 
 ## Sprint 1, 2 Aug. 23 - Sept. 3 ([Overview with self grades](https://docs.google.com/document/d/15w6Z8kx3Inzfa8vwtc6_sD0a42b-ZCU14hYjFbG608A/edit?usp=sharing))
 
