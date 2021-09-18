@@ -6,13 +6,25 @@
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
+<link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
 
     <style style="background-color:powderblue;">
+
         p {
             margin: 10px 10px 10px 10px;
+            font-family: 'Allerta';
+            color: CornflowerBlue;
+
         }
         h1{
-            margin: 10px 10px 10px 10px
+            margin: 10px 10px 10px 10px;
+            font-family: 'Allerta';
+            color: CornflowerBlue;
+        }
+
+        body {
+            background-color:AliceBlue;
+            color: CornflowerBlue;
         }
 
     </style>
@@ -24,7 +36,7 @@
         <div class="col-12">
             <form id="greet" method="POST" action={{link}} >
                 <label for="name">Type a greeting name?</label>
-                <input name="name" id="name">
+                <input name="input" id="name">
                 <input type="submit" value="Greetings!">
             </form>
         </div>
@@ -34,15 +46,16 @@
 
       <h1>Calissa Tyrrell</h1>
 
-    <p>Hi! My name is Calissa and I am currently a junior at Del Norte. My favorite class at Del Norte is AP Computer
+    <p> Hi! My name is Calissa and I am currently a junior at Del Norte. My favorite class at Del Norte is AP Computer
     <br> Science, probably because its the most interesting. To be honest though, I'm not very good at it. <br> </p>
 
     <p>I also have a lot of hobbies. I play basketball year-round, enjoy gardening, playing video games, as well as eating. Yes, eating is a hobby.
         I'd say there is a special art to good food. Yummy food (especially Italian food) is probably what I am most passionate about in regards to hobbies.</p>
-    
-    <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/IMG_2137%202.PNG?raw=true" style="border:20px;margin:20px"width="257" height="518"/>
 
-    <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Italian-food.jpeg?raw=true"/>
+
+    <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/about%20static/calissa%20static/Calissa1.PNG?raw=true" style="border:20px;margin:20px"width="257" height="518"/>
+
+    <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/about%20static/calissa%20static/Calissa2.jpeg?raw=true"/>
 
 
 {% endblock %}
