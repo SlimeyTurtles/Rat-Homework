@@ -49,22 +49,22 @@ Table of Contents:
 
 ## Sprint 1, 2 Aug. 23 - Sept. 3 ([Overview with self grades](https://docs.google.com/document/d/15w6Z8kx3Inzfa8vwtc6_sD0a42b-ZCU14hYjFbG608A/edit?usp=sharing))
 
-Table of Contents:
-1. About Me Avinh https://github.com/SlimeyTurtles/Rat-Homework/blob/main/templates/avinh.html
-2. About Me Akhil https://github.com/SlimeyTurtles/Rat-Homework/blob/main/templates/akhil.html
-3. About Me Calissa https://github.com/SlimeyTurtles/Rat-Homework/blob/main/templates/calissa.html
-4. About Me Valen https://github.com/SlimeyTurtles/Rat-Homework/blob/main/templates/valen.html
-5. Scrum Board https://github.com/SlimeyTurtles/Rat-Homework/projects/1
-6. Wireframe https://docs.google.com/drawings/d/13SSeENyirBK6gFAlrlJrfwtCf8htn690_FfCfaHr6hg/edit?usp=sharing
-7. Brain Write (Page 3) https://docs.google.com/document/d/12dsUnpEVu57HyiE23_80cQSTKghdxiLHDVVv7iYlNCA/edit?usp=sharing
-8. Read Me https://github.com/SlimeyTurtles/Rat-Homework#readme
-9. Greet Project https://github.com/SlimeyTurtles/Rat-Homework/blob/main/templates/greet.html
-10. Navbar Dropdown https://github.com/SlimeyTurtles/Rat-Homework/commit/069a02d2707d03a521e396e73df8ddd68c0db6b0
-11. Video Journal 0 https://github.com/SlimeyTurtles/Rat-Homework/blob/main/templates/videojournal.html
-12. Place holder HTML files https://github.com/SlimeyTurtles/Rat-Homework/commit/069a02d2707d03a521e396e73df8ddd68c0db6b0
+### PBL (Team)
+Scrum Board (Ideation / Design )
+* Scrum Master (Avinh): [Scrum board](https://github.com/SlimeyTurtles/Rat-Homework/projects/1) 
+* Designer (Calissa): [Wire Frame](https://docs.google.com/drawings/d/13SSeENyirBK6gFAlrlJrfwtCf8htn690_FfCfaHr6hg/edit?usp=sharing)
+* Technical Lead (Akhil): [Brain Write](https://docs.google.com/document/d/12dsUnpEVu57HyiE23_80cQSTKghdxiLHDVVv7iYlNCA/edit) (on page 3)
 
-Self Grades:
-- Avinh: 4/4
-- Akhil: 4/4
-- Calissa: 4/4
-- Valen: 4/4
+GitHub assets
+* Navigators (Valen): [README.md](https://github.com/SlimeyTurtles/Rat-Homework/commit/0c81c4412ccc70e1f1f0ab2eb05c7eff6b1e4547#diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5)
+* Developers (Akhil): [Bootstrap dropdowns](https://github.com/SlimeyTurtles/Rat-Homework/commit/069a02d2707d03a521e396e73df8ddd68c0db6b0), [Wire Frame menu options](https://github.com/SlimeyTurtles/Rat-Homework/commit/62743a95cda6c8f401c6c2a5ff6f4c97fa421c28)
+* Developers (Avinh): [Greet Code](https://github.com/SlimeyTurtles/Rat-Homework/commit/7275f6290af09a3c0161d209238b507f07eed4b8)
+* Developers (Calissa): [Video Journal 0](https://github.com/SlimeyTurtles/Rat-Homework/commit/7275f6290af09a3c0161d209238b507f07eed4b8)
+
+### PBL (Individual)
+| Names | Commits | Greet Integration | TPT Notes | Tool Declare |
+| --- | --- | --- | --- | --- |
+| Avinh | [Greet Code](https://github.com/SlimeyTurtles/Rat-Homework/commit/7275f6290af09a3c0161d209238b507f07eed4b8), [About Me](https://github.com/SlimeyTurtles/Rat-Homework/commit/a34049dc6734873dcc9c0098ae58b6403a0a1bf5#diff-ed6404c10378e75ea924a1529dc34a285198e885d80ab653206c138309502cf7) | [Greet Integration](https://github.com/SlimeyTurtles/Rat-Homework/commit/10be5c16919cb493e22b3c6ca3310f08a596f1d5) | [Avinh and Calissa Pair Share](https://docs.google.com/document/d/1M_jU_NzcbDCb40K4yJio2Le8LXt5a7TuSz09csn4ihg/edit?usp=sharing) | Laptop at school and desktop at home |
+| Akhil | [Drop Down](https://github.com/SlimeyTurtles/Rat-Homework/commit/069a02d2707d03a521e396e73df8ddd68c0db6b0), [About Me](https://github.com/SlimeyTurtles/Rat-Homework/commit/67c7fae05969997c33fef0396dc9442a59ad8312#diff-a75e76de4378cdc6aa1c81c45386197c63b78b5a0312ea3f5ab3690cab5336cb) | [Greet Integration](https://github.com/SlimeyTurtles/Rat-Homework/commit/10be5c16919cb493e22b3c6ca3310f08a596f1d5) | [Akhil and Valen Pair Share](https://docs.google.com/document/d/10I6YvPmj3kJEx2zUNu701KBxFONUrfeIO5VNaR7ilts/edit) | Using a personal Macbook Laptop at school and at home. Switching to a newer Macbook in a few days which should be faster and easier to use. |
+| Calissa | [Video Journal 0](https://github.com/SlimeyTurtles/Rat-Homework/commit/7275f6290af09a3c0161d209238b507f07eed4b8), [About Me](https://github.com/SlimeyTurtles/Rat-Homework/commit/5bdec55b08d6655c93c7ccda228c22dd71be9f39#diff-20c44d20c330bb564155a2d0a7ce2b1c2562332225eb804187b0884bf711ea0c) | [Greet Integration](https://github.com/SlimeyTurtles/Rat-Homework/commit/10be5c16919cb493e22b3c6ca3310f08a596f1d5) | [Avinh and Calissa Pair Share](https://docs.google.com/document/d/1M_jU_NzcbDCb40K4yJio2Le8LXt5a7TuSz09csn4ihg/edit?usp=sharing) | I use my MacOS laptop for both class and home |
+| Valen | [Read Me](https://github.com/SlimeyTurtles/Rat-Homework/commit/0c81c4412ccc70e1f1f0ab2eb05c7eff6b1e4547#diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5), [About Me](https://github.com/SlimeyTurtles/Rat-Homework/blob/main/templates/about/valen.html) | [Greet Integration](https://github.com/SlimeyTurtles/Rat-Homework/commit/10be5c16919cb493e22b3c6ca3310f08a596f1d5) | [Akhil and Valen Pair Share](https://docs.google.com/document/d/10I6YvPmj3kJEx2zUNu701KBxFONUrfeIO5VNaR7ilts/edit) | I use my personal mac laptop in class and at home |
