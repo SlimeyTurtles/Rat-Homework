@@ -20,7 +20,7 @@ def image_formatter(img, img_type):
 def image_data(path="static/", img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "awake_dog.jpeg"},
+            {'source': "Unknown", 'label': "Simpson Dog", 'file': "awake_dog.jpeg"},
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
@@ -64,7 +64,7 @@ def image_data(path="static/", img_list=None):  # path of static images is defau
 if __name__ == "__main__":
     local_path = "static/"
     img_test = [
-        {'source': "iconsdb.com", 'label': "Blue square", 'file': "awake_dog.jpeg"},
+        {'source': "iconsdb.com", 'label': "doggo", 'file': "awake_dog.jpeg"},
     ]
     items = image_data(local_path, img_test)  # path of local run
     for row in items:
