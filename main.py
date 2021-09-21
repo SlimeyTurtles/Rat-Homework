@@ -1,7 +1,5 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
-from images import image_data
-
 
 # create a Flask instance
 app = Flask(__name__)
@@ -57,10 +55,6 @@ def binaryhackathon():
 
 #
 
-@app.route('/rgb/', methods=['GET', 'POST'])
-def rgb():
-    return render_template("/minilabs/rgb.html", images=image_data)
-
 # How-Its-Made ---------------------------------------
 
 @app.route('/test-prep-tuesday/')
@@ -101,17 +95,21 @@ class CoinBank:
     def getCoins(self):
         return self.num_coins
 
-    def AddCoins(self, coins):
-        # if removing coins (coins are negative) and we can afford it
-        if self.num_coins >= coins < 0:
+    def addCoins(self, coins):
+        self.num_coins = self.num_coins + coins
+        return self.num_coins
+
+    def removeCoins(self, coins):
+        # only remove coins if we have enough! We do not let you spend more than you have
+        if self.num_coins >= coins:
             self.num_coins = self.num_coins - coins
             return self.num_coins
-        # if we are adding coins
-        elif coins > 0:
-            self.num_coins = self.num_coins + coins
-        # if you do not have enough coins
         else:
             raise ValueError("You do not have that many coins")
+    from flask import Flask, render_template, request
+
+#app = Flask(__name__)
+#app.debug = True
 
 # runs the application on the development server
 if __name__ == "__main__":
