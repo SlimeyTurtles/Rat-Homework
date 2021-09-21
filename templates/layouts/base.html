@@ -3,6 +3,37 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
  ... standardization of style
  ... setting expectations for data
  ... code reuse
+ .menu:hover .menu {
+            background: orange;
+        }
+
+        .menu:hover .menu-content {
+            display: block;
+        }
+ .menu {
+            position: fixed;
+            bottom: 2%;
+            right: 2%;
+        }
+
+        .menu-content {
+            display: none;
+            position: fixed;
+            bottom: 5%;
+            right: 2%;
+            z-index: 1;
+            background:#fff7cd;
+            left: auto;
+            top: auto;.
+        }
+
+        .menu-content a {
+            position: relative;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
 -->
 
 <!DOCTYPE HTML>
@@ -19,6 +50,10 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1">
+
     <style>
         :root{
             --sb: SandyBrown;
@@ -38,24 +73,43 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             font-family:'Sigmar One';
         }
 
-        .menu {
-            position: fixed;
-            bottom: 2%;
-            right: 2%;
+        .container {
+            display: inline-block;
+            cursor: pointer;
         }
 
-        .menu-content {
+        .bar1, .bar2, .bar3 {
+            width:35px;
+            height:5px;
+            background-color: sandybrown;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .change .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate: rotate(-45deg)  translate(-9px, 6px);
+        }
+
+        .change .bar2 {opacity: 0;}
+
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px,-8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+
+        .change content {
             display: none;
             position: fixed;
             bottom: 5%;
             right: 2%;
             z-index: 1;
-            background: #d44646;
+            background:#fff7cd;
             left: auto;
-            top: auto;
+            top: auto;.
         }
 
-        .menu-content a {
+        .change menu-content a {
             position: relative;
             color: black;
             padding: 12px 16px;
@@ -63,15 +117,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             display: block;
         }
 
-        .menu-content a:hover {background-color: #2980B9}
 
-        .menu:hover .menu {
-            background: #59d446;
-        }
 
-        .menu:hover .menu-content {
-            display: block;
-        }
 
         #homeworklist {
             position: fixed;
@@ -79,6 +126,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             right: 2%;
             font-size: xx-large;
         }
+
 
     </style>
 
@@ -96,29 +144,41 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     <p id="homeworklist">Homework List: <br>1. shenanigans<br>2. sheeenanigans</p>
 
-    <div class="menu">
-        <button class="menu">Menu</button>
-        <div class="menu-content">
+    <div class="container" onclick="menuAni(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+
+        <div class="content">
             <table>
                 <tr>
-                    <td><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true"></td>
-                    <td><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true"></td>
-                    <td><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true"></td>
-                </tr>
-                <tr>
-                    <td><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true"></td>
-                    <td><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true"></td>
-                    <td><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true"></td>
-                </tr>
-                <tr>
-                    <td><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true"></td>
-                    <td><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true"></td>
-                    <td><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true"></td>
+                    <td><a href="food"><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/food.gif?raw=true" style="height:204px;width:204px"></a></td>
+                    <td><a href="shop"><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/store.gif?raw=true" style="height:150px;width:150px"></a></td>
+                    <td><a href="minigames"><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/games.gif?raw=true" style="height:150px;width:200px"></a></td>
                 </tr>
             </table>
         </div>
     </div>
 
+    <script>
+        function menuAni(x){
+            x.classList.toggle("change");
+        }
+    </script>
+
+    <div class="menu">
+        <button class="menu">Menu</button>
+        <div class="menu-content">
+            <table>
+                <tr>
+                    <td><a href="food"><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/food.gif?raw=true" style="height:204px;width:204px"></a></td>
+                    <td><a href="shop"><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/store.gif?raw=true" style="height:150px;width:150px"></a></td>
+                    <td><a href="minigames"><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/games.gif?raw=true" style="height:150px;width:200px"></a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    "https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/food.gif?raw=true" style="height:204px;width:204px"
     {% endblock %}
 </body>
 

@@ -59,7 +59,7 @@ def binaryhackathon():
 
 @app.route('/rgb/', methods=['GET', 'POST'])
 def rgb():
-    return render_template("/minilabs/rgb.html", images=image_data())
+    return render_template("/minilabs/rgb.html", images=image_data)
 
 # How-Its-Made ---------------------------------------
 
