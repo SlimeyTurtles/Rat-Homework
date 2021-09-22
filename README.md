@@ -32,7 +32,7 @@ We want our website to be an interactive homework checklist. So far on our sight
 
 ### Planning (1 Point)
 
-- [README](https://github.com/SlimeyTurtles/Rat-Homework/blob/main/README.md/#Sprint-5)
+- [README](https://github.com/SlimeyTurtles/Rat-Homework/blob/main/README.md/#Sprint-4)
 - [Scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1)
 
 ### Team (2 Points)
