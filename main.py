@@ -55,8 +55,6 @@ def binaryhackathon():
             return render_template("/minilabs/binaryhackathon.html", BITS=int(number), link="/binaryhackathon/")
     return render_template("/minilabs/binaryhackathon.html", BITS=8, link="/binaryhackathon/")
 
-#
-
 @app.route('/rgb/', methods=['GET', 'POST'])
 def rgb():
     return render_template("/minilabs/rgb.html", images=image_data())

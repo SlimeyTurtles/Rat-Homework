@@ -2,39 +2,7 @@
 This HTML is setup as as a Jinja2 layout, coders use layouts for:
  ... standardization of style
  ... setting expectations for data
- ... code reuse
- .menu:hover .menu {
-            background: orange;
-        }
-
-        .menu:hover .menu-content {
-            display: block;
-        }
- .menu {
-            position: fixed;
-            bottom: 2%;
-            right: 2%;
-        }
-
-        .menu-content {
-            display: none;
-            position: fixed;
-            bottom: 5%;
-            right: 2%;
-            z-index: 1;
-            background:#fff7cd;
-            left: auto;
-            top: auto;.
-        }
-
-        .menu-content a {
-            position: relative;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
--->
+ ... code reuse -->
 
 <!DOCTYPE HTML>
 <html lang="en">
@@ -42,6 +10,10 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 {% set basename = "Homework Planner" %}
 
 <head>
+
+    {% block head %}
+    {% endblock %}
+
     <link href='https://fonts.googleapis.com/css?family=Sigmar One' rel='stylesheet'>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -87,8 +59,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         }
 
         .change .bar1 {
-            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-            transform: rotate: rotate(-45deg)  translate(-9px, 6px);
+            -webkit-transform: rotate(-45deg) translate(-7px, 8px);
+            transform: rotate(-45deg)  translate(-7px, 8px);
         }
 
         .change .bar2 {opacity: 0;}
@@ -96,17 +68,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         .change .bar3 {
             -webkit-transform: rotate(45deg) translate(-8px,-8px);
             transform: rotate(45deg) translate(-8px, -8px);
-        }
-
-        .change content {
-            display: none;
-            position: fixed;
-            bottom: 5%;
-            right: 2%;
-            z-index: 1;
-            background:#fff7cd;
-            left: auto;
-            top: auto;.
         }
 
         .change menu-content a {
@@ -117,15 +78,29 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             display: block;
         }
 
-
-
-
-        #homeworklist {
-            position: fixed;
-            top: 10%;
-            right: 2%;
-            font-size: xx-large;
+        .change .menu-content {
+            display: block;
         }
+
+        .menu-content {
+            display: none;
+            position: fixed;
+            bottom: 5%;
+            right: 2%;
+            z-index: 1;
+            background:#fff7cd;
+            left: auto;
+            top: auto;.
+        }
+
+        .menu-content a {
+            position: relative;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
 
 
     </style>
@@ -136,20 +111,14 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 <body>
     {% include "layouts/navbar.html" %}
-
     {% block body %}
-
-    <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true" width="50%" height="50%">
-    <p>this rat is a place holder for when i make a background later (avinh)</p>
-
-    <p id="homeworklist">Homework List: <br>1. shenanigans<br>2. sheeenanigans</p>
-
+    {% endblock %}
     <div class="container" onclick="menuAni(this)">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
 
-        <div class="content">
+        <div class="menu-content">
             <table>
                 <tr>
                     <td><a href="food"><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/food.gif?raw=true" style="height:204px;width:204px"></a></td>
@@ -165,21 +134,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             x.classList.toggle("change");
         }
     </script>
-
-    <div class="menu">
-        <button class="menu">Menu</button>
-        <div class="menu-content">
-            <table>
-                <tr>
-                    <td><a href="food"><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/food.gif?raw=true" style="height:204px;width:204px"></a></td>
-                    <td><a href="shop"><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/store.gif?raw=true" style="height:150px;width:150px"></a></td>
-                    <td><a href="minigames"><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/games.gif?raw=true" style="height:150px;width:200px"></a></td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    "https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/food.gif?raw=true" style="height:204px;width:204px"
-    {% endblock %}
 </body>
 
 {% block background %}
