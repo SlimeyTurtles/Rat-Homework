@@ -1,4 +1,4 @@
-# Team Repositories Period 3 (Avinh, Akhil, Calissa, Valen)
+# Team Repositori Period 3 (Avinh, Akhil, Calissa, Valen)
 
 ### [Repository](https://github.com/SlimeyTurtles/Rat-Homework#readme)
 
@@ -26,7 +26,21 @@ We want our website to be an interactive homework checklist. So far on our sight
 
 ## <a name="Sprint-5"> Sprint 5, Sept. 20 - Sept. 24 </a>
 
-### 
+### TPT Activities (2 Points)
+
+| Requirements | Avinh and Calissa | Akhil and Valen |
+| --- | --- | --- |
+| Write about OO and TO | | |
+| 3.1 | | |
+| 3.2 | | |
+
+### RGB Mini-lab (3 Points)
+
+- Dynamic Greyscale (Akhil)
+- Hidden Message (Valen)
+- Manipulate Images
+- Big O Notation
+- Research (Calissa)
 
 ## <a name="Sprint-4"> Sprint 4, Sept. 13 - Sept. 17 (5 Points) </a>
 
