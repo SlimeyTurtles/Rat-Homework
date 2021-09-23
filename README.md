@@ -99,7 +99,7 @@ Binary Hackathon Code
 | Calissa | [Change Background](https://github.com/SlimeyTurtles/Rat-Homework/commit/605aaea7ced436e449cb6fe55cbad204a7c9025b), [Change Font](https://github.com/SlimeyTurtles/Rat-Homework/commit/87409f4cc819623e6d8a9cbe84113d1c8dd9da58) | [Avinh and Calissa Pair Share](https://docs.google.com/document/d/1M_jU_NzcbDCb40K4yJio2Le8LXt5a7TuSz09csn4ihg/edit?usp=sharing) |
 | Valen | [Embed PairShare](https://github.com/SlimeyTurtles/Rat-Homework/commit/41ae1cfea8f24300e62a0694eaba60a92f675f96) | [Akhil and Valen Pair Share](https://docs.google.com/document/d/10I6YvPmj3kJEx2zUNu701KBxFONUrfeIO5VNaR7ilts/edit) |
 
-## </a name="Sprint-1,2"> Sprint 1, 2 Aug. 23 - Sept. 3 ([Overview with self grades](https://docs.google.com/document/d/15w6Z8kx3Inzfa8vwtc6_sD0a42b-ZCU14hYjFbG608A/edit?usp=sharing)) </a>
+## <a name="Sprint-1,2"> Sprint 1, 2 Aug. 23 - Sept. 3 ([Overview with self grades](https://docs.google.com/document/d/15w6Z8kx3Inzfa8vwtc6_sD0a42b-ZCU14hYjFbG608A/edit?usp=sharing)) </a>
 
 ### PBL (Team)
 Scrum Board (Ideation / Design )
