@@ -31,8 +31,18 @@
                             <img class="img-responsive py-3" id="img{{loop.index}}" alt="" width="256" height="Auto" src="{{image.base64}}" >
 
                             <script>
+                                let imgStatus = 'colored';
                                 function gsToggle() {
-                                    document.getElementById("img{{loop.index}}").src = "{{image.base64_GRAY}}";
+                                    if (imgStatus == 'colored') {
+                                        var imgType = document.getElementById("img{{loop.index}}");
+                                        imgType.src = "{{image.base64_GRAY}}";
+                                        imgStatus = 'grayscale';
+                                    }
+                                    if(imgStatus == 'grayscale'){
+                                        var imgType = document.getElementById("img{{loop.index}}");
+                                        imgType.src = "{{image.base64}}";
+                                        imgStatus = 'colored';
+                                    }
                                 }
                             </script>
 
