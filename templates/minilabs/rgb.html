@@ -38,7 +38,7 @@
                                         imgType.src = "{{image.base64_GRAY}}";
                                         imgStatus = 'grayscale';
                                     }
-                                    if(imgStatus == 'grayscale'){
+                                    else{
                                         var imgType = document.getElementById("img{{loop.index}}");
                                         imgType.src = "{{image.base64}}";
                                         imgStatus = 'colored';
