@@ -1,5 +1,7 @@
 {% extends "layouts/base.html" %}
 
+
+
 {% block body %}
 
 <title>RGB starter</title>
@@ -26,12 +28,16 @@
                             <div>{{image.source}}</div>
                         </td>
                         <td>
-                            <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
-                            <!-- Hack: create button (btn{{loop.index}} to  call java script function
-                               pass index to allow you to toggle images with hidden id's
-                               {{image.base64}}  original image
-                               {{image.base64_GRAY}}  gray scale image
-                            -->
+                            <img class="img-responsive py-3" id="img{{loop.index}}" alt="" width="256" height="Auto" src="{{image.base64}}" >
+
+                            <script>
+                                function gsToggle() {
+                                    document.getElementById("img{{loop.index}}").src = "{{image.base64_GRAY}}";
+                                }
+                            </script>
+
+                            <button type="button" onclick="gsToggle()"> Grayscale </button>
+
                             <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                             <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
                         </td>
