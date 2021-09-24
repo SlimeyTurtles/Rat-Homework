@@ -4,7 +4,7 @@
 
 {% block body %}
 
-<title>RGB starter</title>
+    <title>RGB starter</title>
 
     <h1 class="text-center">RGB values within an Image</h1>
     <div class="container">
@@ -31,8 +31,18 @@
                             <img class="img-responsive py-3" id="img{{loop.index}}" alt="" width="256" height="Auto" src="{{image.base64}}" >
 
                             <script>
+                                let imgStatus = 'colored';
                                 function gsToggle() {
-                                    document.getElementById("img{{loop.index}}").src = "{{image.base64_GRAY}}";
+                                    if (imgStatus == 'colored') {
+                                        var imgType = document.getElementById("img{{loop.index}}");
+                                        imgType.src = "{{image.base64_GRAY}}";
+                                        imgStatus = 'grayscale';
+                                    }
+                                    else{
+                                        var imgType = document.getElementById("img{{loop.index}}");
+                                        imgType.src = "{{image.base64}}";
+                                        imgStatus = 'colored';
+                                    }
                                 }
                             </script>
 

@@ -1,2 +1,19 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
 {% extends "layouts/base.html" %}
+
+{% block head %}
+    <style>
+        #homeworklist {
+            position: fixed;
+            top: 10%;
+            right: 2%;
+            font-size: xx-large;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+    <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true" width="50%" height="50%">
+    <p>this rat is a place holder for when i make a background later (avinh)</p>
+
+    <p id="homeworklist">Homework List: <br>1. shenanigans<br>2. sheeenanigans</p>
+{% endblock %}
