@@ -95,3 +95,5 @@ if __name__ == "__main__":
         draw.text((0, 0), "Size is {0} X {1}".format(*row['size']))  # draw in image
         image_ref.show()
 print()
+
+("images/image_text.jpg")

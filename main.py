@@ -94,24 +94,67 @@ def minigames():
 
 # money calculations
 
+
 class CoinBank:
-    num_coins = 10
+    num_coins = 100
+# This is a dictionary with key value pairs
+    dict = {'Premium Mouse Color': 10, 'Larger Mouse Size': 15, 'Rename Mouse': 20, 'Elite Mouse Skin': 10, 'Heightened Smell': 20}
 
     def getCoins(self):
         return self.num_coins
 
-    def AddCoins(self, coins):
+    def removeCoins(self, coins):
         # if removing coins (coins are negative) and we can afford it
-        if self.num_coins >= coins < 0:
+        if self.num_coins >= coins:
             self.num_coins = self.num_coins - coins
             return self.num_coins
-        # if we are adding coins
-        elif coins > 0:
-            self.num_coins = self.num_coins + coins
-        # if you do not have enough coins
         else:
             raise ValueError("You do not have that many coins")
 
+# add any number of coins
+    def AddCoins(self, coins):
+        self.num_coins = self.num_coins + coins
+
+    def costOfMouseUpgrade(key):
+        return dict[key]
+
+    def buyMouseUpgrade(self, key):
+        try:
+            cost = dict[key]
+            print ("cost of " + key + " is ", cost)
+            return self.removeCoins(cost)
+        except KeyError:
+            # Raise a KeyError because the key passed to us does not match anything in our dictionary
+            raise KeyError("No mouse upgrade avaiable for " + key)
+
+
 # runs the application on the development server
 if __name__ == "__main__":
+
+    from PIL import Image, ImageDraw
+class SecretMessage:
+    red = 0
+    green = 0
+    blue = 0
+    locx = 0
+    locy = 0
+    savefile = "image_text.jpg"
+
+    def __init__(self, image, message, x, y):
+        self.image = image
+        self.locx = x
+        self.locy = y
+    def initSecretMessageBlack():
+        red = 255;   green = 0;  blue = 0;   # black by default
+
+    def writeSecretMessage(self):
+        img = PIL.Image.open(self.image)
+        d1 = PIL.Image.ImageDraw.Draw(img)
+        #        myFont = ImageFont.truetype('E:/PythonPillow/Fonts/FreeMono.ttf', 40)
+        d1.text((self.locx, self.locy), message, fill =(self.red, self.green, self.blue))
+        #  d1.text((locx, locy), message, font=myFont, fill =(255, 0, 0))
+        img.show()
+        img.save(self.savefile)
+        return true
+
     app.run(debug=True)
