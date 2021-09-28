@@ -24,23 +24,31 @@
 
 We want our website to be an interactive homework checklist. So far on our sight we have temporary pages for our catagories that don't have code yet. We also have a drop down with our about me pages linked. We will have rat that eats the cheese (homework) when we complete an assignment. When the rat eats the cheese we get more lives on our mini game. Our game is catch the apple but the apple is cheese and the rat (you) has to catch the cheese to get lives. Rat traps fall down on the you have to avoide them while trying to catch the cheese to get more lives. When the rat traps hit the floor you get a point.
 
+## <a name="Sprint-6"> Sprint 6, Sept. 28 - Oct. 1 </a>
+
+### RGB Mini-lab (3 Points)
+
+| Tasks | Name | Commit |
+| --- | --- | --- |
+| Dynamic Greyscale | Akhil | [greyscale code](https://github.com/SlimeyTurtles/Rat-Homework/commit/c466afa6e5a8a7d14fd940f6eee945eaaf97ead8), [toggle-bility](https://github.com/SlimeyTurtles/Rat-Homework/commit/da2998eb7bacff43e47c8753d62049b729758364) |
+| Hidden Message | Valen | |
+| Manipulate Images | Calissa | |
+| Big O Notation | Avinh | [link](https://github.com/SlimeyTurtles/Rat-Homework/commit/f92f314bdf99001d86bd063ff6765daa5adfc96b) |
+| Research | Calissa | [link](https://docs.google.com/document/d/14XpDSa_uyAWiGxeM4FOzOdpKaVFERzjY-FlLhGXox50/edit?usp=sharing) |
+| Documentation | unassigned | |
+
 ## <a name="Sprint-5"> Sprint 5, Sept. 20 - Sept. 24 </a>
 
 ### TPT Activities (2 Points)
 
-| Requirements | Avinh and Calissa | Akhil and Valen |
-| --- | --- | --- |
-| Write about OO and TO | | |
-| 3.1 | | |
-| 3.2 | | |
+Requirements:
+- Write about OOs and TOs
+- 3.1
+- 3.2
 
-### RGB Mini-lab (3 Points)
-
-- Dynamic Greyscale (Akhil)
-- Hidden Message (Valen)
-- Manipulate Images
-- Big O Notation
-- Research (Calissa)
+Journals
+- [Avinh and Calissa](https://docs.google.com/document/d/1M_jU_NzcbDCb40K4yJio2Le8LXt5a7TuSz09csn4ihg/edit?usp=sharing)
+- [Akhil and Valen](https://docs.google.com/document/d/10I6YvPmj3kJEx2zUNu701KBxFONUrfeIO5VNaR7ilts/edit)
 
 ## <a name="Sprint-4"> Sprint 4, Sept. 13 - Sept. 17 (5 Points) </a>
 
