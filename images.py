@@ -20,7 +20,7 @@ def image_formatter(img, img_type):
 def image_data(path=Path("static/img/"), img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "Unknown", 'label': "Simpson Dog", 'file': "awake_dog.jpeg"},
+            {'source': "Pintrest", 'label': "Birthday Rat", 'file': "smile.jpeg"},
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
@@ -39,6 +39,10 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
         img_dict['hex_array'] = []
         img_dict['binary_array'] = []
         img_dict['gray_data'] = []
+        img_dict['flipR'] = img_reference.transpose(Image.FLIP_LEFT_RIGHT)
+        degree_flippedImage = img_reference.transpose(Image.FLIP_LEFT_RIGHT)
+        img_dict['base64_flipR'] = image_formatter(degree_flippedImage, img_dict['format'])
+
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
         for pixel in img_dict['data']:
             # hexadecimal conversions

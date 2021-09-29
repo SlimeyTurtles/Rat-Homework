@@ -44,9 +44,25 @@
                                         imgStatus = 'colored';
                                     }
                                 }
+
+                                function gsFlip() {
+                                    if (imgStatus == 'colored') {
+                                        var imgType = document.getElementById("img{{loop.index}}");
+                                        imgType.src = "{{image.base64_flipR}}";
+                                        imgStatus = 'flipR';
+                                    }
+                                    else{
+                                        var imgType = document.getElementById("img{{loop.index}}");
+                                        imgType.src = "{{image.base64}}";
+                                        imgStatus = 'colored';
+                                    }
+                                }
+
+
                             </script>
 
                             <button type="button" onclick="gsToggle()"> Grayscale </button>
+                            <button type="button" onclick="gsFlip()"> Flip </button>
 
                             <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                             <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
