@@ -9,11 +9,115 @@
             right: 2%;
             font-size: xx-large;
         }
+        #taskUL{
+            margin-top: 30px;
+        }
+        #taskUL li {
+            cursor: pointer;
+            position: relative;
+            padding: 10px 8px 12px 40px;
+            background: rgba(226, 255, 250, 0.8);
+            font-size: 20px;
+        }
+        #taskUL li:hover {
+            background: #ddd;
+        }
+
+        .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 12px 16px 12px 16px;
+        }
+        .close:hover {
+            background-color: #adcbd9;
+            color: black;
+        }
+        .addBtn {
+            padding: 0px;
+            width: 15%;
+            background: #d9d9d9;
+            color: #555;
+            float: left;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 0;
+        }
+        .addBtn:hover {
+            background-color: #bbb;
+        }
+
+        input{
+            width: 600px;
+            height: 50px;
+        }
     </style>
 {% endblock %}
-{% block body %}
-    <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true" width="50%" height="50%">
-    <p>this rat is a place holder for when i make a background later (avinh)</p>
 
-    <p id="homeworklist">Homework List: <br>1. shenanigans<br>2. sheeenanigans</p>
+{% block body %}
+<img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true" width="50%" height="50%">
+<p>this rat is a place holder for when i make a background later (avinh)</p>
+
+<script>
+    // makes new task when clicking on the add button
+    function newItem() {
+        var li = document.createElement("li");
+        li.setAttribute("class", "line")
+        var inputValue = document.getElementById("input").value;
+        var t = document.createTextNode(inputValue);
+        li.appendChild(t);
+        if (inputValue === '') {
+            alert("Please enter a task name.");
+        } else {
+            document.getElementById("taskUL").appendChild(li);
+        }
+        document.getElementById("input").value = "";
+
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("x");
+        span.className = "close";
+        span.appendChild(txt);
+        li.appendChild(span);
+
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function () {
+                var div = this.parentElement;
+                div.style.display = "none";
+            }
+        }
+    }
+
+    //close button
+    var list = document.getElementsByClassName("line");
+    var i;
+    for (i = 0; i < list.length;) {
+        var span = document.createElement("span");
+        var txt = document.createTextNode("x");
+        span.className = "close";
+        span.appendChild(txt);
+        list[i].appendChild(span);
+    }
+
+    // deletes list when close button is clicked
+    var close = document.getElementsByClassName("close");
+    var i;
+    for (i = 0; i < close.length;) {
+        close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+
+        }
+    }
+
+</script>
+<div id="homeworklist">
+    <h3>To do list</h3>
+    <input type="text" id="input" placeholder="Type Task Here">
+    <button onclick="newItem()" class="addBtn">Add Task</button>
+
+        <ul id="taskUL">
+        </ul>
+</div>
 {% endblock %}
