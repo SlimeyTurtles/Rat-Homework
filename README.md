@@ -32,14 +32,25 @@ We want our website to be an interactive homework checklist. So far on our sight
 | --- | --- | --- |
 | Dynamic Greyscale | Akhil | [greyscale code](https://github.com/SlimeyTurtles/Rat-Homework/commit/c466afa6e5a8a7d14fd940f6eee945eaaf97ead8), [toggle-bility](https://github.com/SlimeyTurtles/Rat-Homework/commit/da2998eb7bacff43e47c8753d62049b729758364) |
 | Hidden Message | Valen | |
-| Manipulate Images | Calissa | |
-| Big O Notation | Avinh | [link](https://github.com/SlimeyTurtles/Rat-Homework/commit/f92f314bdf99001d86bd063ff6765daa5adfc96b) |
-| Research | Calissa | [link](https://docs.google.com/document/d/14XpDSa_uyAWiGxeM4FOzOdpKaVFERzjY-FlLhGXox50/edit?usp=sharing) |
-| Documentation | Avinh | |
+| Manipulate Images | Calissa | [commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/a91f15d44755fdd2185b5ec81f25a43a33dc19b3) |
+| Big O Notation | Avinh | [commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/f92f314bdf99001d86bd063ff6765daa5adfc96b) |
+| Research | Calissa | [commit](https://docs.google.com/document/d/14XpDSa_uyAWiGxeM4FOzOdpKaVFERzjY-FlLhGXox50/edit?usp=sharing) |
+| Documentation | Avinh | [link](https://docs.google.com/document/d/1fVsNOKAVlf-BBDu1HsYmOm-zTHZ2jcg_da_N7o5K8os/edit?usp=sharing) |
+
+### College Board
+
+Requirements:
+- 3.3 Notes and Quiz
+- 3.4 Notes and Quiz
+- TT6: [link](https://docs.google.com/document/d/171Dxh1U5lwT0ucvHfQQnK3NEVlqewdzKJ7ANXXFm9PM/edit?usp=sharing)
+
+Journals
+- [Avinh and Calissa](https://docs.google.com/document/d/1M_jU_NzcbDCb40K4yJio2Le8LXt5a7TuSz09csn4ihg/edit?usp=sharing)
+- [Akhil and Valen](https://docs.google.com/document/d/10I6YvPmj3kJEx2zUNu701KBxFONUrfeIO5VNaR7ilts/edit)
 
 ### PBL
 
-- To do list prototype (Akhil)
+- To do list prototype (Akhil): [commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/24abe0977fd394af490dada89f96ca5248f117c5)
 
 ## <a name="Sprint-5"> Sprint 5, Sept. 20 - Sept. 24 </a>
 
