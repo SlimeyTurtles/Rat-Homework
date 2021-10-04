@@ -19,7 +19,7 @@ def greet(link, file, default):
 def index():
     return render_template("index.html")
 
-# about us pages -------------------------------------
+#-------------------------- ABOUT US PAGES -----------------------------------#
 
 @app.route('/avinh/', methods=['GET', 'POST'])
 def avinh():
@@ -37,44 +37,45 @@ def calissa():
 def valen():
     return greet('/valen/', "/about/valen.html", "World")
 
-# mini-labs ------------------------------------------
+#-------------------------- OUR WORK PAGES -----------------------------------#
 
 @app.route('/greet/', methods=['GET', 'POST'])
 def greetminilab():
-    return greet('/greet/', "/minilabs/greet.html", "World")
+    return greet('/greet/', "/OurWork/greet.html", "World")
 
 @app.route('/videojournal/')
 def videojournal():
-    return render_template("/minilabs/videojournal.html")
+    return render_template("/OurWork/videojournal.html")
 
 @app.route('/binaryhackathon/', methods=['GET', 'POST'])
 def binaryhackathon():
     if request.form:
         number = request.form.get("input")
         if len(number) != 0:
-            return render_template("/minilabs/binaryhackathon.html", BITS=int(number), link="/binaryhackathon/")
-    return render_template("/minilabs/binaryhackathon.html", BITS=8, link="/binaryhackathon/")
+            return render_template("/OurWork/binaryhackathon.html", BITS=int(number), link="/binaryhackathon/")
+    return render_template("/OurWork/binaryhackathon.html", BITS=8, link="/binaryhackathon/")
 
 @app.route('/rgb/', methods=['GET', 'POST'])
 def rgb():
     path = Path(app.root_path) / "static" / "img"
-    return render_template('minilabs/rgb.html', images=image_data(path))
-
-# How-Its-Made ---------------------------------------
+    return render_template('OurWork/rgb.html', images=image_data(path))
 
 @app.route('/test-prep-tuesday/')
 def PairShareJournal():
-    return render_template("/HowItsMade/TPT.html")
+    return render_template("/OurWork/TPT.html")
 
 @app.route('/brainwrites/')
 def brainwrites():
-    return render_template("/HowItsMade/brainwrites.html")
+    return render_template("/OurWork/brainwrites.html")
 
 @app.route('/wireframes/')
 def wireframes():
-    return render_template("/HowItsMade/wireframes.html")
+    return render_template("/OurWork/wireframes.html")
 
-# theme ---------------------------------------------
+@app.route('/logic-lab/')
+def logiclab():
+    return render_template("/OurWork/logiclab.html")
+#-------------------------- THEME PAGES-----------------------------------#
 
 @app.route('/food/')
 def food():
@@ -92,8 +93,8 @@ def customization():
 def minigames():
     return render_template("minigames.html")
 
-# money calculations
 
+# money calculations ------------------------------------------------------------------------------------------------------------
 
 class CoinBank:
     num_coins = 100
