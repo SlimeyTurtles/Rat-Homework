@@ -139,8 +139,6 @@
                                 <input name="input" type="number" min="1" max="24" value="type stuff here">
                                 <input type="submit" value="Submit">
                             </form>
-                            <p>{{ ROWS }}</p>
-                            <p>{{ REMAINDER }}</p>
                         </td>
                     </tr>
                 </table>
@@ -171,7 +169,6 @@
                             {% set i = (((ROWS)*8)+j) %}
                             <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
                                 <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
-                                <p>{{ i }}</p>
                             </td>
                             {% endfor %}
                         </tr>
