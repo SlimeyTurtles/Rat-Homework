@@ -127,34 +127,4 @@ class CoinBank:
             # Raise a KeyError because the key passed to us does not match anything in our dictionary
             raise KeyError("No mouse upgrade avaiable for " + key)
 
-
-# runs the application on the development server
-if __name__ == "__main__":
-
-    from PIL import Image, ImageDraw
-class SecretMessage:
-    red = 0
-    green = 0
-    blue = 0
-    locx = 0
-    locy = 0
-    savefile = "image_text.jpg"
-
-    def __init__(self, image, message, x, y):
-        self.image = image
-        self.locx = x
-        self.locy = y
-    def initSecretMessageBlack():
-        red = 255;   green = 0;  blue = 0;   # black by default
-
-    def writeSecretMessage(self):
-        img = PIL.Image.open(self.image)
-        d1 = PIL.Image.ImageDraw.Draw(img)
-        #        myFont = ImageFont.truetype('E:/PythonPillow/Fonts/FreeMono.ttf', 40)
-        d1.text((self.locx, self.locy), message, fill =(self.red, self.green, self.blue))
-        #  d1.text((locx, locy), message, font=myFont, fill =(255, 0, 0))
-        img.show()
-        img.save(self.savefile)
-        return true
-
     app.run(debug=True)

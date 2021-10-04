@@ -15,23 +15,42 @@ def image_base64(img, img_type):
 def image_formatter(img, img_type):
     return "data:image/" + img_type + ";base64," + image_base64(img, img_type)
 
+def getFilename (filename, path=Path("static/img/")):
+    file = path / filename  # file with path for local access (backend)
+    return file
 
 # color_data prepares a series of images for data analysis
 def image_data(path=Path("static/img/"), img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "Pintrest", 'label': "Birthday Rat", 'file': "smile.jpeg"},
+            {'source': "Pintrest", 'label': "Birthday Rat", 'file': "smile.jpeg", 'red': 0, 'green': 0, 'blue': 0}
+#           , {'source': "iconsdb.com", 'label': "doggo", 'file': "awake_dog.jpeg", 'red': 255, 'green': 255, 'blue': 255}
         ]
+
+# Copy-paste original images without any messages written to them, and save them as smile and awake_dog
+#    copyfile = getFilename("smile_v1.jpg") # file with path for local access (backend)
+#    # Python Image Library operations
+#    print (copyfile)
+#    img_reference = Image.open(copyfile)
+#    savefile =getFilename("smile.jpg")
+#    print (savefile)
+#    img_reference.save(savefile)
+
+  #  img_reference = Image.open(str(path) + "/awake_dog_v1.jpg")
+  #  img_reference.save(str(path) + "/awake_dog.jpg")
+
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
         img_dict['path'] = '/' + str(path)  # path for HTML access (frontend)
         file = path / img_dict['file']  # file with path for local access (backend)
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
+
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
         img_dict['size'] = img_reference.size
+
         # Conversion of original Image to Base64, a string format that serves HTML nicely
         img_dict['base64'] = image_formatter(img_reference, img_dict['format'])
         # Numpy is used to allow easy access to data of image, python list
@@ -43,7 +62,9 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
         degree_flippedImage = img_reference.transpose(Image.FLIP_LEFT_RIGHT)
         img_dict['base64_flipR'] = image_formatter(degree_flippedImage, img_dict['format'])
 
-        # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
+        writeSecretMessage(img_reference, file, "A message     ", img_dict['red'], img_dict['green'], img_dict['blue'])
+
+# 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
         for pixel in img_dict['data']:
             # hexadecimal conversions
             hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
@@ -60,7 +81,18 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
                 img_dict['gray_data'].append((average, average, average))
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
+
     return img_list  # list is returned with all the attributes for each image dictionary
+
+def writeSecretMessage(image, file, message, red, green, blue):
+    # add message to image
+    draw = ImageDraw.Draw(image)
+    draw.text((100, 0), message, fill=(red, green, blue) )  # draw in image
+    # file will be over written with the message
+    # to restore it copy the original image _v1 over the new image
+    image.save(file)
+    print ("updated file with message ")
+    print (file)
 
 
 # run this as standalone tester to see data printed in terminal
@@ -98,5 +130,7 @@ if __name__ == "__main__":
         draw.text((0, 0), "Size is {0} X {1}".format(*row['size']))  # draw in image
         image_ref.show()
 print()
+# runs the application on the development server
+from PIL import Image, ImageDraw
 
-("images/image_text.jpg")
+#if __name__ == "__main__":
