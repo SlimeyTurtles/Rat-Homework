@@ -105,25 +105,25 @@ if __name__ == "__main__":
     for row in items:
         # print some details about the image so you can validate that it looks like it is working
         # meta data
-        ##print("---- meta data -----")
-        ##print(row['label'])
-        ##print(row['format'])
-        ##print(row['mode'])
-        ##print(row['size'])
+        print("---- meta data -----")
+        print(row['label'])
+        print(row['format'])
+        print(row['mode'])
+        print(row['size'])
         # data
-        ##print("----  data  -----")
-        ##print(row['data'])
+        print("----  data  -----")
+        print(row['data'])
         print("----  gray data  -----")
         print(row['gray_data'])
-        ##print("----  hex of data  -----")
-        ##print(row['hex_array'])
-        ##print("----  bin of data  -----")
-        ##print(row['binary_array'])
+        print("----  hex of data  -----")
+        print(row['hex_array'])
+        print("----  bin of data  -----")
+        print(row['binary_array'])
         # base65
-       ## print("----  base64  -----")
-        ##print(row['base64'])
+        print("----  base64  -----")
+        print(row['base64'])
         # display image
-        ##print("----  render and write in image  -----")
+        print("----  render and write in image  -----")
         filename = local_path + row['file']
         image_ref = Image.open(filename)
         draw = ImageDraw.Draw(image_ref)

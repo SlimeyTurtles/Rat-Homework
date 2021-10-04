@@ -127,4 +127,6 @@ class CoinBank:
             # Raise a KeyError because the key passed to us does not match anything in our dictionary
             raise KeyError("No mouse upgrade avaiable for " + key)
 
+# runs the application on the development server
+if __name__ == "__main__":
     app.run(debug=True)
