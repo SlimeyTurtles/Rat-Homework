@@ -24,18 +24,47 @@
 
 We want our website to be an interactive homework checklist. So far on our sight we have temporary pages for our catagories that don't have code yet. We also have a drop down with our about me pages linked. We will have rat that eats the cheese (homework) when we complete an assignment. When the rat eats the cheese we get more lives on our mini game. Our game is catch the apple but the apple is cheese and the rat (you) has to catch the cheese to get lives. Rat traps fall down on the you have to avoide them while trying to catch the cheese to get more lives. When the rat traps hit the floor you get a point.
 
+
+## <a name="Sprint-7"> Sprint 7, Oct. 4 - Oct. 8 </a>
+
+### Logic Gates Lab (6 Points)
+
+Lab Requirements:
+| Tasks | Name | Commit | Ticket |
+| --- | --- | --- | --- |
+| Multiply and Divide by 2 (Shift) | Valen |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/47) |
+| Extend/Switch ASCII  to Unicode | Akhil |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
+| Color Codes | Akhil |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
+| Unsigned Addition |  |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
+| Logic Gates | Calissa |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
+| Signed Addition |  |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
+
+Lab Extras:
+| Tasks | Name | Commit | Ticket |
+| --- | --- | --- | --- |
+| Rows | Avinh |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/48) |
+
+### Collegeboard (2 Points)
+
+| | 3.5 | 3.6 |
+| --- | --- | --- |
+| Avinh |  |  |
+| Akhil |  |  |
+| Calissa |  |  |
+| Valen |  |  |
+
 ## <a name="Sprint-6"> Sprint 6, Sept. 28 - Oct. 1 </a>
 
 ### RGB Mini-lab (3 Points)
 
-| Tasks | Name | Commit |
-| --- | --- | --- |
-| Dynamic Greyscale | Akhil | [greyscale code](https://github.com/SlimeyTurtles/Rat-Homework/commit/c466afa6e5a8a7d14fd940f6eee945eaaf97ead8), [toggle-bility](https://github.com/SlimeyTurtles/Rat-Homework/commit/da2998eb7bacff43e47c8753d62049b729758364) |
-| Hidden Message | Valen | [commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/4dcc81a1ecdc22d3e0e1006dfa2fbbf5012c7a4d) |
-| Manipulate Images | Calissa | [commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/a91f15d44755fdd2185b5ec81f25a43a33dc19b3) |
-| Big O Notation | Avinh | [commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/f92f314bdf99001d86bd063ff6765daa5adfc96b) |
-| Research | Calissa | [commit](https://docs.google.com/document/d/14XpDSa_uyAWiGxeM4FOzOdpKaVFERzjY-FlLhGXox50/edit?usp=sharing) |
-| Documentation | Avinh | [link](https://docs.google.com/document/d/1fVsNOKAVlf-BBDu1HsYmOm-zTHZ2jcg_da_N7o5K8os/edit?usp=sharing) |
+| Tasks | Name | Commit | Ticket |
+| --- | --- | --- | --- |
+| Dynamic Greyscale | Akhil | [greyscale code](https://github.com/SlimeyTurtles/Rat-Homework/commit/c466afa6e5a8a7d14fd940f6eee945eaaf97ead8), [toggle-bility](https://github.com/SlimeyTurtles/Rat-Homework/commit/da2998eb7bacff43e47c8753d62049b729758364) | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
+| Write A Message | Valen | [commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/4dcc81a1ecdc22d3e0e1006dfa2fbbf5012c7a4d) | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/33) |
+| Manipulate Images | Calissa | [commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/a91f15d44755fdd2185b5ec81f25a43a33dc19b3) | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/32) |
+| Big O Notation | Avinh | [commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/f92f314bdf99001d86bd063ff6765daa5adfc96b) | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/39) |
+| Research | Calissa | [commit](https://docs.google.com/document/d/14XpDSa_uyAWiGxeM4FOzOdpKaVFERzjY-FlLhGXox50/edit?usp=sharing) | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/35) |
+| Documentation | Avinh | [link](https://docs.google.com/document/d/1fVsNOKAVlf-BBDu1HsYmOm-zTHZ2jcg_da_N7o5K8os/edit?usp=sharing) | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/42) |
 
 ### College Board
 
