@@ -31,7 +31,7 @@ We want our website to be an interactive homework checklist. So far on our sight
 | Tasks | Name | Commit |
 | --- | --- | --- |
 | Dynamic Greyscale | Akhil | [greyscale code](https://github.com/SlimeyTurtles/Rat-Homework/commit/c466afa6e5a8a7d14fd940f6eee945eaaf97ead8), [toggle-bility](https://github.com/SlimeyTurtles/Rat-Homework/commit/da2998eb7bacff43e47c8753d62049b729758364) |
-| Hidden Message | Valen | |
+| Hidden Message | Valen | [commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/4dcc81a1ecdc22d3e0e1006dfa2fbbf5012c7a4d) |
 | Manipulate Images | Calissa | [commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/a91f15d44755fdd2185b5ec81f25a43a33dc19b3) |
 | Big O Notation | Avinh | [commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/f92f314bdf99001d86bd063ff6765daa5adfc96b) |
 | Research | Calissa | [commit](https://docs.google.com/document/d/14XpDSa_uyAWiGxeM4FOzOdpKaVFERzjY-FlLhGXox50/edit?usp=sharing) |
