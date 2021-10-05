@@ -48,7 +48,7 @@ Lab Extras:
 
 | | 3.5 | 3.6 |
 | --- | --- | --- |
-| Avinh |  |  |
+| Avinh | [link](https://docs.google.com/document/d/1K2F8oK6GENNjkntqbwWuTKtp_NxH8kRZiJMaoAKZ4qU/edit?usp=sharing#heading=h.nv3d4cryycgh) | https://docs.google.com/document/d/1K2F8oK6GENNjkntqbwWuTKtp_NxH8kRZiJMaoAKZ4qU/edit?usp=sharing#heading=h.tnlbv4yut2wo |
 | Akhil |  |  |
 | Calissa |  |  |
 | Valen |  |  |
