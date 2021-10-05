@@ -49,8 +49,8 @@ Lab Extras:
 | | 3.5 | 3.6 |
 | --- | --- | --- |
 | Avinh | [link](https://docs.google.com/document/d/1K2F8oK6GENNjkntqbwWuTKtp_NxH8kRZiJMaoAKZ4qU/edit?usp=sharing#heading=h.nv3d4cryycgh) | https://docs.google.com/document/d/1K2F8oK6GENNjkntqbwWuTKtp_NxH8kRZiJMaoAKZ4qU/edit?usp=sharing#heading=h.tnlbv4yut2wo |
-| Akhil | [3.5 notes](https://docs.google.com/document/d/1ADzWK7hQCqoqXfQ9YzT8egU4kZVWq7GpBJqkbnPD0vU/edit?usp=sharing) | [3.6 notes](https://docs.google.com/document/d/1ADzWK7hQCqoqXfQ9YzT8egU4kZVWq7GpBJqkbnPD0vU/edit?usp=sharing) |
-| Calissa |  |  |
+| Akhil |  | https://docs.google.com/document/d/1ADzWK7hQCqoqXfQ9YzT8egU4kZVWq7GpBJqkbnPD0vU/edit?usp=sharing |
+| Calissa | [link](https://docs.google.com/document/d/17BkYgas3ukQLQ1Xn6eoTjGdYYPQwgxtcUpXaLjUG7Xw/edit?usp=sharing) | [link](https://docs.google.com/document/d/17BkYgas3ukQLQ1Xn6eoTjGdYYPQwgxtcUpXaLjUG7Xw/edit?usp=sharing) |
 | Valen |  |  |
 
 ## <a name="Sprint-6"> Sprint 6, Sept. 28 - Oct. 1 </a>
