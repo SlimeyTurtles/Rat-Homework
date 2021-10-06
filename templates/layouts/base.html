@@ -11,9 +11,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 <head>
 
-    {% block head %}
-    {% endblock %}
-
     <link href='https://fonts.googleapis.com/css?family=Sigmar One' rel='stylesheet'>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -108,6 +105,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
     <title>{{ basename }}</title>
 
+    {% block head %}
+    {% endblock %}
 </head>
 
 <body>
