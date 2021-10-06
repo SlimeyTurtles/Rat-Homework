@@ -35,7 +35,7 @@ Lab Requirements:
 | Multiply and Divide by 2 (Shift) | Valen |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/47) |
 | Extend/Switch ASCII  to Unicode | Akhil | [commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/edb8600788327c5c6e6c4a30955a61f095dcba7e) | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
 | Color Codes | Akhil |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
-| Unsigned Addition |  |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
+| Unsigned Addition | Avinh |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
 | Logic Gates | Calissa |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
 | Signed Addition |  |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
 
