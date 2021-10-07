@@ -81,21 +81,39 @@
             const binary = getBits();
             setConversions(binary);
         }
-        // add is positive integer, subtract is negative integer
-        function add(n) {
+
+        function subtract(n)
+        {
             let binary = getBits();
             // convert to decimal and do math
             let decimal = parseInt(binary, 2);
-            if (n > 0) {  // PLUS
-                decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
-            } else  {     // MINUS
-                decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
-            }
+            // decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
+            if (decimal <= 1)
+                decimal = 0; // we do not allow negative numbers
+            else
+                decimal = decimal - 1;
             // convert the result back to binary
             binary = decimal_2_base(decimal, 2);
             // update conversions
             setConversions(binary);
             // update bits
+            updateDocument(binary);
+        }
+        function add(n)
+        {
+            let binary = getBits();
+            // convert to decimal and do math
+            let decimal = parseInt(binary, 2);
+            decimal = MAX === decimal ? 0 : decimal += 1; // OVERFLOW or PLUS
+
+            // convert the result back to binary
+            binary = decimal_2_base(decimal, 2);
+            // update conversions
+            setConversions(binary);
+            // update bits
+            updateDocument(binary);
+        }
+        function updateDocument(binary) {
             for (let i = 0; i < binary.length; i++) {
                 let digit = binary.substr(i, 1);
                 document.getElementById('digit' + i).value = digit;
@@ -108,7 +126,33 @@
                 }
             }
         }
-    </script>
+        function shiftleft(n)
+        {
+            let binary = getBits();
+            let decimal = parseInt(binary, 2);
+            decimal = decimal * 2;
+//            decimal = MAX === decimal ? 0 : decimal *= 2; // OVERFLOW or shift left once
+            binary = decimal_2_base(decimal, 2);
+            // update conversions
+            setConversions(binary);
+            updateDocument(binary);
+        }
+        function shiftright(n) {
+            let binary = getBits();
+           // binary = binary >> 1;
+
+            let decimal = parseInt(binary, 2);
+            if (decimal >= 2)
+                decimal = decimal / 2;
+            else
+                decimal = 0;
+            binary = decimal_2_base(decimal, 2);
+            // update conversions
+            setConversions(binary);
+            updateDocument(binary);
+        }
+
+</script>
 
 
     <h1 class="text-center">Binary Math with Conversions</h1>
@@ -118,6 +162,7 @@
             <div class="col-8">
                 <table class="table">
                     <tr id="table">
+                        <th>Left</th>
                         <th>Plus</th>
                         <th>Binary</th>
                         <th>Octal</th>
@@ -125,16 +170,19 @@
                         <th>Decimal</th>
                         <th>Unicode</th>
                         <th>Minus</th>
+                        <th>Right</th>
                         <th>Input Bits</th>
                     </tr>
                     <tr>
+                        <td><button type ="button" id="shiftleft1" onclick="shiftleft(1)"> << </button></td>
                         <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
                         <td id="binary">00000000</td>
                         <td id="octal">0</td>
                         <td id="hexadecimal">0</td>
                         <td id="decimal">0</td>
                         <td id="ASCII"> NULL </td>
-                        <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
+                        <td><button type="button" id="sub1" onclick="subtract(1)">-1</button></td>
+                        <td><button type="button" id="shiftright1" onclick="shiftright(1)"> >> </button></td>
                         <td>
                             <form method="POST" action="/binaryhackathon/">
                                 <input name="input" type="number" min="1" max="24" value="type stuff here">
