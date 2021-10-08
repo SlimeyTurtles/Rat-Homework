@@ -28,7 +28,7 @@
 
 <style>
     :root{
-        --rgbColor: rgba(0,0,0,0);
+        --rgbColor: rgb(255,255,255);
     }
     .rgbBox{
         width: 70%;
@@ -151,11 +151,11 @@
         document.getElementById('greenDisplay').innerHTML = parseInt(bitG, 2).toString(10);
         document.getElementById('blueDisplay').innerHTML = parseInt(bitB, 2).toString(10);
 
-        var rDecimal = parseInt(bitR, 10)
-        var gDecimal = parseInt(bitG, 10)
-        var bDecimal = parseInt(bitB, 10)
+        var rDecimal = parseInt(bitR, 2).toString(10)
+        var gDecimal = parseInt(bitG, 2).toString(10)
+        var bDecimal = parseInt(bitB, 2).toString(10)
 
-        document.documentElement.style.setProperty('--rgbColor', 'rgb(' + rDecimal + ", " + gDecimal + ", " + bDecimal + "100" + ')')
+        document.documentElement.style.setProperty('--rgbColor', 'rgb(' + rDecimal + ", " + gDecimal + ", " + bDecimal + ')')
     }
 
 </script>
