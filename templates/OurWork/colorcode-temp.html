@@ -1,54 +1,89 @@
-<!DOCTYPE html>
 {% extends "layouts/base.html" %}
 
-<!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
-<!-- need to adjust Templates to start -->
+{% set red_tag = "Red" %}
+{% set blue_tag = "Blue" %}
+{% set green_tag = "Green" %}
 
-<!-- Hack: Build form to drive bit size dynamic updates
-           use HTML Input Form in Frontend, ie toward top of Page
-           send initial value and updated values to form via Python render_template -->
-<!-- Hack: use 8 as default -->
-{% set BITS = 8 %}
-{% set MAX = ((2 ** BITS) - 1) %}
-{% set perRow = 8 %}
-{% set ROWS = (BITS/perRow) | round(1, 'floor') | int  %}
-{% set REMAINDER = (BITS%8)  %}
-<!-- use your PNGs as default -->
+{% set BITS_RED = 8 %}
+{% set perRow_RED = 8 %}
+{% set ROWS_RED = (BITS_RED/perRow_RED) | round(1, 'floor') | int  %}
+{% set REMAINDER_RED = (BITS_RED%8)  %}
+
+{% set BITS_GREEN = 8 %}
+{% set perRow_GREEN = 8 %}
+{% set ROWS_GREEN = (BITS_GREEN/perRow_GREEN) | round(1, 'floor') | int  %}
+{% set REMAINDER_GREEN = (BITS_GREEN%8)  %}
+
+{% set BITS_BLUE = 8 %}
+{% set perRow_BLUE = 8 %}
+{% set ROWS_BLUE = (BITS_BLUE/perRow_BLUE) | round(1, 'floor') | int  %}
+{% set REMAINDER_BLUE = (BITS_BLUE%8)  %}
+
 {% set imgBulbOn = "/static/img/awake_dog.jpeg" %}
 {% set imgBulbOff = "/static/dog sleeping.jpeg" %}
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}
 
 {% block body %}
-<title>Binary page</title>
+
+<style>
+    .rgbBox{
+        width: 70%;
+        padding: 50px;
+        margin-top: 5px;
+        border: 2px solid black;
+    }
+</style>
 
 <script>
-    const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
 
-    // return string with current value of each bit
-
-    function getBits() {
-        let bits = "";
-        for(let i = 0; i < BITS; i++) {
-            bits = bits + document.getElementById('digit' + i).value;
+    const BITS_RED = '{{ BITS_RED }}';
+    function getBits_RED() {
+        let bits_RED = "";
+        for (let i = 0; i < BITS_RED; i++) {
+            bits_RED = bits_RED + document.getElementById('digit_RED' + i).value;
         }
-        return bits;
+        return bits_RED;
     }
 
-    // -----------------------------------------------------------------------------------------------
-
-    function setConversions(binary) {
-        document.getElementById('binary').innerHTML = binary;
-        // DOM assignment to Decimal conversion
-        document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
+    const BITS_GREEN = '{{ BITS_GREEN }}';
+    function getBits_GREEN() {
+        let bits_GREEN = "";
+        for (let i = 0; i < BITS_GREEN; i++) {
+            bits_GREEN = bits_GREEN + document.getElementById('digit_GREEN' + i).value;
+        }
+        return bits_GREEN;
     }
-    // -----------------------------------------------------------------------------------------------
 
-    function toggleBit(i) {
+    const BITS_BLUE = '{{ BITS_BLUE }}';
+    function getBits_BLUE() {
+        let bits_BLUE = "";
+        for (let i = 0; i < BITS_BLUE; i++) {
+            bits_BLUE = bits_BLUE + document.getElementById('digit_BLUE' + i).value;
+        }
+        return bits_BLUE;
+    }
+
+    function setConversions_RED(binary) {
+        document.getElementById('binary_RED').innerHTML = binary;
+        document.getElementById('decimal_RED').innerHTML = parseInt(binary, 2).toString(10);
+    }
+
+    function setConversions_GREEN(binary) {
+        document.getElementById('binary_GREEN').innerHTML = binary;
+        document.getElementById('decimal_GREEN').innerHTML = parseInt(binary, 2).toString(10);
+    }
+
+    function setConversions_BLUE(binary) {
+        document.getElementById('binary_BLUE').innerHTML = binary;
+        document.getElementById('decimal_BLUE').innerHTML = parseInt(binary, 2).toString(10);
+    }
+
+    function toggleBit_RED(i) {
         //alert("Digit action: " + i );
-        const dig = document.getElementById('digit' + i);
-        const image = document.getElementById('bulb' + i);
-        const butt = document.getElementById('butt' + i);
+        const dig = document.getElementById('digit_RED' + i);
+        const image = document.getElementById('bulb_RED' + i);
+        const butt = document.getElementById('butt_RED' + i);
         // Change digit and visual
         if (image.src.match("{{ imgBulbOn }}")) {
             dig.value = 0;
@@ -59,14 +94,60 @@
             image.src = "{{ imgBulbOn }}";
             butt.innerHTML = "{{ msgTurnOff }}";
         }
-
-        // Binary numbers for R
-        const binary = getBits();
-        setConversions(binary);
+        // Binary numbers
+        const binary = getBits_RED();
+        setConversions_RED(binary);
     }
 
-</script>
+    function toggleBit_GREEN(i) {
+        //alert("Digit action: " + i );
+        const dig = document.getElementById('digit_GREEN' + i);
+        const image = document.getElementById('bulb_GREEN' + i);
+        const butt = document.getElementById('butt_GREEN' + i);
+        // Change digit and visual
+        if (image.src.match("{{ imgBulbOn }}")) {
+            dig.value = 0;
+            image.src = "{{ imgBulbOff }}";
+            butt.innerHTML = "{{ msgTurnOn }}";
+        } else {
+            dig.value = 1;
+            image.src = "{{ imgBulbOn }}";
+            butt.innerHTML = "{{ msgTurnOff }}";
+        }
+        // Binary numbers
+        const binary = getBits_GREEN();
+        setConversions_GREEN(binary);
+    }
 
+    function toggleBit_BLUE(i) {
+        //alert("Digit action: " + i );
+        const dig = document.getElementById('digit_BLUE' + i);
+        const image = document.getElementById('bulb_BLUE' + i);
+        const butt = document.getElementById('butt_BLUE' + i);
+        // Change digit and visual
+        if (image.src.match("{{ imgBulbOn }}")) {
+            dig.value = 0;
+            image.src = "{{ imgBulbOff }}";
+            butt.innerHTML = "{{ msgTurnOn }}";
+        } else {
+            dig.value = 1;
+            image.src = "{{ imgBulbOn }}";
+            butt.innerHTML = "{{ msgTurnOff }}";
+        }
+        // Binary numbers
+        const binary = getBits_BLUE();
+        setConversions_BLUE(binary);
+    }
+
+    function displayRGB() {
+        var bitR = getBits_RED()
+        var bitG = getBits_GREEN()
+        var bitB = getBits_BLUE()
+        document.getElementById('redDisplay').innerHTML = parseInt(bitR, 2).toString(10);
+        document.getElementById('greenDisplay').innerHTML = parseInt(bitG, 2).toString(10);
+        document.getElementById('blueDisplay').innerHTML = parseInt(bitB, 2).toString(10);
+    }
+</script>
 
 <h1 class="text-center">Color Code</h1>
 <div class="container">
@@ -75,51 +156,166 @@
         <div class="col-8">
             <table class="table">
                 <tr id="table">
-                    <th>Binary</th>
-                    <th>Decimal</th>
+                    <th>Binary Red</th>
+                    <th>RGB Red Value</th>
                 </tr>
                 <tr>
-                    <td id="binary">00000000</td>
-                    <td id="decimal">0</td>
+                    <td id="binary_RED">00000000</td>
+                    <td id="decimal_RED">0</td>
                 </tr>
             </table>
         </div>
 
         <div class="col-12">
             <table class="table">
-                {% for ROW in range(ROWS) %}
+                {% for ROW_RED in range(ROWS_RED) %}
                 <tr>
-                    {% for j in range(perRow) %}
-                    {% set i = (((ROW)*8)+j) %}
-                    <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                        <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
+                    {% for j in range(perRow_RED) %}
+                    {% set i = (((ROW_RED)*8)+j) %}
+                    <td><img class="img-responsive py-3" id="bulb_RED{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                        <button type="button" id="butt_RED{{i}}" onclick="toggleBit_RED('{{i}}')">{{ msgTurnOn }}</button>
                     </td>
                     {% endfor %}
                 </tr>
                 <tr>
-                    {% for j in range(perRow) %}
-                    {% set i = ((ROW*8)+j) %}
-                    <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
+                    {% for j in range(perRow_RED) %}
+                    {% set i = ((ROW_RED*8)+j) %}
+                    <td><input type='text' id='digit_RED{{i}}' Value="0" size="1" readonly></td>
                     {% endfor %}
                 </tr>
                 {% endfor %}
 
                 <tr>
-                    {% for j in range(REMAINDER) %}
-                    {% set i = (((ROWS)*8)+j) %}
-                    <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                        <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
+                    {% for j in range(REMAINDER_RED) %}
+                    {% set i = (((ROWS_RED)*8)+j) %}
+                    <td><img class="img-responsive py-3" id="bulb_RED{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                        <button type="button" id="butt_RED{{i}}" onclick="toggleBit_RED('{{i}}')">{{ msgTurnOn }}</button>
                     </td>
                     {% endfor %}
                 </tr>
                 <tr>
-                    {% for j in range(REMAINDER) %}
-                    {% set i = ((ROWS*8)+j) %}
-                    <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
+                    {% for j in range(REMAINDER_RED) %}
+                    {% set i = ((ROWS_RED*8)+j) %}
+                    <td><input type='text' id='digit_RED{{i}}' Value="0" size="1" readonly></td>
                     {% endfor %}
                 </tr>
             </table>
         </div>
     </div>
 </div>
+
+<div class="container">
+    <div class="row justify-content-md-center">
+
+        <div class="col-8">
+            <table class="table">
+                <tr id="table">
+                    <th>Binary Green</th>
+                    <th>RGB Green Value</th>
+                </tr>
+                <tr>
+                    <td id="binary_GREEN">00000000</td>
+                    <td id="decimal_GREEN">0</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-12">
+            <table class="table">
+                {% for ROW_GREEN in range(ROWS_GREEN) %}
+                <tr>
+                    {% for j in range(perRow_GREEN) %}
+                    {% set i = (((ROW_GREEN)*8)+j) %}
+                    <td><img class="img-responsive py-3" id="bulb_GREEN{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                        <button type="button" id="butt_GREEN{{i}}" onclick="toggleBit_GREEN('{{i}}')">{{ msgTurnOn }}</button>
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for j in range(perRow_GREEN) %}
+                    {% set i = ((ROW_GREEN*8)+j) %}
+                    <td><input type='text' id='digit_GREEN{{i}}' Value="0" size="1" readonly></td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+
+                <tr>
+                    {% for j in range(REMAINDER_GREEN) %}
+                    {% set i = (((ROWS_GREEN)*8)+j) %}
+                    <td><img class="img-responsive py-3" id="bulb_GREEN{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                        <button type="button" id="butt_GREEN{{i}}" onclick="toggleBit_GREEN('{{i}}')">{{ msgTurnOn }}</button>
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for j in range(REMAINDER_GREEN) %}
+                    {% set i = ((ROWS_GREEN*8)+j) %}
+                    <td><input type='text' id='digit_GREEN{{i}}' Value="0" size="1" readonly></td>
+                    {% endfor %}
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-md-center">
+
+        <div class="col-8">
+            <table class="table">
+                <tr id="table">
+                    <th>Binary Blue</th>
+                    <th>RGB Blue Value</th>
+                </tr>
+                <tr>
+                    <td id="binary_BLUE">00000000</td>
+                    <td id="decimal_BLUE">0</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-12">
+            <table class="table">
+                {% for ROW_BLUE in range(ROWS_BLUE) %}
+                <tr>
+                    {% for j in range(perRow_BLUE) %}
+                    {% set i = (((ROW_BLUE)*8)+j) %}
+                    <td><img class="img-responsive py-3" id="bulb_BLUE{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                        <button type="button" id="butt_BLUE{{i}}" onclick="toggleBit_BLUE('{{i}}')">{{ msgTurnOn }}</button>
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for j in range(perRow_BLUE) %}
+                    {% set i = ((ROW_BLUE*8)+j) %}
+                    <td><input type='text' id='digit_BLUE{{i}}' Value="0" size="1" readonly></td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+
+                <tr>
+                    {% for j in range(REMAINDER_BLUE) %}
+                    {% set i = (((ROWS_BLUE)*8)+j) %}
+                    <td><img class="img-responsive py-3" id="bulb_BLUE{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                        <button type="button" id="butt_BLUE{{i}}" onclick="toggleBit_BLUE('{{i}}')">{{ msgTurnOn }}</button>
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for j in range(REMAINDER_BLUE) %}
+                    {% set i = ((ROWS_BLUE*8)+j) %}
+                    <td><input type='text' id='digit_BLUE{{i}}' Value="0" size="1" readonly></td>
+                    {% endfor %}
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div align="center">
+    <h2> RBG Value =</h2> <p id="redDisplay">{{red_tag}}: NULL</p><p id="greenDisplay">{{green_tag}}: NULL</p><p id="blueDisplay">{{blue_tag}}: NULL</p>
+
+<button onclick="displayRGB()">Click to see RGB that you created!</button>
+    <div class="rgbBox">Your color displayed as the background color!</div>
+</div>
+
 {% endblock %}
