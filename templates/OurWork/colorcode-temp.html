@@ -27,11 +27,15 @@
 {% block body %}
 
 <style>
+    :root{
+        --rgbColor: rgba(0,0,0,0);
+    }
     .rgbBox{
         width: 70%;
         padding: 50px;
         margin-top: 5px;
         border: 2px solid black;
+        background-color: var(--rgbColor);
     }
 </style>
 
@@ -146,7 +150,14 @@
         document.getElementById('redDisplay').innerHTML = parseInt(bitR, 2).toString(10);
         document.getElementById('greenDisplay').innerHTML = parseInt(bitG, 2).toString(10);
         document.getElementById('blueDisplay').innerHTML = parseInt(bitB, 2).toString(10);
+
+        var rDecimal = parseInt(bitR, 10)
+        var gDecimal = parseInt(bitG, 10)
+        var bDecimal = parseInt(bitB, 10)
+
+        document.documentElement.style.setProperty('--rgbColor', 'rgb(' + rDecimal + ", " + gDecimal + ", " + bDecimal + "100" + ')')
     }
+
 </script>
 
 <h1 class="text-center">Color Code</h1>
@@ -315,7 +326,7 @@
     <h2> RBG Value =</h2> <p id="redDisplay">{{red_tag}}: NULL</p><p id="greenDisplay">{{green_tag}}: NULL</p><p id="blueDisplay">{{blue_tag}}: NULL</p>
 
 <button onclick="displayRGB()">Click to see RGB that you created!</button>
-    <div class="rgbBox">Your color displayed as the background color!</div>
+    <div class="rgbBox" id="rgbBox">Your color displayed as the background color!</div>
 </div>
 
 {% endblock %}
