@@ -1,0 +1,55 @@
+{% extends "layouts/base.html" %}
+
+{% set project = "Addition" %}
+{% set rows = 2 %}
+{% set perRow = 8 %}
+
+{% block head %}
+    <script>
+        function concatRow(row) {
+            let binNum = '';
+            for(let count = 0; count < 8; count++) {
+                let id = ((row - 1) * 8) + count
+                binNum = binNum + document.getElementById(id).innerHTML;
+            }
+            return binNum
+        }
+        function add(row1, row2) {
+            let num1 = parseInt(concatRow(row1), 2).toString(10)
+            let num2 = parseInt(concatRow(row2), 2).toString(10)
+            let sum = parseInt(Number(num1)+Number(num2), 10).toString(2);
+            document.getElementById("addition").innerHTML = sum;
+            return sum
+        }
+        function toggleBits(i) {;
+            if (document.getElementById(i).innerHTML == "0") {
+                document.getElementById(i).innerHTML = "1";
+            }
+            else if (document.getElementById(i).innerHTML == "1") {
+                document.getElementById(i).innerHTML = "0";
+            }
+            else {
+                document.getElementById(i).innerHTML = "error";
+            }
+        }
+    </script>
+    <style>
+
+    </style>
+{% endblock %}
+{% block body %}
+<table>
+    {% for row in range(rows) %}
+    <tr>
+        {% for j in range(perRow) %}
+        {% set i = (((row)*8)+j) %}
+        <td>
+            <button type="button" id="{{i}}" onclick="toggleBits('{{i}}')">0</button>
+            <p>{{i}}</p>
+        </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+<button type="button" id="addition" onclick="add(1, 2)">add</button>
+{% endblock %}

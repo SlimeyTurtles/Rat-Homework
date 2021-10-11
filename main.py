@@ -76,9 +76,10 @@ def wireframes():
 def logiclab():
     return render_template("/OurWork/logiclab.html")
 
-@app.route('/color-code/')
-def colorcode():
-    return render_template("/OurWork/colorcode-temp.html")
+@app.route('/addition/')
+def addition():
+    return render_template("/OurWork/addition.html")
+
 #-------------------------- THEME PAGES-----------------------------------#
 
 @app.route('/food/')
