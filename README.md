@@ -29,6 +29,8 @@ We want our website to be an interactive homework checklist. So far on our sight
 
 ### Logic Gates Lab (6 Points)
 
+[Runtime Video](https://youtu.be/MMDhkP4jzm8)
+
 Lab Requirements:
 | Tasks | Name | Ticket |
 | --- | --- | --- |
