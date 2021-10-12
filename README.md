@@ -36,7 +36,7 @@ Lab Requirements:
 | Extend/Switch ASCII  to Unicode | Akhil | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
 | Color Codes | Akhil | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
 | Unsigned Addition | Avinh | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
-| Logic Gates | Calissa | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
+| Logic Gates | Calissa | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/46) |
 | Signed Addition | Avinh | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
 
 Lab Extras:
