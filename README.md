@@ -33,11 +33,11 @@ Lab Requirements:
 | Tasks | Name | Ticket |
 | --- | --- | --- |
 | Multiply and Divide by 2 (Shift) | Valen | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/47) |
-| Extend/Switch ASCII  to Unicode | Akhil | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
-| Color Codes | Akhil | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
-| Unsigned Addition | Avinh | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
+| Extend/Switch ASCII  to Unicode | Akhil | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/43) |
+| Color Codes | Akhil | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/44) |
+| Unsigned Addition | Avinh | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/45) |
 | Logic Gates | Calissa | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/46) |
-| Signed Addition | Avinh | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
+| Signed Addition | Avinh | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/49) |
 
 Lab Extras:
 | Tasks | Name | Commit | Ticket |
