@@ -64,105 +64,159 @@
 
 {% block body %}
 
-<img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true" width="20%" height="20%">
-
-
-<!script>
-    // makes new task when clicking on the add button
-    function newItem() {
-        var li = document.createElement("li");
-        li.setAttribute("class", "line")
-        var inputValue = document.getElementById("input").value;
-        var t = document.createTextNode(inputValue);
-        li.appendChild(t);
-        if (inputValue === '') {
-            alert("Please enter a task name.");
-        } else {
-            document.getElementById("taskUL").appendChild(li);
-        }
-        document.getElementById("input").value = "";
-
-        var span = document.createElement("SPAN");
-        var txt = document.createTextNode("x");
-        span.className = "close";
-        span.appendChild(txt);
-        li.appendChild(span);
-
-        for (i = 0; i < close.length; i++) {
-            close[i].onclick = function () {
-                var div = this.parentElement;
-                div.style.display = "none";
-            }
-        }
-    }
-
-    //close button
-    var list = document.getElementsByClassName("line");
-    var i;
-    for (i = 0; i < list.length;) {
-        var span = document.createElement("span");
-        var txt = document.createTextNode("x");
-        span.className = "close";
-        span.appendChild(txt);
-        list[i].appendChild(span);
-    }
-
-    // deletes list when close button is clicked
-    var close = document.getElementsByClassName("close");
-    var i;
-    for (i = 0; i < close.length;) {
-        close[i].onclick = function() {
-            var div = this.parentElement;
-            div.style.display = "none";
-
-        }
-    }
-
-
-<!/script>
-
-<!div id="homeworklist">
-    <!h3>To do list</h3>
-    <!input type="text" id="input" placeholder="Type Task Here">
-    <!button onclick="newItem()" class="addBtn">Add Task</button>
-
-        <!ul id="taskUL">
-        <!/ul>
-<!/div>
-
 <script>
-    var ul = document.getElementById("myUl");
+    var todo = {
+        data: [], // creates a list/array called data to hold the localstorage data
 
-    function add() {
-        var item = document.getElementById("newItem").value;
-        var itemTxt = document.createTextNode(item);
-        var li = document.createElement("li");
-        var btn = document.createElement("button");
-        var btnx = document.createTextNode("x");
-        btn.setAttribute("onclick", "remove()");
-        btn.appendChild(btnx);
-        li.appendChild(itemTxt);
-        li.appendChild(btn);
-        ul.appendChild(li);
-        localStorage["list"] = ul.innerHTML
-    }
+        // Function below takes local storage data and adds it to the tododata array
+        // Takes stuff from the session and puts it into tododata as text in a JSON
+        // array will have the format Key,Value
+        // Key,Value = Task [0] ,Status [1]
+        // Status can either be 0 (not done), 1 (completed), or 2 (cancelled/x'ed out)
 
-    function remove() {
-        var task = this.event.currentTarget.parentNode;
-        ul.removeChild(task);
-        localStorage["list"] = ul.innerHTML // updating localstorage
-    }
+        load: function () {
+            if (localStorage.list == undefined) {
+                localStorage.list = "[]";
+            }
+            todo.data = JSON.parse(localStorage.list);
+            todo.list();
+        },
 
-    if (localStorage["list"]) {
-        ul.innerHTML = localStorage["list"];
-    }
+        // saves the current data into the LocalStorage
+        save: function () {
+            localStorage.list = JSON.stringify(todo.data);
+            todo.list();
+        },
+
+        // Function below creates (draws) html from the JSON data
+        list: function () {
+
+            // 1st empty the old HTML list
+            var container = document.getElementById("todo-list");
+            container.innerHTML = "";
+
+            // 2nd Start making the new HTML list
+            if (todo.data.length > 0) {    // if json has data inside continue and create the html elements using that data
+                var row = "", el = "";
+                for (var key in todo.data) {    // loops for each key in the JSON and creates the rows and texts for each task
+                    row = document.createElement("div");  // create div element
+                    row.classList.add("clearfix");        // set div class to clearfix
+                    row.dataset.id = key;
+
+                    // Item text
+                    el = document.createElement("div");
+                    el.classList.add("item");
+                    if (todo.data[key][1] == 1) {   // if status of task is 1 (done)
+                        el.classList.add("done");   // set class of div to done
+                    }
+                    if (todo.data[key][1] == 2) {   // if status of task is 2 (cancelled/x'ed)
+                        el.classList.add("cx");     // set class of fiv to cx
+                    }
+                    el.innerHTML = todo.data[key][0];  // set the inner HTML to the task name data at index [0] in json
+                    row.appendChild(el);               // append that div created to the row
+
+                    // Cancel button
+                    el = document.createElement("input");  // creates an input element
+                    el.setAttribute("type", "button");     // sets the attributes of the element to a button
+                    el.value = "\u2716";                  // value is a unicode X
+                    el.classList.add("bdel");              // assigns class called bdel
+                    el.addEventListener("click", function () {      //event listener calls and runs function on click
+                        todo.status(this, 2);                       // updates the element it is on to have the cancelled/x'ed out status
+                    });
+                    row.appendChild(el);      // appends the x button to the task line
+
+                    // OK button
+                    el = document.createElement("input");      // same process as above, but uses a checkmark and updates staus to complete
+                    el.setAttribute("type", "button");
+                    el.value = "\u2714";
+                    el.classList.add("bdone");
+                    el.addEventListener("click", function () {
+                        todo.status(this, 1);
+                    });
+                    row.appendChild(el);
+
+                    // Add row to list
+                    container.appendChild(row);   //references the container var = div that holds the task and appends it to the row that will hold all of the tasks created
+                }
+            }
+        },
+
+        // (D) add todoitem to the data array
+        add: function () {
+
+            let item = document.getElementById("todo-item");
+            todo.data.push([item.value, 0]);      // takes div item and pushes the task name/title as an array in the [0] index to hold it as the task
+            item.value = "";     // clears the item value
+            todo.save();     // saves and updates the array
+        },
+
+        // update the item status
+        status: function (el, stat) {
+
+            var parent = el.parentElement;    //identifies the parent element of the div item
+            todo.data[parent.dataset.id][1] = stat;    // updates the data list with the status of that element
+            todo.save();    // saves and updates the list
+        },
+
+        // deleting tasks
+        del: function (type) {
+            if (confirm("Delete tasks?")) {  // alerts a browser message saying "delete tasks?"
+                // delete all button
+                if (type == 0) {             // for all tasks
+                    todo.data = [];           // clear all items from the data list
+                    todo.save();               // save and update list
+                }
+                // delete just the completed tasks
+                else {
+                    todo.data = todo.data.filter(row => row[1]==0); // outputs the row array with completed tasks deleted
+                    todo.save();                                  // save and update list
+                }
+            }}
+    };
+
+    // page JS
+
+    // even listeners runs the follow functions when the page is loaded
+
+    //
+    window.addEventListener("load", function () {
+        document.getElementById("todo-delall").addEventListener("click", function () {
+            todo.del(0);
+        });     // when clicking the delete all button, function will set type var to 0 and tun the function
+
+
+        document.getElementById("todo-delcom").addEventListener("click", function () {
+            todo.del(1);
+        });     // when clicking the delete all button, function will set type var to 1 and tun the function
+
+
+        document.getElementById("todo-add").addEventListener("submit", function (evt) {
+            evt.preventDefault();
+            todo.add();
+        });     // when submitting using the add button, the function will run the add function
+
+        todo.load();   // run the load function
+    });
 </script>
 
 
-<div id="homeworklist">
-    <input id="input" placeholder="Type Task Here">
-    <button onclick="add()" class="addBtn">Add Task</button>
-    <ul id="taskUL">New List</ul>
-</div>
+<div id="todo-wrap">
+    <!-- header -->
+    <h1>TO DO LIST</h1>
 
+    <!-- add task button and input -->
+    <form id="todo-add">
+        <input type="text" id="todo-item" placeholder="New Item" required/>
+        <input type="submit" id="todo-save" value="&#10010;"/>
+    </form>
+
+    <!-- delete buttons -->
+    <div id="todo-del">
+        <input type="button" value="Delete All" id="todo-delall"/>
+        <input type="button" value="Delete Completed" id="todo-delcom"/>
+    </div>
+
+    <!-- task list items -->
+    <div id="todo-list"></div>
+</div>
 {% endblock %}
