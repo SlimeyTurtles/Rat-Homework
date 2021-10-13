@@ -49,7 +49,7 @@
             background-color: #bbb;
         }
 
-        input{
+        #input{
             width: 600px;
             height: 50px;
         }
@@ -60,7 +60,7 @@
 <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/rat%20gif.gif?raw=true" width="50%" height="50%">
 <p> test this rat is a place holder for when i make a background later (avinh)</p>
 
-<script>
+<!script>
     // makes new task when clicking on the add button
     function newItem() {
         var li = document.createElement("li");
@@ -111,13 +111,51 @@
         }
     }
 
-</script>
-<div id="homeworklist">
-    <h3>To do list</h3>
-    <input type="text" id="input" placeholder="Type Task Here">
-    <button onclick="newItem()" class="addBtn">Add Task</button>
 
-        <ul id="taskUL">
-        </ul>
+<!/script>
+
+<!div id="homeworklist">
+    <!h3>To do list</h3>
+    <!input type="text" id="input" placeholder="Type Task Here">
+    <!button onclick="newItem()" class="addBtn">Add Task</button>
+
+        <!ul id="taskUL">
+        <!/ul>
+<!/div>
+
+<script>
+    var ul = document.getElementById("myUl");
+
+    function add() {
+        var item = document.getElementById("newItem").value;
+        var itemTxt = document.createTextNode(item);
+        var li = document.createElement("li");
+        var btn = document.createElement("button");
+        var btnx = document.createTextNode("x");
+        btn.setAttribute("onclick", "remove()");
+        btn.appendChild(btnx);
+        li.appendChild(itemTxt);
+        li.appendChild(btn);
+        ul.appendChild(li);
+        localStorage["list"] = ul.innerHTML
+    }
+
+    function remove() {
+        var task = this.event.currentTarget.parentNode;
+        ul.removeChild(task);
+        localStorage["list"] = ul.innerHTML // updating localstorage
+    }
+
+    if (localStorage["list"]) {
+        ul.innerHTML = localStorage["list"];
+    }
+</script>
+
+
+<div id="homeworklist">
+    <input id="input" placeholder="Type Task Here">
+    <button onclick="add()" class="addBtn">Add Task</button>
+    <ul id="taskUL">New List</ul>
 </div>
+
 {% endblock %}
