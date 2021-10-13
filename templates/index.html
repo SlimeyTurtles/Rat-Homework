@@ -59,11 +59,44 @@
             background-size: cover;
         }
 
+        /* header 1 */
+        #todo-wrap h1 {
+            font-size: 1.5em;
+            margin: 0;
+            color: #333;
+        }
+
+        /* add button and input */
+        #todo-add { display: flex; }
+        #todo-item { width: 85%; }
+        #todo-save {
+            width: 15%;
+            background: #5866CF;
+            border: 2px solid #5866CF;
+        }
+
+        /* delete buttons */
+        #todo-del { margin: 10px 0;}
+        #todo-del input {
+            background: #CF585C;
+            border: 2px solid #CF585C;
+        }
+
+        #todo-wrap{
+            width: fit-content;
+            border: cornflowerblue 2px solid;
+            background-color: rgba(178, 246, 246, 0.55);
+        }
+
+        .todo-item.done {
+            background: #DCFFD7;
+            text-decoration: line-through;
+        }
     </style>
+
 {% endblock %}
 
 {% block body %}
-
 <script>
     var todo = {
         data: [], // creates a list/array called data to hold the localstorage data
@@ -109,29 +142,16 @@
                     if (todo.data[key][1] == 1) {   // if status of task is 1 (done)
                         el.classList.add("done");   // set class of div to done
                     }
-                    if (todo.data[key][1] == 2) {   // if status of task is 2 (cancelled/x'ed)
-                        el.classList.add("cx");     // set class of fiv to cx
-                    }
                     el.innerHTML = todo.data[key][0];  // set the inner HTML to the task name data at index [0] in json
                     row.appendChild(el);               // append that div created to the row
 
-                    // Cancel button
-                    el = document.createElement("input");  // creates an input element
-                    el.setAttribute("type", "button");     // sets the attributes of the element to a button
-                    el.value = "\u2716";                  // value is a unicode X
-                    el.classList.add("bdel");              // assigns class called bdel
-                    el.addEventListener("click", function () {      //event listener calls and runs function on click
-                        todo.status(this, 2);                       // updates the element it is on to have the cancelled/x'ed out status
-                    });
-                    row.appendChild(el);      // appends the x button to the task line
-
-                    // OK button
-                    el = document.createElement("input");      // same process as above, but uses a checkmark and updates staus to complete
-                    el.setAttribute("type", "button");
-                    el.value = "\u2714";
-                    el.classList.add("bdone");
-                    el.addEventListener("click", function () {
-                        todo.status(this, 1);
+                    // check/complete button
+                    el = document.createElement("input");      // creates an input element
+                    el.setAttribute("type", "button");          // sets the attributes of the element to a button
+                    el.value = "\u2714";                        // value is a unicode checkmark
+                    el.classList.add("done");                   // assigns class called done
+                    el.addEventListener("click", function () {  //event listener calls and runs function on click
+                        todo.status(this, 1);                   // updates element to have the completed status
                     });
                     row.appendChild(el);
 
@@ -197,6 +217,7 @@
 
         todo.load();   // run the load function
     });
+
 </script>
 
 
