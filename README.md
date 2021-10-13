@@ -27,22 +27,20 @@ We want our website to be an interactive homework checklist. So far on our sight
 
 ## <a name="Sprint-7"> Sprint 7, Oct. 4 - Oct. 8 </a>
 
-### Logic Gates Lab (6 Points)
+### Team (6 Points)
 
 Lab Requirements:
-| Tasks | Name | Commit | Ticket |
+| Tasks | Name | Commits | Ticket |
 | --- | --- | --- | --- |
-| Multiply and Divide by 2 (Shift) | Valen |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/47) |
-| Extend/Switch ASCII  to Unicode | Akhil | [commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/edb8600788327c5c6e6c4a30955a61f095dcba7e) | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
-| Color Codes | Akhil |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
-| Unsigned Addition | Avinh |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
-| Logic Gates | Calissa |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
-| Signed Addition |  |  | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/34) |
-
-Lab Extras:
-| Tasks | Name | Commit | Ticket |
-| --- | --- | --- | --- |
+| Multiply and Divide by 2 (Shift) | Valen | [Commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/ef02f72bb93dedabdc7b0927af39744f2d716c5d) | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/47) |
+| Extend/Switch ASCII  to Unicode | Akhil | [Commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/edb8600788327c5c6e6c4a30955a61f095dcba7e) | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/43) |
+| Color Codes | Akhil | [Create Bits](https://github.com/SlimeyTurtles/Rat-Homework/commit/924ad604b6ea6050749a9bdafa0ae5aa1ca82202), [Color](https://github.com/SlimeyTurtles/Rat-Homework/commit/6273d430733048bcc442d510621fe6869427457b) | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/44) |
+| Unsigned Addition | Avinh | [Commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/649c48fad14787b2d122ee2bc19fef2755dede4d) | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/45) |
+| Logic Gates | Calissa | [Commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/37b218a3fa9a015e6f278ed2fbf6317069db0158) | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/46) |
+| Signed Addition | Avinh | [Commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/649c48fad14787b2d122ee2bc19fef2755dede4d) | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/49) |
 | Rows | Avinh | [commit](https://github.com/SlimeyTurtles/Rat-Homework/commit/97cfe6ea11c5199ef60eddd283b9faa3263dc996) | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/48) |
+
+Runtime Video: [Video](https://youtu.be/MMDhkP4jzm8)
 
 ### Collegeboard (2 Points)
 

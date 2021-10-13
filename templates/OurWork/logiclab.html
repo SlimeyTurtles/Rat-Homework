@@ -1,15 +1,72 @@
 {% extends "layouts/base.html" %}
 {% block head %}
-    <style>
-        table, th, td{
-            border:3px coral;
-        }
-    </style>
 {% endblock %}
 {% block body %}
 <h1>Logic Gates Lab</h1>
 
-<table style="width:100%" >
+<p>Inputs!</p>
+
+<script>
+    function logicAB(){
+        const a = document.getElementById("checkboxA");
+        const b = document.getElementById("checkboxB");
+<!-- AND GATE -->
+    if (a.checked && b.checked){
+        document.getElementById("AND").innerHTML='1';
+    }
+    else{
+        document.getElementById("AND").innerHTML='0';
+    }
+<!-- OR GATE -->
+    if (a.checked | b.checked){
+        document.getElementById("OR").innerHTML='1';
+    }
+    else{
+        document.getElementById("OR").innerHTML='0';
+    }
+<!-- XOR GATE -->
+    if (a.checked ^ b.checked){
+        document.getElementById("XOR").innerHTML ='1';
+    }
+    else{
+        document.getElementById("XOR").innerHTML ='0';
+    }
+<!-- NOT GATE -->
+    if (a.checked){
+        document.getElementById("NOT").innerHTML ='0';
+    }
+    else{
+        document.getElementById("NOT").innerHTML ='1';
+    }
+<!-- NAND GATE -->
+    if (a.checked && b.checked){
+        document.getElementById("NAND").innerHTML = '0';
+    }
+    else{
+        document.getElementById("NAND").innerHTML = '1';
+    }
+<!-- NOR GATE -->
+    if (a.checked | b.checked){
+        document.getElementById("NOR").innerHTML = '0';
+    }
+    else{
+        document.getElementById("NOR").innerHTML = '1';
+    }
+<!-- XNOR GATE -->
+    if (a.checked ^ b.checked){
+        document.getElementById("XNOR").innerHTML = '0';
+    }
+    else{
+        document.getElementById("XNOR").innerHTML = '1';
+    }
+    }
+</script>
+
+     <input type="checkbox" id="checkboxA" value="unchecked" onclick="logicAB()">A</input>
+    <input type="checkbox" id="checkboxB" value="unchecked" onclick="logicAB()">B</input>
+
+
+<table style="width:60%">
     <tr>
         <th>Logic Gate</th>
         <th>Symbol</th>
@@ -17,8 +74,38 @@
     </tr>
     <tr>
         <td>AND Gate</td>
-        <td><img src=""/></td>
-    </tr>`
+        <td><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Logic%20Lab/AND.png?raw=true" style="width:216px;height:103px"/> </td>
+        <td id="AND">...</td>
+    </tr>
+    <tr>
+        <td>OR Gate</td>
+        <td><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Logic%20Lab/OR%20.png?raw=true" style="width:216px;height:103px"/></td>
+        <td id="OR">...</td>
+    </tr>
+    <tr>
+        <td>XOR Gate</td>
+        <td><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Logic%20Lab/XOR.png?raw=true" style="width:216px;height:103px"/></td>
+        <td id="XOR">...</td>
+    </tr>
+    <tr>
+        <td>NOT Gate</td>
+        <td><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Logic%20Lab/NOT.png?raw=true" style="width:216px;height:103px"/></td>
+        <td id="NOT">...</td>
+    </tr>
+    <tr>
+        <td>NOR Gate</td>
+        <td><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Logic%20Lab/NOR.png?raw=true" style="width:216px;height:103px"/></td>
+        <td id="NOR">...</td>
+    </tr>
+    <tr>
+        <td>NAND Gate</td>
+        <td><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Logic%20Lab/NAND.png?raw=true" style="width:216px;height:103px"/></td>
+        <td id="NAND">...</td>
+    </tr>
+    <tr>
+        <td>XNOR Gate</td>
+        <td><img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Logic%20Lab/XNOR.png?raw=true" style="width:216px;height:103px"/></td>
+        <td id="XNOR">...</td>
+    </tr>
 </table>
-
 {% endblock %}
