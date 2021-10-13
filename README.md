@@ -42,6 +42,8 @@ Lab Requirements:
 
 Runtime Video: [Video](https://youtu.be/MMDhkP4jzm8)
 
+Week 7 Ticket: [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/53)
+
 ### Collegeboard (2 Points)
 
 | | 3.5 | 3.6 |
