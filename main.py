@@ -98,11 +98,13 @@ def shop():
 def customization():
     return render_template("customization.html")
 
-@app.route('/minigames/')
+@app.route('/minigames/minigames/')
 def minigames():
-    return render_template("minigames.html")
+    return render_template("/minigames/minigames.html")
 
-
+@app.route('/minigames/Snake/')
+def Snake():
+    return render_template("/minigames/Snake.html")
 # money calculations ------------------------------------------------------------------------------------------------------------
 
 class CoinBank:
