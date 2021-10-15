@@ -105,6 +105,10 @@ def minigames():
 @app.route('/minigames/Snake/')
 def Snake():
     return render_template("/minigames/Snake.html")
+
+@app.route('/minigames/game/')
+def Game():
+    return render_template("/minigames/game.html")
 # money calculations ------------------------------------------------------------------------------------------------------------
 
 class CoinBank:
