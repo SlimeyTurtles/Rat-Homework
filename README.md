@@ -24,6 +24,22 @@
 
 We want our website to be an interactive homework checklist. So far on our sight we have temporary pages for our catagories that don't have code yet. We also have a drop down with our about me pages linked. We will have rat that eats the cheese (homework) when we complete an assignment. When the rat eats the cheese we get more lives on our mini game. Our game is catch the apple but the apple is cheese and the rat (you) has to catch the cheese to get lives. Rat traps fall down on the you have to avoide them while trying to catch the cheese to get more lives. When the rat traps hit the floor you get a point.
 
+## <a name="Sprint-8"> Sprint 8, Oct. 11 - Oct. 15 </a>
+
+### PBL
+| Name | Task | Commits | Ticket |
+| --- | --- | --- | --- |
+| | | |
+
+### TPT
+| Name | 3.7 | 3.8 |
+| --- | --- | --- |
+| Avinh | [at top of page](https://docs.google.com/document/d/1TJkSgIqcy-vjAVx6aAgbk_lAIqVqzyzfgVuc_PEV7uk/edit?usp=sharing) | [at middle of page](https://docs.google.com/document/d/1TJkSgIqcy-vjAVx6aAgbk_lAIqVqzyzfgVuc_PEV7uk/edit?usp=sharing) |
+| Akhil | | |
+| Calissa | | |
+| Valen | | |
+
+Journal of TPT: 
 
 ## <a name="Sprint-7"> Sprint 7, Oct. 4 - Oct. 8 </a>
 
