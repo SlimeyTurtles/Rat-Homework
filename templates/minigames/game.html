@@ -1,3 +1,6 @@
+{% extends "/minigames/minigames.html" %}
+
+{% block minigame %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +8,7 @@
     <title>Title</title>
 </head>
 <body>
+<script>
 function startGame() {
     myGamePiece = new component(30, 30, "yellow", 10, 120);
     myGamePiece.gravity = 0.05;
@@ -59,6 +63,11 @@ this.hitBottom = funtion() {
     var rockbottom =  myGameArea.canvas.height - this.height;
     if (this.y > rockbottom) {
     this.y = rockbottom) {
+        }
+</script>
+
 </body>
 </html>
 #h
+
+{% endblock %}
