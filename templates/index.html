@@ -4,56 +4,7 @@
 {% block head %}
 <meta name="viewport" content="width=device-width initial-scale=1">
     <style>
-        #homeworklist {
-            position: fixed;
-            top: 10%;
-            right: 2%;
-            font-size: xx-large;
-        }
-        #taskUL{
-            margin-top: 30px;
-        }
-        #taskUL li {
-            cursor: pointer;
-            position: relative;
-            padding: 10px 8px 12px 40px;
-            background: rgba(226, 255, 250, 0.8);
-            font-size: 20px;
-        }
-        #taskUL li:hover {
-            background: #ddd;
-        }
 
-        .close {
-            position: absolute;
-            right: 0;
-            top: 0;
-            padding: 12px 16px 12px 16px;
-        }
-        .close:hover {
-            background-color: #adcbd9;
-            color: black;
-        }
-        .addBtn {
-            padding: 0px;
-            width: 15%;
-            background: #d9d9d9;
-            color: #555;
-            float: left;
-            text-align: center;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-            border-radius: 0;
-        }
-        .addBtn:hover {
-            background-color: #bbb;
-        }
-
-        #input{
-            width: 600px;
-            height: 50px;
-        }
         body{
             background: url("https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Background%20(2).jpg?raw=true");
             background-size: cover;
@@ -86,6 +37,9 @@
             width: fit-content;
             border: cornflowerblue 2px solid;
             background-color: rgba(178, 246, 246, 0.55);
+            position: relative;
+            left: 1110px;
+            top: 25px;
         }
 
         .todo-item.done {
