@@ -1,0 +1,23 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Minigames" %}
+
+<!- This is a replacement block for Body in base.html -->
+
+{% block body %}
+
+<head>
+   <style>
+       body {
+          background-image: url("https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/miniBack1.jpeg?raw=true");
+          background-size: cover;
+       }
+   </style>
+</head>
+
+<img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Minigames%20logo.png?raw=true" height="100px"/>
+
+
+{% endblock %}
