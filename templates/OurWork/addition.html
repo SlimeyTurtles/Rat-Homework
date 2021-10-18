@@ -11,62 +11,22 @@
             for(let count = 0; count < 8; count++) {
                 let id = ((row - 1) * 8) + count
                 binNum = binNum + document.getElementById(id).innerHTML;
-                }
+            }
             return binNum
         }
-        function ifNegative(bin) {
-            if (bin.charAt(0) == "1") {
-                let num = -(parseInt(bin, 2).toString(10) - 128);
-                return num
-            } else {
-                let num = parseInt(bin, 2).toString(10)
-                return num
-            }
-        }
-        function make8Bits(sum) {
-            if (sum.length > 8) {
-                sum = sum.substr(sum.length - 8)
-            } else for (let count = sum.length; count < 8; count++) {
-                    sum = '0' + sum
-                }
-            if (document.getElementById("sign").innerHTML == "signed") {
-                if (sum.includes("-")) {
-                    sum = sum.replace("-", "0")
-                    sum = sum.substr(1)
-                    sum = "1" + sum
-                    return sum
-                } else {
-                    sum = sum.substr(1)
-                    sum = "0" + sum
-                    return sum
-                }
-            } else {
-                return sum
-            }
-        }
         function add(row1, row2) {
-            let bin1 = concatRow(row1);
-            let bin2 = concatRow(row2);
-            if (document.getElementById("sign").innerHTML == "unsigned") {
-                let num1 = parseInt(bin1, 2).toString(10)
-                let num2 = parseInt(bin2, 2).toString(10)
-                let sum = parseInt(Number(num1)+Number(num2), 10).toString(2);
-                document.getElementById("addition").innerHTML = make8Bits(sum);
-                return sum
-            } else {
-                let num1 = ifNegative(bin1)
-                let num2 = ifNegative(bin2)
-                let sum = parseInt(Number(num1)+Number(num2), 10).toString(2);
-                document.getElementById("addition").innerHTML = make8Bits(sum);
-                return sum
-            }
+            let num1 = parseInt(concatRow(row1), 2).toString(10)
+            let num2 = parseInt(concatRow(row2), 2).toString(10)
+            let sum = parseInt(Number(num1)+Number(num2), 10).toString(2);
+            document.getElementById("addition").innerHTML = sum;
+            return sum
         }
-        function toggle(i, objTrue, objFalse) {
-            if (document.getElementById(i).innerHTML == objFalse) {
-                document.getElementById(i).innerHTML = objTrue;
+        function toggleBits(i) {;
+            if (document.getElementById(i).innerHTML == "0") {
+                document.getElementById(i).innerHTML = "1";
             }
-            else if (document.getElementById(i).innerHTML == objTrue) {
-                document.getElementById(i).innerHTML = objFalse;
+            else if (document.getElementById(i).innerHTML == "1") {
+                document.getElementById(i).innerHTML = "0";
             }
             else {
                 document.getElementById(i).innerHTML = "error";
@@ -84,13 +44,12 @@
         {% for j in range(perRow) %}
         {% set i = (((row)*8)+j) %}
         <td>
-            <button type="button" id="{{i}}" onclick="toggle('{{i}}', '1', '0')">0</button>
+            <button type="button" id="{{i}}" onclick="toggleBits('{{i}}')">0</button>
             <p>{{i}}</p>
         </td>
         {% endfor %}
     </tr>
     {% endfor %}
 </table>
-<button type="button" id="sign" onclick="toggle('sign', 'signed', 'unsigned')">unsigned</button>
-<button type="button" id="addition" onclick="add('1', '2')">add</button>
+<button type="button" id="addition" onclick="add(1, 2)">add</button>
 {% endblock %}
