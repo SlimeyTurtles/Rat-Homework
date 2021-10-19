@@ -2,11 +2,12 @@
 from flask import Flask, render_template, request
 from images import image_data
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
+import requests
 
 # create a Flask instance
 app = Flask(__name__)
 
-#this adds the greet code-------------------------------
+# Greet Function
 
 def greet(link, file, default):
     if request.form:                                                # if the user submits a name
@@ -17,9 +18,15 @@ def greet(link, file, default):
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    access_token = "2573~5LIOVMh7P3sMuGrZQS4lWrXp6k96wZf7zBy8efDat22Y1sTAcLYLoMyKP0AanUQR"
+    homework_list_url = "https://poway.instructure.com/api/v1/courses/108206/assignments?access_token=" + access_token
+    response = requests.get(homework_list_url)
+    homework_list = []
+    for assignment in response.json():
+        homework_list.append(assignment["name"])
+    return render_template("index.html", homework_list=homework_list)
 
-#-------------------------- ABOUT US PAGES -----------------------------------#
+# About us
 
 @app.route('/avinh/', methods=['GET', 'POST'])
 def avinh():
@@ -37,7 +44,7 @@ def calissa():
 def valen():
     return greet('/valen/', "/about/valen.html", "World")
 
-#-------------------------- OUR WORK PAGES -----------------------------------#
+# Our work
 
 @app.route('/greet/', methods=['GET', 'POST'])
 def greetminilab():
@@ -84,7 +91,7 @@ def colorcode():
 def addition():
     return render_template("/OurWork/addition.html")
 
-#-------------------------- THEME PAGES-----------------------------------#
+# PBL
 
 @app.route('/food/')
 def food():
@@ -109,7 +116,7 @@ def Snake():
 @app.route('/minigames/game/')
 def Game():
     return render_template("/minigames/game.html")
-# money calculations ------------------------------------------------------------------------------------------------------------
+# money calculations
 
 class CoinBank:
     num_coins = 100

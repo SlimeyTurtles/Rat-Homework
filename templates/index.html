@@ -3,50 +3,50 @@
 
 {% block head %}
 <meta name="viewport" content="width=device-width initial-scale=1">
-    <style>
+<style>
 
-        body{
-            background: url("https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Background%20(2).jpg?raw=true");
-            background-size: cover;
-        }
+    body{
+        background: url("https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Background%20(2).jpg?raw=true");
+        background-size: cover;
+    }
 
-        /* header 1 */
-        #todo-wrap h1 {
-            font-size: 1.5em;
-            margin: 0;
-            color: #333;
-        }
+    /* header 1 */
+    #todo-wrap h1 {
+        font-size: 1.5em;
+        margin: 0;
+        color: #333;
+    }
 
-        /* add button and input */
-        #todo-add { display: flex; }
-        #todo-item { width: 85%; }
-        #todo-save {
-            width: 15%;
-            background: #5866CF;
-            border: 2px solid #5866CF;
-        }
+    /* add button and input */
+    #todo-add { display: flex; }
+    #todo-item { width: 85%; }
+    #todo-save {
+        width: 15%;
+        background: #5866CF;
+        border: 2px solid #5866CF;
+    }
 
-        /* delete buttons */
-        #todo-del { margin: 10px 0;}
-        #todo-del input {
-            background: #CF585C;
-            border: 2px solid #CF585C;
-        }
+    /* delete buttons */
+    #todo-del { margin: 10px 0;}
+    #todo-del input {
+        background: #CF585C;
+        border: 2px solid #CF585C;
+    }
 
-        #todo-wrap{
-            width: fit-content;
-            border: cornflowerblue 2px solid;
-            background-color: rgba(178, 246, 246, 0.55);
-            position: relative;
-            left: 1110px;
-            top: 25px;
-        }
+    #todo-wrap{
+        width: fit-content;
+        border: cornflowerblue 2px solid;
+        background-color: rgba(178, 246, 246, 0.55);
+        position: fixed;
+        right: 25px;
+        top: 75px;
+    }
 
-        .todo-item.done {
-            background: #DCFFD7;
-            text-decoration: line-through;
-        }
-    </style>
+    .todo-item.done {
+        background: #DCFFD7;
+        text-decoration: line-through;
+    }
+</style>
 
 {% endblock %}
 
@@ -63,7 +63,7 @@
 
         load: function () {
             if (localStorage.list == undefined) {
-                localStorage.list = "[]";
+                localStorage.list = [];
             }
             todo.data = JSON.parse(localStorage.list);
             todo.list();
@@ -171,7 +171,6 @@
 
         todo.load();   // run the load function
     });
-
 </script>
 
 
@@ -193,5 +192,21 @@
 
     <!-- task list items -->
     <div id="todo-list"></div>
+</div>
+<style>
+    .tempapi {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        background-color: #704a48;
+        color: #ad7f7c;
+        width: fit-content;
+    }
+</style>
+<div class="tempapi">
+    <h3>temporary api output</h3>
+    {% for assignment in homework_list %}
+    <p>{{assignment}}</p>
+    {% endfor %}
 </div>
 {% endblock %}
