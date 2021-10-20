@@ -6,11 +6,80 @@
 
 <!- This is a replacement block for Body in base.html -->
 
+{% block head %}
+<style>
+    body {
+        background-image: url("https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Market%20(1).png?raw=true");
+        background-size: cover;
+    }
+
+    .apple img{
+        height:170px;
+        position: relative;
+        left: 370px;
+        top: 300px
+
+    }
+    .cheese img{
+        height: 170px;
+        position: relative;
+        left: 625px;
+        top: 120px;
+    }
+
+    .pancake img{
+        height: 170px;
+        position: relative;
+        left: 810px;
+        bottom: 100px;
+    }
+
+    .button1 {
+        position: relative;
+        left:470px;
+        top: 450px;
+
+    }
+    .button2 {
+        position: relative;
+        left: 700px;
+        top: 250px;
+    }
+
+    .button3 {
+        position: relative;
+        left: 925px;
+        top: 50px;
+    }
+
+
+
+</style>
+{% endblock %}
 
 {% block body %}
+<div class = "apple">
+    <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/apple.png?raw=true"/>
+</div>
 
-    <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/yummy.gif?raw=true" >
-    
+<div class="button1">
+<button>Buy</button>
+</div>
 
-    <p>FOOD! Stub Temp</p>
+<div class = "cheese">
+    <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/cheese.png?raw=true"/>
+</div>
+
+<div class="button2">
+<button>Buy</button>
+</div>
+
+<div class="pancake">
+    <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/pancakes.png?raw=true"/>
+</div>
+
+<div class="button3">
+<button>Buy</button>
+</div>
+
 {% endblock %}
