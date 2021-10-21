@@ -101,8 +101,20 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             display: block;
         }
 
+        .currencycounter {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+        }
     </style>
-
+    <script>
+        var coins = 0
+        function addcoin(num) {
+            coins = coins + num
+            document.getElementById("coins").innerHTML = "Currency: " + coins.toString()
+            return coins
+        }
+    </script>
     <title>{{ basename }}</title>
 
     {% block head %}
@@ -128,6 +140,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             </table>
         </div>
     </div>
+
+    <p id="coins">Currency: </p>
+    <button type="button" onclick="addcoin(1)">Add Coin</button>
 
     <script>
         function menuAni(x){
