@@ -123,8 +123,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 <body>
     {% include "layouts/navbar.html" %}
-    {% block body %}
-    {% endblock %}
     <div class="menu" onclick="menuAni(this)">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -150,7 +148,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         }
     </script>
 </body>
-
+{% block body %}
+{% endblock %}
 {% block background %}
 {% endblock %}
 

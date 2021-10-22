@@ -7,28 +7,34 @@
 <!- This is a replacement block for Body in base.html -->
 
 {% block head %}
+<script>
+    window.onresize = function(event) {
+        $("#bg_1").css("width", $(window).width());
+    }
+</script>
 <style>
     body {
         background-image: url("https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Market%20(1).jpg?raw=true");
         background-size: cover;
+        background-size: 100% 100%;
     }
+
 
     .button1 {
-        position: relative;
-        left:470px;
-        top: 450px;
-
+        left: 48.75vw;
+        top: 72vh;
+        position: absolute;
     }
     .button2 {
-        position: relative;
-        left: 700px;
-        top: 250px;
+        left: 34vw;
+        top: 72vh;
+        position: absolute;
     }
 
     .button3 {
-        position: relative;
-        left: 925px;
-        top: 50px;
+        left: 64.75vw;
+        top: 72vh;
+        position: absolute;
     }
 
 
@@ -38,9 +44,7 @@
 
 {% block body %}
 
-<div class="button1">
-<button>Buy</button>
-</div>
+<button class="button1">Buy</button>
 
 <div class="button2">
 <button>Buy</button>
