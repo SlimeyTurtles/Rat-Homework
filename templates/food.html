@@ -39,15 +39,35 @@
 {% block body %}
 
 <div class="button1">
-<button>Buy</button>
+<button onclick="apple()">Buy</button>
 </div>
 
 <div class="button2">
-<button>Buy</button>
+<button onclick="cheese()">Buy</button>
 </div>
 
 <div class="button3">
-<button>Buy</button>
+<button onclick="pancake()">Buy</button>
 </div>
+
+<script>
+
+    function apple(){
+        document.getElementById("coins").innerHTML = "Currency: " + coins;
+        coins = coins - 50;
+        return coins
+    }
+
+    function cheese(){
+        document.getElementById("coins").innerHTML = "Currency: " + coins;
+        coins = coins - 75;
+        return coins
+    }
+    function pancake(){
+        document.getElementById("coins").innerHTML = "Currency: " + coins;
+        coins = coins - 65;
+        return coins
+    }
+</script>
 
 {% endblock %}
