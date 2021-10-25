@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<script>
 function startGame() {
     myGamePiece = new component(30, 30, "yellow", 10, 120);
     myGamePiece.gravity = 0.05;
@@ -50,15 +51,32 @@ function component(width, height, color, x, y, type) {
 this.height);
         }
     }
-    this.newPos = function () {
+this.newPos = function () {
         this.gravitySpeed += this.gravity;
         this.x += this.gravitySpeed;
         this.hitBottom();
     }
-this.hitBottom = funtion() {
-    var rockbottom =  myGameArea.canvas.height - this.height;
-    if (this.y > rockbottom) {
-    this.y = rockbottom) {
+    this.hitBottom = funtion() {
+        var rockbottom =  myGameArea.canvas.height - this.height;
+        if (this.y > rockbottom) {
+            this.y = rockbottom) {
+            this.gravitySpeed = 0;
+        }
+    }
+    this.crashWith = function (otherrobj) {
+        var myleft = this.x;
+        var myright = this.x + (this.width);
+        var mytop = this.y;
+        var mybottom = this.y + ( this.height
+        var overleft = otherrobj.x;
+        var otherright = otherrobj.x + (otherobj.width);
+        var othertop = otherobj.y;
+        var otherbottom = otherrobj.y + (otherrobj.height);
+        var crash = true;
+        if ((mybottom < othertop)
+
+
+</script>
 </body>
 </html>
-#h
+<!-->h
