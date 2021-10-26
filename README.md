@@ -26,7 +26,7 @@ We want our website to be an interactive homework checklist. So far on our sight
 
 ## <a name="Sprint-9"> Sprint 9, Oct. 18 - Oct. 22 </a>
 
-[Individual Final Video](https://github.com/SlimeyTurtles/Rat-Homework/issues/63)
+**[Individual Final Videos]**(https://github.com/SlimeyTurtles/Rat-Homework/issues/63)
 
 ### TPT
 | Name | 3.9 | 3.10 |
