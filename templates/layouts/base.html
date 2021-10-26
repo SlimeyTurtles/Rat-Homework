@@ -101,8 +101,20 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             display: block;
         }
 
+        .currencycounter {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+        }
     </style>
-
+    <script>
+        var coins = 0
+        function addcoin(num) {
+            coins = coins + num
+            document.getElementById("coins").innerHTML = "Currency: " + coins.toString()
+            return coins
+        }
+    </script>
     <title>{{ basename }}</title>
 
     {% block head %}
@@ -111,8 +123,14 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
 <body>
     {% include "layouts/navbar.html" %}
+
+    <p id="coins">Currency: </p>
+    <button type="button" onclick="addcoin(1)">Add Coin</button>
+
     {% block body %}
     {% endblock %}
+
+
     <div class="menu" onclick="menuAni(this)">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -128,6 +146,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             </table>
         </div>
     </div>
+
+
+
 
     <script>
         function menuAni(x){

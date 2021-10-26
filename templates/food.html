@@ -6,11 +6,68 @@
 
 <!- This is a replacement block for Body in base.html -->
 
+{% block head %}
+<style>
+    body {
+        background-image: url("https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Market%20(1).jpg?raw=true");
+        background-size: cover;
+    }
+
+    .button1 {
+        position: relative;
+        left:470px;
+        top: 450px;
+
+    }
+    .button2 {
+        position: relative;
+        left: 700px;
+        top: 250px;
+    }
+
+    .button3 {
+        position: relative;
+        left: 925px;
+        top: 50px;
+    }
+
+
+
+</style>
+{% endblock %}
 
 {% block body %}
 
-    <img src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/yummy.gif?raw=true" >
-    
+<div class="button1">
+<button onclick="apple()">Buy</button>
+</div>
 
-    <p>FOOD! Stub Temp</p>
+<div class="button2">
+<button onclick="cheese()">Buy</button>
+</div>
+
+<div class="button3">
+<button onclick="pancake()">Buy</button>
+</div>
+
+<script>
+
+    function apple(){
+        document.getElementById("coins").innerHTML = "Currency: " + coins;
+        coins = coins - 50;
+        return coins
+    }
+
+    function cheese(){
+        document.getElementById("coins").innerHTML = "Currency: " + coins;
+        coins = coins - 75;
+        return coins
+    }
+    function pancake(){
+        document.getElementById("coins").innerHTML = "Currency: " + coins;
+        coins = coins - 65;
+        return coins
+    }
+</script>
+
 {% endblock %}
