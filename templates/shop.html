@@ -14,4 +14,28 @@
             background-size: cover;
         }
     </style>
+
+<button onclick="sweater()">Buy</button>
+<button onclick="cape()">Buy</button>
+<button onclick="shoes()">Buy</button>
+
+<script>
+    function sweater(){
+        document.getElementById("coins").innerHTML = "Currency: " + coins;
+        coins = coins - 100;
+        return coins
+    }
+
+    function cape(){
+        document.getElementById("coins").innerHTML = "Currency: " + coins;
+        coins = coins - 95;
+        return coins
+    }
+
+    function shoes(){
+        document.getElementById("coins").innerHTML = "Currency: " + coins;
+        coins = coins - 1000;
+        return coins
+    }
+</script>
 {% endblock %}
