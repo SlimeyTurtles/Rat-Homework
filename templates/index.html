@@ -46,11 +46,53 @@
         background: #DCFFD7;
         text-decoration: line-through;
     }
+
+    .change .clothesContent {
+        display: block;
+    }
+
+    .clothes {
+        display: inline-block;
+        cursor: pointer;
+        position: fixed;
+        bottom: 10%;
+        right: 2%;
+    }
+
+    .clothesContent {
+        display: none;
+        position: fixed;
+        bottom: 7%;
+        right: 2%;
+        z-index: 1;
+        background:#fff7cd;
+        left: auto;
+        top: auto;.
+    }
+
+    .clothesContent a {
+        position: relative;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
 </style>
 
 {% endblock %}
 
 {% block body %}
+<div class="clothes">
+    <input type="image" onclick="menuOpen(this)" src="https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/shirt2.png?raw=true">
+    <div class="clothesContent">
+        <table>
+            <tr>
+                <td>wweweqwq</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
 <script>
     var todo = {
         data: [], // creates a list/array called data to hold the localstorage data
@@ -171,6 +213,10 @@
 
         todo.load();   // run the load function
     });
+
+    function menuOpen(x){
+        x.classList.toggle("change");
+    }
 </script>
 
 
