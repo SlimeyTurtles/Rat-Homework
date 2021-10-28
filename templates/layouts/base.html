@@ -121,9 +121,6 @@
 
     {% include "layouts/navbar.html" %}
 
-    {% block body %}
-    {% endblock %}
-
     <p id="coins">Currency: </p>
     <button type="button" onclick="addcoin(1)">Add Coin</button>
 
@@ -142,6 +139,9 @@
             </table>
         </div>
     </div>
+
+    {% block body %}
+    {% endblock %}
 
 </body>
 </html>
