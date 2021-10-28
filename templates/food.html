@@ -1,52 +1,36 @@
-<!-- Extending the predefined project layout -->
 {% extends "layouts/base.html" %}
-
-<!- This variable sets name of browser tab  -->
 {% set project = "Food" %}
 
-<!- This is a replacement block for Body in base.html -->
-
 {% block head %}
+
 <style>
     body {
         background-image: url("https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Market%20(1).jpg?raw=true");
         background-size: cover;
     }
-
-    .button1 {
+    .cheese {
         left: 48.75vw;
         top: 72vh;
         position: absolute;
     }
-    .button2 {
+    .apple {
         left: 34vw;
         top: 72vh;
         position: absolute;
     }
 
-    .button3 {
+    .pancake {
         left: 64.75vw;
         top: 72vh;
         position: absolute;
     }
-
-
-
 </style>
-{% endblock %}
 
+{% endblock %}
 {% block body %}
 
-<div class="button1">
-<button onclick="apple()">Buy</button>
-</div>
-
-<div class="button2">
-<button onclick="cheese()">Buy</button>
-</div>
-
-<div class="button3">
-<button onclick="pancake()">Buy</button>
-</div>
+<button class="apple" onclick="addcoin(-50)">Buy</button>
+<button class="cheese" onclick="addcoin(-75)">Buy</button>
+<button class="pancake" onclick="addcoin(-65)">Buy</button>
 
 {% endblock %}

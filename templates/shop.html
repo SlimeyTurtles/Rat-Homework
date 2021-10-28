@@ -1,41 +1,35 @@
-<!-- Extending the predefined project layout -->
 {% extends "layouts/base.html" %}
-
-<!- This variable sets name of browser tab  -->
 {% set project = "Shop" %}
 
-<!- This is a replacement block for Body in base.html -->
+{% block head %}
 
+<style>
+    body{
+        background-image: url("https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Shop.jpg?raw=true");
+        background-size: cover;
+    }
+    .sweater {
+        left: 42.5vw;
+        top: 45vh;
+        position: absolute;
+    }
+    .cape {
+        left: 60vw;
+        top: 45vh;
+        position: absolute;
+    }
+    .shoes {
+        left: 15vw;
+        bottom: 5vh;
+        position: absolute;
+    }
+</style>
 
+{% endblock %}
 {% block body %}
-    <style>
-        body{
-            background-image: url("https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/Shop.jpg?raw=true");
-            background-size: cover;
-        }
-    </style>
 
-<button onclick="sweater()">Buy</button>
-<button onclick="cape()">Buy</button>
-<button onclick="shoes()">Buy</button>
+<button class="sweater" onclick="addcoin(-100)">Buy</button>
+<button class="cape" onclick="addcoin(-95)">Buy</button>
+<button class="shoes" onclick="addcoin(-1000)">Buy</button>
 
-<script>
-    function sweater(){
-        document.getElementById("coins").innerHTML = "Currency: " + coins;
-        coins = coins - 100;
-        return coins
-    }
-
-    function cape(){
-        document.getElementById("coins").innerHTML = "Currency: " + coins;
-        coins = coins - 95;
-        return coins
-    }
-
-    function shoes(){
-        document.getElementById("coins").innerHTML = "Currency: " + coins;
-        coins = coins - 1000;
-        return coins
-    }
-</script>
 {% endblock %}
