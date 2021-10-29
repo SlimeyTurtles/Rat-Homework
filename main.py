@@ -116,39 +116,6 @@ def Snake():
 @app.route('/minigames/game/')
 def Game():
     return render_template("/minigames/game.html")
-# money calculations
-
-class CoinBank:
-    num_coins = 100
-# This is a dictionary with key value pairs
-    dict = {'Premium Mouse Color': 10, 'Larger Mouse Size': 15, 'Rename Mouse': 20, 'Elite Mouse Skin': 10, 'Heightened Smell': 20}
-
-    def getCoins(self):
-        return self.num_coins
-
-    def removeCoins(self, coins):
-        # if removing coins (coins are negative) and we can afford it
-        if self.num_coins >= coins:
-            self.num_coins = self.num_coins - coins
-            return self.num_coins
-        else:
-            raise ValueError("You do not have that many coins")
-
-# add any number of coins
-    def AddCoins(self, coins):
-        self.num_coins = self.num_coins + coins
-
-    def costOfMouseUpgrade(key):
-        return dict[key]
-
-    def buyMouseUpgrade(self, key):
-        try:
-            cost = dict[key]
-            print ("cost of " + key + " is ", cost)
-            return self.removeCoins(cost)
-        except KeyError:
-            # Raise a KeyError because the key passed to us does not match anything in our dictionary
-            raise KeyError("No mouse upgrade avaiable for " + key)
 
 # runs the application on the development server
 if __name__ == "__main__":

@@ -45,12 +45,16 @@
         top: 75px;
     }
 
+    .tempapi {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        background-color: rgba(255, 255, 255, 0.85);
+        color: rgba(0, 0, 0, 1);
+        width: fit-content;
+    }
+
 </style>
-
-{% endblock %}
-
-{% block body %}
-
 <script>
 
     // citation: localstorage inspiration from dev.to
@@ -74,7 +78,7 @@
                                                             // and assigns it to the JS list we called "data"
 
             todo.list();                                     //data list will run the list function, which gets info
-                                                            // updates the JS "data" list
+            // updates the JS "data" list
         },
 
         // saves the current data into the LocalStorage
@@ -180,8 +184,10 @@
 
         todo.load();   // run the load function
     });
-</script>
 
+</script>
+{% endblock %}
+{% block body %}
 
 <div id="todo-container">
     <!-- header -->
@@ -202,21 +208,6 @@
     <!-- task list items -->
     <div id="todo-list"></div>
 
-
-
-
-<style>
-    .tempapi {
-        position: fixed;
-        bottom: 10px;
-        left: 10px;
-        background-color: rgba(255, 255, 255, 0.85);
-        color: rgba(0, 0, 0, 1);
-        width: fit-content;
-    }
-
-
-</style>
 <div class="tempapi">
     <h3>temporary api output</h3>
     {% for assignment in homework_list %}
