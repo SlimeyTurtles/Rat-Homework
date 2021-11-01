@@ -26,6 +26,7 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
             {'source': "Pintrest", 'label': "Birthday Rat", 'file': "smile.jpeg", 'red': 0, 'green': 0, 'blue': 0}
 #           , {'source': "iconsdb.com", 'label': "doggo", 'file': "awake_dog.jpeg", 'red': 255, 'green': 255, 'blue': 255}
         ]
+# https://www.rapidtables.com/web/color/RGB_Color.html
 
 # Copy-paste original images without any messages written to them, and save them as smile and awake_dog
 #    copyfile = getFilename("smile_v1.jpg") # file with path for local access (backend)
@@ -81,7 +82,6 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
                 img_dict['gray_data'].append((average, average, average))
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
-
     return img_list  # list is returned with all the attributes for each image dictionary
 
 def writeSecretMessage(image, file, message, red, green, blue):
@@ -90,8 +90,7 @@ def writeSecretMessage(image, file, message, red, green, blue):
     draw.text((100, 0), message, fill=(red, green, blue) )  # draw in image
     # file will be over written with the message
     # to restore it copy the original image _v1 over the new image
-    image.save(file)
-    print ("updated file with message ")
+#    image.save(file)
     print (file)
 
 
