@@ -10,8 +10,9 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
+    <content url="file://$MODULE_DIR$/python" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="pytest" level="application" />
+    <orderEntry type="library" exported="" name="Python 3.9" level="application" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />

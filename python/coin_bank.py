@@ -1,5 +1,11 @@
 
-dict = {'Premium Mouse Color': 10, 'Larger Mouse Size': 15, 'Rename Mouse': 20, 'Elite Mouse Skin': 10, 'Heightened Smell': 20}
+mouseDict = {'Premium Mouse Color': 10, 'Larger Mouse Size': 15, 'Rename Mouse': 20,
+             'Elite Mouse Skin': 10, 'Heightened Smell': 20}
+
+
+def costofmouseupgrade(key):
+    return mouseDict[key]
+
 
 class CoinBank:
     num_coins = 100
@@ -22,12 +28,9 @@ class CoinBank:
         else:
             raise ValueError("You do not have that many coins")
 
-    def costOfMouseUpgrade(key):
-        return dict[key]
-
     def buyMouseUpgrade(self, key):
         try:
-            cost = dict[key]
+            cost = mouseDict[key]
             print ("cost of " + key + " is ", cost)
             return self.removeCoins(cost)
         except KeyError:

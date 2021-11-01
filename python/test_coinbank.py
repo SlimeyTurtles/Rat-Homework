@@ -1,31 +1,40 @@
+import pytest as pytest
 
-import pytest
-from coinbank import CoinBank
+from coin_bank import CoinBank, costofmouseupgrade
+
 
 def test_startingCoinsEqual100():
     assert CoinBank().getCoins() == 100
 
+
 def test_addOneCoin():
     assert CoinBank().addCoins(1) == 101
+
 
 def test_removeOneCoin():
     assert CoinBank().removeCoins(1) == 99
 
+
 def test_removeAllCoins():
     assert CoinBank().removeCoins(10) == 90
+
 
 def test_removeTooManyCoinsValueError():
     with pytest.raises(ValueError):
         # sorry hacker you do not have that many coins
         CoinBank().removeCoins(100000)
+        assert False
+
 
 def test_unsupportedMouseUpgradeRaisesError():
     with pytest.raises(KeyError):
         remaining_coins = CoinBank().buyMouseUpgrade('Flying Mouse')
-        assert true;
+        assert True;
 
-def test_costOfRenameMouse():
-    assert CoinBank.costOfMouseUpgrade('Rename Mouse') == 20
+
+def test_costofmouseupgrade():
+    assert 20 == costofmouseupgrade('Rename Mouse')
+
 
 def test_renameMouse():
     coinBank = CoinBank()
