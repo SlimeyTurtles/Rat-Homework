@@ -100,10 +100,12 @@
     </style>
     <script>
 
-        var coins = 0
+        coins = parseInt(localStorage.getItem('coins'))
+        document.getElementById("coins").innerHTML = "Currency: " + coins.toString()
         function addcoin(num) {
             coins = coins + num
             document.getElementById("coins").innerHTML = "Currency: " + coins.toString()
+            localStorage.setItem('coins', coins)
             return coins
         }
 
@@ -121,7 +123,7 @@
 
     {% include "layouts/navbar.html" %}
 
-    <p id="coins">Currency: </p>
+    <p id="coins"></p>
     <button type="button" onclick="addcoin(1)">Add Coin</button>
 
     <div class="menu" onclick="menuAni(this)">
