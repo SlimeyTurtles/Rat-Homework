@@ -1,27 +1,26 @@
 {% extends "/minigames/minigames.html" %}
 
 
-{% block minigame %}
-<head>
+{% block body %}
+
     <style>
         html, body{
             height: 100%;
             margin: 0;
     }
         body {
-            background: olivedrab;
-            display: flex;
             align-items: center;
             justify-content: center;
         }
         canvas{
-            border: 2px olive;
+            border: 2px solid black;
+            background: olivedrab;
         }
     </style>
-</head>
-<body>
 
+<div>
 <canvas width = "400" height="400" id="game"></canvas>
+</div>
 
 <script>
     var canvas = document.getElementById('game');
@@ -99,7 +98,7 @@
         context.fillRect(cheese.x, cheese.y, grid-1, grid-1);
 
         //snake
-        context.fillStyle = 'blue';
+        context.fillStyle = 'darkgrey';
         snake.cells.forEach(function(cell, index) {
 
             //creates grid effect in snake body
@@ -158,5 +157,5 @@
     //start the game
     requestAnimationFrame(loop);
 </script>
-</body>
+
 {% endblock %}

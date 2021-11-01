@@ -74,7 +74,7 @@
             }
             todo.data = JSON.parse(localStorage.list);      // whenever funtion is run,
                                                             // it parses json information from locastorage into
-                                                            //javascript information
+                                                            // javascript information
                                                             // and assigns it to the JS list we called "data"
 
             todo.list();                                     //data list will run the list function, which gets info
@@ -131,8 +131,8 @@
         add: function () {
 
             let item = document.getElementById("todo-item");    // item variable references the element called "to.do-item"
-            todo.data.push([item.value, 0]);      // takes div item and pushes the task name/title as an array
-                                                  // to the js data list
+            todo.data.push([item.value, 0]);      // takes div item and pushes the task name/title
+                                                  // to the end of the js data list
             item.value = "";     // clears the item value
             todo.save();     // saves and updates the array
         },
@@ -163,18 +163,18 @@
 
     // page JS
 
-    // even listeners runs the follow functions when the page is loaded
+    // even listeners runs the following functions when the page is loaded
 
     //
     window.addEventListener("load", function () {
         document.getElementById("todo-delall").addEventListener("click", function () {
             todo.del(0);
-        });     // when clicking the delete all button, function will set type var to 0 and tun the function
+        });     // when clicking the delete all button, function will set type var to 0 and run the function
 
 
         document.getElementById("todo-delcom").addEventListener("click", function () {
             todo.del(1);
-        });     // when clicking the delete all button, function will set type var to 1 and tun the function
+        });     // when clicking the delete all button, function will set type var to 1 and run the function
 
 
         document.getElementById("add-button").addEventListener("submit", function (evt) {
