@@ -11,12 +11,8 @@
         const a = document.getElementById("checkboxA");
         const b = document.getElementById("checkboxB");
 <!-- AND GATE -->
-    if (a.checked && b.checked){
-        document.getElementById("AND").innerHTML='1';
-    }
-    else{
-        document.getElementById("AND").innerHTML='0';
-    }
+    document.getElementById("AND").innerHTML= a.checked && b.checked ? '1': '0';
+
 <!-- OR GATE -->
     if (a.checked | b.checked){
         document.getElementById("OR").innerHTML='1';
