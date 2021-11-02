@@ -47,6 +47,10 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
 
+        writeSecretMessage(img_reference, file,
+                           "A message that is entirely too lengthy to be writing to our image crap cra crap   ",
+                           img_dict['red'], img_dict['green'], img_dict['blue'])
+
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
@@ -62,8 +66,6 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
         img_dict['flipR'] = img_reference.transpose(Image.FLIP_LEFT_RIGHT)
         degree_flippedImage = img_reference.transpose(Image.FLIP_LEFT_RIGHT)
         img_dict['base64_flipR'] = image_formatter(degree_flippedImage, img_dict['format'])
-
-        writeSecretMessage(img_reference, file, "A message     ", img_dict['red'], img_dict['green'], img_dict['blue'])
 
 # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
         for pixel in img_dict['data']:
@@ -87,10 +89,16 @@ def image_data(path=Path("static/img/"), img_list=None):  # path of static image
 def writeSecretMessage(image, file, message, red, green, blue):
     # add message to image
     draw = ImageDraw.Draw(image)
-    draw.text((100, 0), message, fill=(red, green, blue) )  # draw in image
+    messagelen = len(message)
+    if messagelen > 31:
+        messagelen = 31
+# else we are okay with the message length
+
+    xpos = 31 - messagelen
+    draw.text((xpos, 0), message[0:messagelen-1], fill=(red, green, blue) )  # draw in image
     # file will be over written with the message
     # to restore it copy the original image _v1 over the new image
-#    image.save(file)
+ #   image.save(file)
     print (file)
 
 

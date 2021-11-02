@@ -15,8 +15,12 @@ def test_removeOneCoin():
     assert CoinBank().removeCoins(1) == 99
 
 
-def test_removeAllCoins():
+def test_removetenCoins():
     assert CoinBank().removeCoins(10) == 90
+
+
+def test_removeAllCoins():
+    assert CoinBank().removeCoins(CoinBank().getCoins()) == 0
 
 
 def test_removeTooManyCoinsValueError():
@@ -29,7 +33,7 @@ def test_removeTooManyCoinsValueError():
 def test_unsupportedMouseUpgradeRaisesError():
     with pytest.raises(KeyError):
         remaining_coins = CoinBank().buyMouseUpgrade('Flying Mouse')
-        assert True;
+    assert True
 
 
 def test_costofmouseupgrade():
