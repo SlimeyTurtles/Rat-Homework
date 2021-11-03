@@ -6,7 +6,29 @@
 
 ### [Insights](https://github.com/SlimeyTurtles/Rat-Homework/pulse)
 
-### Overview
+### Pair Share Journals
+
+- Avinh and Calissa: https://docs.google.com/document/d/1M_jU_NzcbDCb40K4yJio2Le8LXt5a7TuSz09csn4ihg/edit?usp=sharing
+- Akhil and Valen: https://docs.google.com/document/d/10I6YvPmj3kJEx2zUNu701KBxFONUrfeIO5VNaR7ilts/edit
+
+### Site Objective
+
+We want our website to be an interactive homework checklist. On our sight we have a TO-DO checklist that the user can input their homework assignments into. There is also a window that connects to your MyConnect account and displays all of the assigments you have active in this class. The user can store their assingments in the todo lists, and completing assigments will give the user coins (planned, not implemented yet). The coins can be used to play minigames and buy items to customize and feed their virtual character/avatar (rat). The minigame we currently have implemented on the webiste. The currency system and shopping system has been implemented, and connections between the homework list and currency amount is our future goal. We would also like to automatically import canvas assigments straight into the TO-DO list in the future.
+
+#### Implemented
+- Currency System using LocalStorage
+- Shopping System + UI
+- Snake Minigame
+- Connection to Canvas (MyConnect) API to display Homework
+- Interactive To-Do List using LocalStorage
+
+#### Future Goals
+- Automatically Add canvas assigments to To-Do list
+- Connect currency system to the completion of homework tasks on the To-Do list
+- Customizable avatar
+- Generalize the use of LocalStorage as a temporary data saving for minigame stats and currency
+
+### Team Overview
 
 | Role | Name | ID | Tasks | Commits | Scrumboard | Profile |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -14,15 +36,6 @@
 | Technical Lead | Akhil Nandhakumar | 89219514 | [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3AAkhilNandhakumar+is%3Aopen) | [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=AkhilNandhakumar) | [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Aakhilnandhakumar) | [profile](https://github.com/AkhilNandhakumar) |
 | Designer | Calissa Tyrell | 89219525 | [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3ACalissaT+is%3Aopen) | [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=CalissaT) | [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Acalissat) | [profile](https://github.com/CalissaT) |
 | Developer | Valen Reynolds | 89166851 | [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3AValenReynolds+is%3Aopen) | [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=ValenReynolds) | [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Avalenreynolds) | [profile](https://github.com/ValenReynolds) |
-
-### Pair Share Journals
-
-- Avinh and Calissa: https://docs.google.com/document/d/1M_jU_NzcbDCb40K4yJio2Le8LXt5a7TuSz09csn4ihg/edit?usp=sharing
-- Akhil and Valen: https://docs.google.com/document/d/10I6YvPmj3kJEx2zUNu701KBxFONUrfeIO5VNaR7ilts/edit
-
-### Objective
-
-We want our website to be an interactive homework checklist. So far on our sight we have temporary pages for our catagories that don't have code yet. We also have a drop down with our about me pages linked. We will have rat that eats the cheese (homework) when we complete an assignment. When the rat eats the cheese we get more lives on our mini game. Our game is catch the apple but the apple is cheese and the rat (you) has to catch the cheese to get lives. Rat traps fall down on the you have to avoide them while trying to catch the cheese to get more lives. When the rat traps hit the floor you get a point.
 
 ## <a name="Sprint-9"> Sprint 9, Oct. 18 - Oct. 22 </a>
 
