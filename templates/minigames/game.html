@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,13 +17,15 @@
     var myGamePiece;
     var myObstacles = [];
     var myScore;
+    var gravity = 0.05;
+    var speedup = -0.2;
 
     function startGame() {
 //        myGamePiece = new component(30, 30, "red", 10, 120);
 
-        myGamePiece = new component(30, 30, "rat gif.gif", 10, 120, "image");
+        myGamePiece = new component(30, 30, "MouseFighter.png", 10, 120, "image");
       //  myGamePiece = new component(30, 30, "smiley.gif", 10, 120, "image");
-        myGamePiece.gravity = 0.05;
+        myGamePiece.gravity = 0;
         myScore = new component("30px", "Consolas", "black", 280, 40, "text");
         myGameArea.start();
     }
@@ -128,16 +132,30 @@
         return false;
     }
 
-    function accelerate(n) {
-        myGamePiece.gravity = n;
+    function moveup(n) {
+        myGamePiece.gravity = speedup;
+    }
+
+    function movedown() {
+        myGamePiece.gravity = 0.05;  // gravity is a constant
+    }
+
+    function speedupgrade() {
+        speedup = -0.3;
     }
 </script>
 <br>
-<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
+<button onmousedown="moveup()" onmouseup="movedown()">ACCELERATE</button>
 <p>Use the ACCELERATE button to stay in the air</p>
 <p>How long can you stay alive?</p>
+<button onclick="speedupgrade()">Upgrade Speed</button>
+<p>Updrades speed by 1 for 1 coin</p>
+<form action="/>action_page.php">
+<input type="reset" value="Reset">
+</form>
+
 </body>
 </html>
+Done
 
-#Done pygame.quit()
 </script>
