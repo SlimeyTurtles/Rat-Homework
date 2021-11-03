@@ -1,6 +1,6 @@
 
 mouseDict = {'Premium Mouse Color': 10, 'Larger Mouse Size': 15, 'Rename Mouse': 20,
-             'Elite Mouse Skin': 10, 'Heightened Smell': 20}
+             'Elite Mouse Skin': 10, 'Faster Mouse': 20}
 
 
 def costofmouseupgrade(key):
