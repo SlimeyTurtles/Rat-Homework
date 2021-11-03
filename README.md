@@ -6,11 +6,6 @@
 
 ### [Insights](https://github.com/SlimeyTurtles/Rat-Homework/pulse)
 
-### Pair Share Journals
-
-- Avinh and Calissa: https://docs.google.com/document/d/1M_jU_NzcbDCb40K4yJio2Le8LXt5a7TuSz09csn4ihg/edit?usp=sharing
-- Akhil and Valen: https://docs.google.com/document/d/10I6YvPmj3kJEx2zUNu701KBxFONUrfeIO5VNaR7ilts/edit
-
 ### Site Objective
 
 We want our website to be an interactive homework checklist. On our sight we have a TO-DO checklist that the user can input their homework assignments into. There is also a window that connects to your MyConnect account and displays all of the assigments you have active in this class. The user can store their assingments in the todo lists, and completing assigments will give the user coins (planned, not implemented yet). The coins can be used to play minigames and buy items to customize and feed their virtual character/avatar (rat). The minigame we currently have implemented on the webiste. The currency system and shopping system has been implemented, and connections between the homework list and currency amount is our future goal. We would also like to automatically import canvas assigments straight into the TO-DO list in the future.
@@ -27,6 +22,11 @@ We want our website to be an interactive homework checklist. On our sight we hav
 - Connect currency system to the completion of homework tasks on the To-Do list
 - Customizable avatar
 - Generalize the use of LocalStorage as a temporary data saving for minigame stats and currency
+
+### Pair Share Journals
+
+- Avinh and Calissa: https://docs.google.com/document/d/1M_jU_NzcbDCb40K4yJio2Le8LXt5a7TuSz09csn4ihg/edit?usp=sharing
+- Akhil and Valen: https://docs.google.com/document/d/10I6YvPmj3kJEx2zUNu701KBxFONUrfeIO5VNaR7ilts/edit
 
 ### Team Overview
 
