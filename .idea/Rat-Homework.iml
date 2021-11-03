@@ -2,7 +2,7 @@
 <module version="4">
   <component name="FacetManager">
     <facet type="Python" name="Python">
-      <configuration sdkName="Python 3.9" />
+      <configuration sdkName="" />
     </facet>
   </component>
   <component name="Flask">
@@ -10,7 +10,9 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/python" />
+    <content url="file://$MODULE_DIR$/python">
+      <sourceFolder url="file://$MODULE_DIR$/python" isTestSource="true" />
+    </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="Python 3.9" level="application" />
   </component>
