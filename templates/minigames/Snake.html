@@ -14,7 +14,7 @@
         }
         canvas{
             border: 2px solid black;
-            background: olivedrab;
+            background-image: url("https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/grass.jpeg?raw=true");
         }
     </style>
 
@@ -28,6 +28,9 @@
 
     var grid = 16;
     var count = 0;
+
+    var score = 0;
+    var highScore = 0;
 
     var snake = {
         x: 160,
@@ -54,108 +57,136 @@
         return Math.floor(Math.random() * (max - min)) + min;
     }
 
-    //game loop
-    function loop() {
-        requestAnimationFrame(loop);
+    //game start
+        function loop() {
+            requestAnimationFrame(loop);
 
-        //slows game loop to 15 fps instead of 60
-        if(++count < 4){
-            return;
-        }
-
-        count = 0;
-        context.clearRect(0,0,canvas.width,canvas.height);
-
-        //moves snake by velocity
-        snake.x += snake.dx;
-        snake.y += snake.dy;
-
-        //snake position horizontally on edge of screen
-        if (snake.x <0){
-            snake.x = canvas.width - grid;
-    }
-        else if (snake.x >= canvas.width){
-            snake.x = 0;
-    }
-
-        //snake position vertically on edge of screen
-        if (snake.y < 0){
-            snake.y = canvas.height - grid;
-    }
-        else if (snake.y >= canvas.height) {
-            snake.y = 0;
-    }
-        //where snake has been
-        snake.cells.unshift({x: snake.x, y: snake.y});
-
-        //remove cells as snake moves away
-        if (snake.cells.length > snake.maxCells){
-            snake.cells.pop();
-        }
-
-        //cheese
-        context.fillStyle = 'yellow';
-        context.fillRect(cheese.x, cheese.y, grid-1, grid-1);
-
-        //snake
-        context.fillStyle = 'darkgrey';
-        snake.cells.forEach(function(cell, index) {
-
-            //creates grid effect in snake body
-            context.fillRect(cell.x, cell.y, grid - 1, grid - 1);
-
-            //snake eating cheese
-            if (cell.x === cheese.x && cell.y === cheese.y) {
-                snake.maxCells++;
-                cheese.x = getRandomInt(0, 25) * grid;
-                cheese.y = getRandomInt(0, 25) * grid;
+            //slows game loop to 15 fps instead of 60
+            if (++count < 4) {
+                return;
             }
-            //checks collision
-            for (var i = index + 1; i < snake.cells.length; i++){
-                if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y){
-                    snake.x = 160;
-                    snake.y = 160;
-                    snake.cells = [];
-                    snake.maxCells = 4;
-                    snake.dc = grid;
-                    snake.dy = 0;
 
+            count = 0;
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            //moves snake by velocity
+            snake.x += snake.dx;
+            snake.y += snake.dy;
+
+            //snake position horizontally on edge of screen
+            if (snake.x < 0) {
+                snake.x = canvas.width - grid;
+            } else if (snake.x >= canvas.width) {
+                snake.x = 0;
+            }
+
+            //snake position vertically on edge of screen
+            if (snake.y < 0) {
+                snake.y = canvas.height - grid;
+            } else if (snake.y >= canvas.height) {
+                snake.y = 0;
+            }
+            //where snake has been
+            snake.cells.unshift({x: snake.x, y: snake.y});
+
+            //remove cells as snake moves away
+            if (snake.cells.length > snake.maxCells) {
+                snake.cells.pop();
+            }
+
+            //cheese
+            const img = new Image();
+            img.src = 'https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/cheese%20square.png?raw=true';
+            context.drawImage(img, cheese.x, cheese.y, grid-1, grid-1);
+
+            //snake
+            const rat = new Image ();
+            rat.src = 'https://github.com/SlimeyTurtles/Rat-Homework/blob/main/static/cheese%20square.png?raw=true';
+            context.drawImage(rat, snake.x, snake.y, grid-1, grid-1);
+
+            snake.cells.forEach(function (cell, index) {
+
+                //snake eating cheese + score
+                if (cell.x === cheese.x && cell.y === cheese.y) {
+                    snake.maxCells++;
                     cheese.x = getRandomInt(0, 25) * grid;
                     cheese.y = getRandomInt(0, 25) * grid;
+                    score = score + 1
+                    document.getElementById("score").innerHTML = score.toString()
                 }
+                //checks collision
+                for (var i = index + 1; i < snake.cells.length; i++) {
+                    if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+                        snake.x = 160;
+                        snake.y = 160;
+                        snake.cells = [];
+                        snake.maxCells = 4;
+                        snake.dc = grid;
+                        snake.dy = 0;
 
+                        cheese.x = getRandomInt(0, 25) * grid;
+                        cheese.y = getRandomInt(0, 25) * grid;
+
+                        document.getElementById("lastScore").innerHTML = score.toString()
+                        if (score > highScore) {
+                            highScore = score
+                            document.getElementById("highScore").innerHTML = score.toString()
+                        }
+                        score = 0
+                        document.getElementById("score").innerHTML = score.toString()
+                    }
+
+
+                }
+            });
+        }
+
+        //keyboard to move snake
+        document.addEventListener('keydown', function (e) {
+            //preventing snake from backtracking
+
+            //left
+            if (e.which === 37 && snake.dx === 0) {
+                snake.dx = -grid;
+                snake.dy = 0;
+            }
+            //up
+            else if (e.which === 38 && snake.dy === 0) {
+                snake.dy = -grid;
+                snake.dx = 0;
+            }
+            //right
+            else if (e.which === 39 && snake.dx === 0) {
+                snake.dx = grid;
+                snake.dy = 0;
+            }
+            //down
+            else if (e.which === 40 && snake.dy === 0) {
+                snake.dy = grid;
+                snake.dx = 0;
             }
         });
+
+        //start the game
+    function gameStart() {
+        requestAnimationFrame(loop);
     }
 
-    //keyboard to move snake
-    document.addEventListener('keydown', function(e){
-        //preventing snake from backtracking
-
-        //left
-        if (e.which === 37 && snake.dx === 0){
-            snake.dx = -grid;
-            snake.dy = 0;
-        }
-        //up
-        else if (e.which === 38 && snake.dy === 0){
-            snake.dy = -grid;
-            snake.dx = 0;
-        }
-        //right
-        else if (e.which === 39 && snake.dx === 0){
-            snake.dx = grid;
-            snake.dy = 0;
-        }
-        //down
-        else if (e.which === 40 && snake.dy === 0){
-            snake.dy = grid;
-            snake.dx = 0;
-        }
-    });
-
-    //start the game
-    requestAnimationFrame(loop);
 </script>
 
+<button onclick="gameStart()">Start!</button>
+
+<h2>Score!</h2>
+<h2 id="score">0</h2>
+
+<table border="1">
+    <tr>
+        <td> High Score </td>
+        <td id="highScore">000</td>
+    </tr>
+    <tr>
+        <td>Last Score</td>
+        <td id="lastScore">000</td>
+    </tr>
+</table>
 {% endblock %}
