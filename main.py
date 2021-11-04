@@ -1,7 +1,8 @@
 # import "packages" from flask
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from images import image_data
 from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
+
 import requests
 
 # create a Flask instance
@@ -116,6 +117,10 @@ def Snake():
 @app.route('/minigames/game/')
 def Game():
     return render_template("/minigames/game.html")
+
+@app.route('/minigames/game/mousespeed')
+def UpgradeMouseSpeed():
+    return jsonify("true")
 
 # runs the application on the development server
 if __name__ == "__main__":

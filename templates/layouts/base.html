@@ -100,19 +100,50 @@
     </style>
     <script>
 
-        coins = parseInt(localStorage.getItem('coins'))
-        document.getElementById("coins").innerHTML = "Currency: " + coins.toString()
+        function define(string, variable) {
+            if (localStorage.getItem(string) == undefined) {
+                localStorage.setItem(string, 0)
+            } else {
+                variable = parseInt(localStorage.getItem(string))
+            }
+        }
+
+        define('coins', coins)
+        define('apple', apple)
+        define('cheeese', cheeese)
+        define('pancake', pancake)
+        define('sweater', sweater)
+        define('cape', cape)
+        define('shoes', shoes)
+
         function addcoin(num) {
-            coins = coins + num
-            document.getElementById("coins").innerHTML = "Currency: " + coins.toString()
+            coins = parseInt(localStorage.getItem('coins')) + num
             localStorage.setItem('coins', coins)
+            document.getElementById('coins').innerHTML = "Currency: " + coins.toString()
             return coins
+        }
+
+        function buything(id, thing, cost) {
+            addcoin(cost);
+            thing = parseInt(localStorage.getItem(id));
+            thing++;
+            localStorage.setItem(id, thing);
+            document.getElementById(id).innerHTML = thing;
         }
 
         function menuAni(x){
             x.classList.toggle("change");
         }
 
+        function reset(){
+            localStorage.setItem('coins', 0)
+            localStorage.setItem('apple', 0)
+            localStorage.setItem('cheeese', 0)
+            localStorage.setItem('pancake', 0)
+            localStorage.setItem('sweater', 0)
+            localStorage.setItem('cape', 0)
+            localStorage.setItem('shoes', 0)
+        }
     </script>
 
     {% block head %}
@@ -123,8 +154,15 @@
 
     {% include "layouts/navbar.html" %}
 
-    <p id="coins"></p>
+    <p id="coins">coins</p>
+    <p id="apple">apples</p>
+    <p id="cheeese">cheeese</p>
+    <p id="pancake">pancake</p>
+    <p id="sweater">sweater</p>
+    <p id="cape">cape</p>
+    <p id="shoes">shoes</p>
     <button type="button" onclick="addcoin(1)">Add Coin</button>
+    <button type="button" onclick="reset()">Reset</button>
 
     <div class="menu" onclick="menuAni(this)">
         <div class="bar1"></div>
