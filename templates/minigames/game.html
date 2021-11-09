@@ -1,5 +1,8 @@
 
 
+
+{% block body %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -143,19 +146,26 @@
     function speedupgrade() {
         speedup = -0.3;
     }
+    function reload() {
+        location.reload();
+    }
+
+
 </script>
+{% include "/layouts/navbar.html" %}
 <br>
 <button onmousedown="moveup()" onmouseup="movedown()">ACCELERATE</button>
 <p>Use the ACCELERATE button to stay in the air</p>
 <p>How long can you stay alive?</p>
 <button onclick="speedupgrade()">Upgrade Speed</button>
 <p>Updrades speed by 1 for 1 coin</p>
-<form action="/>action_page.php">
-<input type="reset" value="Reset">
+<form action="/minigames/game/";>
+        <button onClick="reload()">Refresh</button>
 </form>
 
 </body>
 </html>
-Done
 
-</script>
+{% endblock %}
+
+
