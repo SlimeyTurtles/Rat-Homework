@@ -49,7 +49,7 @@ We want our website to be an interactive homework checklist that keeps you motiv
 | Avinh | |
 | Akhil | |
 | Calissa |[link](https://docs.google.com/document/d/1YViqgIDt4jTNeWnAhjjWD8meiLIRJ251l2vBf0EI46w/edit?usp=sharing)
-| Valen | |
+| Valen | [link](https://docs.google.com/document/d/147dwm2hAiguv-IuOFVYPvIZHXmvaFJkmHIc4QIs0erM/edit?usp=sharing)
 
 ## <a name="Sprint-9"> Sprint 9, Oct. 18 - Oct. 22 </a>
 
@@ -61,7 +61,7 @@ We want our website to be an interactive homework checklist that keeps you motiv
 | Avinh | | |
 | Akhil | [link](https://docs.google.com/document/d/1JVAg5pRieS9SZO9xZKVBXDIecDxExtM-pPJwz2wHQ0Q/edit?usp=sharing) | [link](https://docs.google.com/document/d/1JVAg5pRieS9SZO9xZKVBXDIecDxExtM-pPJwz2wHQ0Q/edit?usp=sharing) |
 | Calissa |[3.9-3.10](https://docs.google.com/document/d/18sY3pHriyVSnNLNGjqLiFSa6c5cLKEeUem-D_SNG578/edit?usp=sharing)|[3.9-3.10](https://docs.google.com/document/d/18sY3pHriyVSnNLNGjqLiFSa6c5cLKEeUem-D_SNG578/edit?usp=sharing)  |
-| Valen | | |
+| Valen |[link](https://docs.google.com/document/d/1mSg7-izc5nJYkKu42gaLDlywvrZ1mdMelYj0JZOOjao/edit?usp=sharing) | |
 
 ## <a name="Sprint-8"> Sprint 8, Oct. 11 - Oct. 15 </a>
 
@@ -78,7 +78,7 @@ We want our website to be an interactive homework checklist that keeps you motiv
 | Avinh | [at top of page](https://docs.google.com/document/d/1TJkSgIqcy-vjAVx6aAgbk_lAIqVqzyzfgVuc_PEV7uk/edit?usp=sharing) | [at middle of page](https://docs.google.com/document/d/1TJkSgIqcy-vjAVx6aAgbk_lAIqVqzyzfgVuc_PEV7uk/edit?usp=sharing) |
 | Akhil | [link](https://docs.google.com/document/d/1EvAoJh42y_pIa29LWFjGM1AC2WLsiVIxFre7m83ll_k/edit?usp=sharing) | [link](https://docs.google.com/document/d/1EvAoJh42y_pIa29LWFjGM1AC2WLsiVIxFre7m83ll_k/edit?usp=sharing) |
 | Calissa |[3.7-3.8](https://docs.google.com/document/d/1xXmz8Yv2LAxPktu_V8k1Ea1O18y0RH1v0j6g7j2OT-8/edit?usp=sharing) | [3.7-3.8](https://docs.google.com/document/d/1xXmz8Yv2LAxPktu_V8k1Ea1O18y0RH1v0j6g7j2OT-8/edit?usp=sharing)|
-| Valen | | |
+| Valen | [link](https://docs.google.com/document/d/1psf_zckc-T5-YLU-VMA_r7GnvPszMoOK_n6MENGFiCc/edit?usp=sharing)| |
 
 Journal of TPT: 
 
