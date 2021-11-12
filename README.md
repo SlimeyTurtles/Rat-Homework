@@ -65,7 +65,7 @@ We want our website to be an interactive homework checklist that keeps you motiv
 | Name | 3.7 | 3.8 |
 | --- | --- | --- |
 | Avinh | [at top of page](https://docs.google.com/document/d/1TJkSgIqcy-vjAVx6aAgbk_lAIqVqzyzfgVuc_PEV7uk/edit?usp=sharing) | [at middle of page](https://docs.google.com/document/d/1TJkSgIqcy-vjAVx6aAgbk_lAIqVqzyzfgVuc_PEV7uk/edit?usp=sharing) |
-| Akhil | [link](https://docs.google.com/document/d/1EvAoJh42y_pIa29LWFjGM1AC2WLsiVIxFre7m83ll_k/edit?usp=sharing) | [link](https://docs.google.com/document/d/1EvAoJh42y_pIa29LWFjGM1AC2WLsiVIxFre7m83ll_k/edit?usp=sharing_\) |
+| Akhil | [link](https://docs.google.com/document/d/1EvAoJh42y_pIa29LWFjGM1AC2WLsiVIxFre7m83ll_k/edit?usp=sharing) | [link](https://docs.google.com/document/d/1EvAoJh42y_pIa29LWFjGM1AC2WLsiVIxFre7m83ll_k/edit?usp=sharing) |
 | Calissa | | |
 | Valen | | |
 
