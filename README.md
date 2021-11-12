@@ -68,7 +68,7 @@ We want our website to be an interactive homework checklist that keeps you motiv
 ### PBL
 | Name | Task | Ticket |
 | --- | --- | --- |
-| Calissa | New Background |  |
+| Calissa | New Background | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/65)  |
 | Akhil | To Do list | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/54) |
 | Avinh | API Connection | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/23)|
 
