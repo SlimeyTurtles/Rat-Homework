@@ -40,6 +40,17 @@ We want our website to be an interactive homework checklist that keeps you motiv
 | Designer | Calissa Tyrell | 89219525 | [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3ACalissaT+is%3Aopen) | [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=CalissaT) | [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Acalissat) | [profile](https://github.com/CalissaT) |
 | Developer | Valen Reynolds | 89166851 | [tasks](https://github.com/SlimeyTurtles/Rat-Homework/issues?q=assignee%3AValenReynolds+is%3Aopen) | [commits](https://github.com/SlimeyTurtles/Rat-Homework/commits?author=ValenReynolds) | [scrumboard](https://github.com/SlimeyTurtles/Rat-Homework/projects/1?card_filter_query=assignee%3Avalenreynolds) | [profile](https://github.com/ValenReynolds) |
 
+## <a name="Final Preperations"> Final Preperations </a>
+[Final Reflection](https://docs.google.com/presentation/d/16o4KWXCuIH28-PH0UCVQkhH56YgF5J-zdAhkA-55NeM/edit?usp=sharing)
+
+### AP Exams 
+| Name |Work |
+| --- | --- |
+| Avinh | |
+| Akhil | |
+| Calissa |[link](https://docs.google.com/document/d/1YViqgIDt4jTNeWnAhjjWD8meiLIRJ251l2vBf0EI46w/edit?usp=sharing)
+| Valen | |
+
 ## <a name="Sprint-9"> Sprint 9, Oct. 18 - Oct. 22 </a>
 
 **[Individual Final Videos](https://github.com/SlimeyTurtles/Rat-Homework/issues/63)**
@@ -49,7 +60,7 @@ We want our website to be an interactive homework checklist that keeps you motiv
 | --- | --- | --- |
 | Avinh | | |
 | Akhil | [link](https://docs.google.com/document/d/1JVAg5pRieS9SZO9xZKVBXDIecDxExtM-pPJwz2wHQ0Q/edit?usp=sharing) | [link](https://docs.google.com/document/d/1JVAg5pRieS9SZO9xZKVBXDIecDxExtM-pPJwz2wHQ0Q/edit?usp=sharing) |
-| Calissa | | |
+| Calissa |[3.9-3.10](https://docs.google.com/document/d/18sY3pHriyVSnNLNGjqLiFSa6c5cLKEeUem-D_SNG578/edit?usp=sharing)|[3.9-3.10](https://docs.google.com/document/d/18sY3pHriyVSnNLNGjqLiFSa6c5cLKEeUem-D_SNG578/edit?usp=sharing)  |
 | Valen | | |
 
 ## <a name="Sprint-8"> Sprint 8, Oct. 11 - Oct. 15 </a>
@@ -66,7 +77,7 @@ We want our website to be an interactive homework checklist that keeps you motiv
 | --- | --- | --- |
 | Avinh | [at top of page](https://docs.google.com/document/d/1TJkSgIqcy-vjAVx6aAgbk_lAIqVqzyzfgVuc_PEV7uk/edit?usp=sharing) | [at middle of page](https://docs.google.com/document/d/1TJkSgIqcy-vjAVx6aAgbk_lAIqVqzyzfgVuc_PEV7uk/edit?usp=sharing) |
 | Akhil | [link](https://docs.google.com/document/d/1EvAoJh42y_pIa29LWFjGM1AC2WLsiVIxFre7m83ll_k/edit?usp=sharing) | [link](https://docs.google.com/document/d/1EvAoJh42y_pIa29LWFjGM1AC2WLsiVIxFre7m83ll_k/edit?usp=sharing) |
-| Calissa | | |
+| Calissa |[3.7-3.8](https://docs.google.com/document/d/1xXmz8Yv2LAxPktu_V8k1Ea1O18y0RH1v0j6g7j2OT-8/edit?usp=sharing) | [3.7-3.8](https://docs.google.com/document/d/1xXmz8Yv2LAxPktu_V8k1Ea1O18y0RH1v0j6g7j2OT-8/edit?usp=sharing)|
 | Valen | | |
 
 Journal of TPT: 
