@@ -48,22 +48,24 @@ We want our website to be an interactive homework checklist that keeps you motiv
 | Name | 3.9 | 3.10 |
 | --- | --- | --- |
 | Avinh | | |
-| Akhil | | |
+| Akhil | [link](https://docs.google.com/document/d/1JVAg5pRieS9SZO9xZKVBXDIecDxExtM-pPJwz2wHQ0Q/edit?usp=sharing) | [link](https://docs.google.com/document/d/1JVAg5pRieS9SZO9xZKVBXDIecDxExtM-pPJwz2wHQ0Q/edit?usp=sharing) |
 | Calissa | | |
 | Valen | | |
 
 ## <a name="Sprint-8"> Sprint 8, Oct. 11 - Oct. 15 </a>
 
 ### PBL
-| Name | Task | Commits | Ticket |
-| --- | --- | --- | --- |
-| | | |
+| Name | Task | Ticket |
+| --- | --- | --- |
+| Calissa | New Background |  |
+| Akhil | To Do list | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/54) |
+| Avinh | API Connection | [Ticket](https://github.com/SlimeyTurtles/Rat-Homework/issues/23)|
 
 ### TPT
 | Name | 3.7 | 3.8 |
 | --- | --- | --- |
 | Avinh | [at top of page](https://docs.google.com/document/d/1TJkSgIqcy-vjAVx6aAgbk_lAIqVqzyzfgVuc_PEV7uk/edit?usp=sharing) | [at middle of page](https://docs.google.com/document/d/1TJkSgIqcy-vjAVx6aAgbk_lAIqVqzyzfgVuc_PEV7uk/edit?usp=sharing) |
-| Akhil | | |
+| Akhil | [link](https://docs.google.com/document/d/1EvAoJh42y_pIa29LWFjGM1AC2WLsiVIxFre7m83ll_k/edit?usp=sharing) | [link](https://docs.google.com/document/d/1EvAoJh42y_pIa29LWFjGM1AC2WLsiVIxFre7m83ll_k/edit?usp=sharing_\) |
 | Calissa | | |
 | Valen | | |
 
